@@ -1,0 +1,94 @@
+<div class="grid_6 alpha">
+	<header class="widget-title"><h2>Suits</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+	{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/slider.phtml" products_amount="10" visible_products="2" product_name_slider="1" price_slider="1" add_to_cart_slider="1" wishlist_slider="1" compare_slider="1" quickview_slider="1" rating_stars_slider="1" rating_cust_link_slider="1" rating_add_review_link_slider="1" autoSlide="1" autoSlideTimer="5000" autoSlideTransTimer="5000" widget_id="6642"}}
+	<hr class="indent-18 white-space" />
+	<div class="text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/sk1_text_banner.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_text_banner@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content">
+			<h2>Holiday Gifts</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eu ante eu ultrices. Nulla ac auctor metus. Nunc consectetur lorem nec tellus consectetur.</p>
+			<a class="banner-link" href="#">Read More <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<hr class="indent-18 white-space" />
+	<header class="widget-title"><h2>Suits</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+	{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/slider.phtml" products_amount="10" visible_products="2" product_name_slider="1" price_slider="1" add_to_cart_slider="1" wishlist_slider="1" compare_slider="1" quickview_slider="1" rating_stars_slider="1" rating_cust_link_slider="1" rating_add_review_link_slider="1" autoSlide="1" autoSlideTimer="5000" autoSlideTransTimer="5000" widget_id="3243"}}
+	<hr class="indent-18 mobile white-space" />
+</div>
+<div class="grid_6 omega">
+	<div class="grid_2 alpha">
+		<div class="banner">
+			<a href="#" title="Banner 1"><img src="{{media url="wysiwyg/sk1_home_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_1@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Art & Craft</a>
+		</div>
+	</div>
+	<div class="grid_2">
+		<div class="banner">
+			<a href="#" title="Banner 2"><img src="{{media url="wysiwyg/sk1_home_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_2@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Sleeping Bags</a>
+		</div>
+	</div>
+	<div class="grid_2 omega">
+		<div class="banner">
+			<a href="#" title="Banner 3"><img src="{{media url="wysiwyg/sk1_home_banner_3.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_3@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Gift Sets</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<hr class="indent-18 white-space" />
+	<div class="text-banner">
+		<a href="#" title="Text Banner 2"><img src="{{media url="wysiwyg/sk1_text_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_text_banner_2@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content skin-1">
+			<h3>Featured category</h3>
+			<h2>Holiday Gifts</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt eu ante eu ultrices. Nulla ac auctor metus. Nunc consectetur lorem nec tellus consectetur. Consectetur adipiscing elit. </p>
+			<a class="banner-link" href="#">Read More <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<hr class="indent-18 white-space" />
+	<div class="grid_2 alpha">
+		<div class="banner">
+			<a href="#" title="Banner 4"><img src="{{media url="wysiwyg/sk1_home_banner_4.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_4@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Puzzles</a>
+		</div>
+	</div>
+	<div class="grid_2">
+		<div class="banner">
+			<a href="#" title="Banner 5"><img src="{{media url="wysiwyg/sk1_home_banner_5.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_5@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Creative</a>
+		</div>
+	</div>
+	<div class="grid_2 omega">
+		<div class="banner">
+			<a href="#" title="Banner 6"><img src="{{media url="wysiwyg/sk1_home_banner_6.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_6@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Suits</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<hr class="indent-18 white-space" />
+	<div class="grid_2 alpha">
+		<div class="banner">
+			<a href="#" title="Banner 7"><img src="{{media url="wysiwyg/sk1_home_banner_7.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_7@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Books</a>
+		</div>
+	</div>
+	<div class="grid_2">
+		<div class="banner">
+			<a href="#" title="Banner 8"><img src="{{media url="wysiwyg/sk1_home_banner_8.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_8@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Kitchen Sets</a>
+		</div>
+	</div>
+	<div class="grid_2 omega">
+		<div class="banner">
+			<a href="#" title="Banner 9"><img src="{{media url="wysiwyg/sk1_home_banner_9.jpg"}}" data-srcX2="{{media url="wysiwyg/sk1_home_banner_9@x2.jpg"}}" alt="" /></a>
+			<a href="#" title="Banner Title" class="banner-title">Accessories</a>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<hr class="indent-24 white-space" />
+<header class="widget-title"><h2>Bags</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/grid.phtml" products_amount="6" products_per_row="6" product_name_grid="1" price_grid="1" widget_id="3943"}}
+<hr class="indent-40 white-space" />
+{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}

@@ -1,0 +1,41 @@
+Do not install any theme updates on live stores before testing it locally!
+
+---------------------------
+HOW TO CUSTOMIZE THIS THEME:
+---------------------------
+Please do not change default files of our theme! We strongly recommend you creating subthemes. This allows you implement future updates with ease. How to do that please read in "User Guide" provided with the theme. 
+
+
+---------------------------
+HOW TO REQUEST SUPPORT:
+---------------------------
+Please refer to "Support" section in "User Guide" before you will ask any questions. Following described steps you'll always get fast help.
+
+
+---------------------------
+HOW TO PATCH THIS THEME:
+-----------------------
+By default this theme is coded for Magento Community Edition ver.1.9.0.1 but if you want:
+
+- to use it for Magento Community Edition ver.1.9.1.0 you need go through following steps:
+-----------------------------------------------------------------------------------------
+1. Upload Theme Files/Theme_vX.X.zip to the root directory your magento and unzip it
+2. Upload patch files from Theme Files/patch_for_magento_community_1.9.1.0 with replacing files
+-----------------------------------------------------------------------------------------
+
+- to use it for Magento Community Edition ver.1.8.0.0 you need go through following steps:
+-----------------------------------------------------------------------------------------
+1. Upload Theme Files/Theme_vX.X.zip to the root directory your magento and unzip it
+2. Upload patch files from Theme Files/patch_for_magento_community_1.8.0.0 with replacing files
+-----------------------------------------------------------------------------------------
+
+- to use it for Magento Community Edition ver.1.7.X.X you need go through following steps:
+-----------------------------------------------------------------------------------------
+1. Upload Theme Files/Theme_vX.X.zip to the root directory your magento and unzip it 
+2. Upload patch files from Theme Files/patch_for_magento_community_1.7.x.x with replacing files
+-----------------------------------------------------------------------------------------
+
+
+
+If you like our theme please rate it on themeforest. 5 stars would be appreciated!
+With best regards, MeigeeTeam.

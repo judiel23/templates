@@ -1,0 +1,112 @@
+<hr class="indent-18 white-space" />
+<div class="home-banners">
+	<div class="grid_4 alpha text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/text_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/text_banner_1@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content">
+			<h2>Triple Color Bowling Bag</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_4 text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/text_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/text_banner_2@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content skin-2">
+			<h2>Adventure City Urban Collection</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_4 omega text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/text_banner_3.jpg"}}" data-srcX2="{{media url="wysiwyg/text_banner_3@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content skin-3">
+			<h2>20% sale</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<hr class="indent-46 white-space" />
+<header class="widget-title"><h2>Suits</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/slider.phtml" products_amount="10" visible_products="4" product_name_slider="1" price_slider="1" add_to_cart_slider="1" wishlist_slider="1" compare_slider="1" quickview_slider="1" rating_stars_slider="1" rating_cust_link_slider="1" rating_add_review_link_slider="1" autoSlide="1" autoSlideTimer="5000" autoSlideTransTimer="5000" widget_id="2030"}}
+<hr class="indent-28 white-space" />
+<div class="product-tabs-wrapper">
+	<div class="product-tabs-bg">
+		<img src="{{media url="wysiwyg/products_tabs_bg.jpg"}}" data-srcX2="{{media url="wysiwyg/products_tabs_bg@x2.jpg"}}" alt="" />
+	</div>
+	<header class="widget-title"><h2>Best from our shop</h2></header>
+	{{widget type="meigeewidgetsbizarre/tabs" static_blocks="suits,hoodies_sweatshirts,bags" template="meigee/meigeewidgetsbizarre/tabs.phtml" buttons_pos="1"}}
+</div>
+<hr class="indent-40 white-space" />
+<div class="home-banners-2">
+	<div class="grid_9 alpha">
+		<div class="banner">
+			<div class="banner-content">
+				<h2>Get the theme installed and configured for free!</h2>
+				<p>Installation of our theme is pretty easy, anyway if you’ve got into any problems we can install it on your server absolutelly for free.</p>
+				<span class="label">for free</span>
+			</div>
+		</div>
+	</div>
+	<div class="grid_3 omega">
+		<div class="text-banner">
+			<span class="banner-title"><i class="fa fa-thumb-tack"></i><strong>Address</strong></span>
+			<p>Jersey City, NJ 07305, New York, USA</p>
+			<p>Call Us : (555) 723-649-4920</p>
+			<p>Email : <a href="mailto:bizarre@info.com">bizarre@info.com</a></p>
+		</div>
+	</div>
+</div>
+<hr class="indent-72 white-space" />
+<div class="home-text-banners">
+	<div class="grid_3 alpha">
+		<div class="text-banner-image">
+			<img src="{{media url="wysiwyg/text_banner_img_1.png"}}" data-srcX2="{{media url="wysiwyg/text_banner_img_1@x2.png"}}" alt="" />
+		</div>
+		<div class="box">
+			<strong>London</strong>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.</p>
+			<a href="#">Read more<i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_3">
+		<div class="text-banner-image">
+			<img src="{{media url="wysiwyg/text_banner_img_2.png"}}" data-srcX2="{{media url="wysiwyg/text_banner_img_2@x2.png"}}" alt="" />
+		</div>
+		<div class="box">
+			<strong>New York</strong>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.</p>
+			<a href="#">Read more<i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_3">
+		<div class="text-banner-image">
+			<img src="{{media url="wysiwyg/text_banner_img_3.png"}}" data-srcX2="{{media url="wysiwyg/text_banner_img_3@x2.png"}}" alt="" />
+		</div>
+		<div class="box">
+			<strong>Paris</strong>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.</p>
+			<a href="#">Read more<i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_3 omega">
+		<div class="text-banner-image">
+			<img src="{{media url="wysiwyg/text_banner_img_4.png"}}" data-srcX2="{{media url="wysiwyg/text_banner_img_4@x2.png"}}" alt="" />
+		</div>
+		<div class="box">
+			<strong>Sydney</strong>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.</p>
+			<a href="#">Read more<i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+</div>
+<hr class="indent-64 white-space" />
+<header class="widget-title"><h2>Bags</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/grid.phtml" products_amount="6" products_per_row="6" product_name_grid="1" price_grid="1" widget_id="665"}}
+<hr class="indent-60 white-space" />
+<div class="widget-wrapper">
+	<div class="background-wrapper" style="background-color: #ddd;"></div>
+	<header class="widget-title"><h2>New Products</h2></header>
+	{{widget type="meigeewidgetsbizarre/saleproducts" template="meigee/meigeewidgetsbizarre/masonry_grid.phtml" products_amount="8" grid2_description="2" widget_id="6785"}}
+</div>
+{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}

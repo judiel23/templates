@@ -1,0 +1,4 @@
+<div class="popup-content-wrapper" data-bgimg="background-image: url({{media url="wysiwyg/popup_block_bg.jpg"}});" data-srcX2="background-image: url({{media url="wysiwyg/popup_block_bg@x2.jpg"}});" data-bgcolor="background-color: #555;">
+	{{block type="newsletter/subscribe" block_id="popup.newsletter" template="newsletter/subscribe.phtml"}}
+	<div class="clear"></div>
+</div>

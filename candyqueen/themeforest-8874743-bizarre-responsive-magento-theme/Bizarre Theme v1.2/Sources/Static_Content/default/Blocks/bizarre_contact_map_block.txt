@@ -1,0 +1,4 @@
+<div class="block-title"><h2>Our address</h2></div>
+<p>No. 315, Jersey City, New York, USA<br/>
+Call Us : (555) 723-649-4920<br/>
+Email : <a href="mailto:bizarre@info.com">bizarre@info.com</a></p>

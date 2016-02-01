@@ -1,0 +1,60 @@
+<div class="parallax-banners-wrapper">
+	<div class="background-wrapper">
+		<div class="text-banner" id="parallax-banner-1">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_1.jpg"}});"></div>
+			<div class="banner-content skin-1" data-top="43%" data-colors="colors-1">
+				<p>From new collection</p>
+				<h2>Men’s accessories</h2>
+				<h3>Rucksack smoke large lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+		<div class="text-banner" id="parallax-banner-2">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_2.jpg"}});"></div>
+			<div class="banner-content skin-2" data-top="43%" data-colors="colors-1">
+				<p>From new collection</p>
+				<h2>Mighty Phone Wallet</h2>
+				<h3>Rucksack smoke large lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+		<div class="text-banner" id="parallax-banner-3">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_3.jpg"}});"></div>
+			<div class="banner-content skin-3" data-top="43.5%" data-colors="colors-2">
+				<p>From new collection</p>
+				<h2>Tab <span>iPad mini</span> bro feat</h2>
+				<h3>Tablet case lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+		<div class="text-banner" id="parallax-banner-4">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_4.jpg"}});"></div>
+			<div class="banner-content skin-4" data-top="43%" data-colors="colors-1">
+				<p>From new collection</p>
+				<h2>Explore more</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+		<div class="text-banner" id="parallax-banner-5">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_5.jpg"}});"></div>
+			<div class="banner-content skin-5" data-top="43%" data-colors="colors-1">
+				<p>From new collection</p>
+				<h2>gadget accessories</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+		<div class="text-banner" id="parallax-banner-6">
+			<div class="background" style="background-image: url({{media url="wysiwyg/sk6_text_banner_6.jpg"}});"></div>
+			<div class="banner-content skin-6" data-top="43%" data-colors="colors-1">
+				<p>Only for men’s</p>
+				<h2>Leather citybags</h2>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies euismod justo</h3>
+				<h4><button class="button banner-btn"><span><span>Go Shopping</span></span></button></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<hr class="indent-18 white-space" />
+{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}

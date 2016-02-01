@@ -1,0 +1,4 @@
+<div class="header-phone">
+	<i class="fa fa-phone"></i>
+	Call us free 24/7: <a href="skype:(555) 872-642-7462" class="phone">(555) 872-642-7462</a>
+</div>

@@ -1,0 +1,19 @@
+General Options:
+	Design:
+		Theme Design : Theme Design - skin2
+	Language Switcher 
+		Status : Select Box
+	Currency Switcher 
+		Status : Select Box
+	Layout 
+		Site Layout : Wide
+	Header & Menu
+		Sticky : Enable
+		Logo on sticky header : Display on all versions
+		Menu on sticky header : Display on all versions
+		Search on sticky header : Display only on desktop version
+		Cart on sticky header : Display on all versions
+		Background For header : Skin color
+	Footer
+		Custom Footer : Enable
+		Custom Footer Static Block : bizarre_sk2_footer

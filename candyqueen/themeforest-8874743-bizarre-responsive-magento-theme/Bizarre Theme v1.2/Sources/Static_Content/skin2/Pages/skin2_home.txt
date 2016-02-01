@@ -1,0 +1,53 @@
+<hr class="indent-60 white-space" />
+<div class="home-banners">
+	<div class="grid_4 alpha text-banner border">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/sk2_text_banner_1.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_text_banner_1@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content">
+			<h2>Airaid Round Air Filters</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_4 text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/sk2_text_banner_2.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_text_banner_2@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content skin-2">
+			<h2>GT Series Cross Drilled Brake Kits</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="grid_4 omega text-banner">
+		<a href="#" title="Text Banner"><img src="{{media url="wysiwyg/sk2_text_banner_3.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_text_banner_3@x2.jpg"}}" alt="" /></a>
+		<div class="text-banner-content">
+			<h2>Amazing Choise & Service</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<a class="banner-link" href="#">Shop now <i class="fa fa-angle-right"></i></a>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<hr class="indent-60 white-space" />
+<div class="widget-wrapper">
+	<div class="background-wrapper" style="background-color: #ddd;"></div>
+	<header class="widget-title"><h2>LED Lights</h2></header>
+	{{widget type="meigeewidgetsbizarre/saleproducts" template="meigee/meigeewidgetsbizarre/masonry_grid.phtml" products_amount="8" grid2_description="1" widget_id="6785"}}
+</div>
+<hr class="indent-56 white-space" />
+<header class="widget-title"><h2>Suits</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/slider.phtml" products_amount="10" visible_products="4" product_name_slider="1" price_slider="1" add_to_cart_slider="1" wishlist_slider="1" compare_slider="1" quickview_slider="1" rating_stars_slider="1" rating_cust_link_slider="1" rating_add_review_link_slider="1" autoSlide="1" autoSlideTimer="5000" autoSlideTransTimer="5000" widget_id="2030"}}
+<hr class="indent-60 white-space" />
+<div class="product-tabs-wrapper">
+	<div class="product-tabs-bg">
+		<img src="{{media url="wysiwyg/sk2_products_tabs_bg.jpg"}}" data-srcX2="{{media url="wysiwyg/sk2_products_tabs_bg@x2.jpg"}}" alt="" />
+	</div>
+	<header class="widget-title"><h2>Best from our shop</h2></header>
+	{{widget type="meigeewidgetsbizarre/tabs" static_blocks="headlights,air_intakes,led_lights" template="meigee/meigeewidgetsbizarre/tabs.phtml" buttons_pos="1"}}
+</div>
+<hr class="indent-56 white-space" />
+<header class="widget-title"><h2>Bags</h2><a class="category-link" href="#">Shop Category <i class="fa fa-angle-right"></i></a></header>
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/grid.phtml" products_amount="6" products_per_row="6" product_name_grid="1" price_grid="1" widget_id="665"}}
+<hr class="indent-36 white-space" />
+<div class="newsletter-wrapper">
+	<div class="background-wrapper" style="background-color: #eee"></div>
+	{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}
+</div>

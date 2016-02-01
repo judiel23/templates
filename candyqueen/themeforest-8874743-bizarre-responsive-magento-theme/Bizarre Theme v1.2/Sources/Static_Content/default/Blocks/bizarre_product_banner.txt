@@ -1,0 +1,1 @@
+<a href="#" title="Product Banner"><img src="{{media url="wysiwyg/product_banner.jpg"}}" data-srcx2="{{media url="wysiwyg/product_banner@x2.jpg"}}" alt="" /></a>

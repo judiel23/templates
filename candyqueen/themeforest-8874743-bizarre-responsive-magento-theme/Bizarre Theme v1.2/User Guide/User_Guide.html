@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Guide</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="library/css/bootstrap.css" />
+	<link rel="stylesheet" media="all" href="library/style.css" />
+	<link rel="stylesheet" type="text/css" href="library/js/highlighter/jquery.snippet.min.css" />
+	<script type="text/javascript" src="library/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="library/js/jquery.scrollTo-min.js"></script>
+	<script type="text/javascript" src="library/js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="library/js/highlighter/jquery.snippet.min.js"></script>
+	<script type="text/javascript" src="library/js/script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript">
+	$(function() {
+
+	    function scroll(direction) {
+
+	        var scroll, i,
+	                positions = [],
+	                here = $(window).scrollTop(),
+	                collection = $('.post');
+
+	        collection.each(function() {
+	            positions.push(parseInt($(this).offset()['top'],10));
+	        });
+
+	        for(i = 0; i < positions.length; i++) {
+	            if (direction == 'next' && positions[i] > here) { scroll = collection.get(i); break; }
+	            if (direction == 'prev' && i > 0 && positions[i] >= here) { scroll = collection.get(i-1); break; }
+	        }
+
+	        if (scroll) {
+	            $.scrollTo(scroll, {
+	                duration: 750       
+	            });
+	        }
+
+	        return false;
+	    }
+
+	    $("#next,#prev").click(function() {        
+	        return scroll($(this).attr('id'));        
+	    });
+
+	    $(".scrolltoanchor").click(function() {
+	        $.scrollTo($($(this).attr("href")), {
+	            duration: 750
+	        });
+	        return false;
+	    });
+
+	});
+	</script>
+
+</head>
+<body>
+	<div class="row">
+		<div class="span3 left-block">
+			<div id="nav-dock">
+				<a id="logo" target="_blank" href="http://meigeeteam.com">
+					<img src="library/img/logo_meigee.png" />
+				</a>
+				<div class="links">
+					<div class="category"><br />
+						<a href="#start" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Start</span>
+						</a>
+						<a href="#package" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Package Structure</span>
+						</a>
+						<a href="#license" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>License</span>
+						</a>
+						<a href="#installation" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Template Installation</span>
+						</a>
+						<a href="#general_options" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Theme Options</span>
+						</a>
+						<a href="#statics" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Static Blocks and Pages</span>
+						</a>
+						<a href="#new_features" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>What's new</span>
+						</a>
+					</div>
+					<div class="category">
+						<h4>Used Meigee<br	> Extensions</h4>
+						<a href="#megamenu" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Mega Menu</span>
+						</a>
+						<a href="#brands-showcase" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Brands Showcase</span>
+						</a>
+						<a href="#widgets" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Widgets for pages and blocks</span>
+						</a>
+					</div>
+					<div class="category">
+						<h4>Used 3-rd party Extensions</h4>
+						<a href="#revolution_slider" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Revolution Slider</span>
+						</a>
+						<a href="#blog_extension" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Blog Extension</span>
+						</a>
+						<a href="#extensions" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Other small extensions</span>
+						</a>
+					</div>
+					<div class="category">
+						<h4>Usage</h4>
+						<a href="#homepage" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Home Page</span>
+						</a>						
+						<a href="#category-page" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Category Page</span>
+						</a>
+						<a href="#productpage" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Product Page</span>
+						</a>
+						<a href="#shopping-cart" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Shopping cart page</span>
+						</a>
+						<a href="#checkout" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Checkout page</span>
+						</a>
+						<a href="#contact-us" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Contact us page</span>
+						</a>
+						<a href="#404-page" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Custom 404 page</span>
+						</a>
+						<a href="#sidebar" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Sidebar</span>
+						</a>
+						<a href="#footer" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Footer</span>
+						</a>
+						<a href="#parallax" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Parallax effect</span>
+						</a>
+						<a href="#mobile" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Mobile Appearance</span>
+						</a>
+						<a href="#subthemes" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Pre-defined subthemes</span>
+						</a>
+						<a href="#multistores" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Multiply stores</span>
+						</a>
+						<a href="#grid-system" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Grid system</span>
+						</a>
+						<a href="#translation" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Translation</span>
+						</a>
+					</div>
+					<div class="category">
+						<h4>Customization</h4>
+						<a href="#customization" class="scrolltoanchor">
+							<span>Custom subthemes</span>
+							<div class="sym">&sect;</div>
+						</a>
+						<a href="#new-extensions" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Integration of new extension</span>
+						</a>
+					</div>
+					<div class="category">
+						<h4>Troubleshooting</h4>
+						<a href="#ready-solutions" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Ready Solutions</span>
+						</a>
+						<a href="#self-diagnostic" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Self-diagnostic</span>
+						</a>
+					</div>
+					<div class="category">
+						<br/><br/>
+						<a href="#custom" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Custom Development</span>
+						</a>
+						<a href="#updates" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Theme Updates</span>
+						</a>
+						<a href="#support" class="scrolltoanchor">
+							<div class="sym">&sect;</div>
+							<span>Support</span>
+						</a>
+					</div>
+					<br/><br/><br/>
+				</div>
+			</div>
+		</div>
+		<div class="span10 offset3 right-col">
+			<div id="start" class="post first">
+				<h2 class="section-title">Bizarre</h2>
+				<h3 class="sub-title">Premium magento theme by MeigeeTeam</h3>
+				Current Package Version is 1.2<br />
+				Created for Magento Community Edition <strong>v1.7.x.x - 1.9.x.x</strong><br /><br /><br /><br />
+				</ul><br /><br />
+				<h4 class="sub-title-2">User Guide</h4>
+			</div>
+			<div id="package" class="post first">
+				<h2 class="section-title">Package Structure</h2><br /><br />
+				This package is organized as follows:<br />
+				<strong>/Changes</strong> - contains .diff files where we describe all changes we have altered in code. All these changes must be implemented by yourself. Please refer to <a href="#customization">customization</a> chapter of this guide to learn how to customize this theme in the correct way which allows you implement further updates with ease<br />
+				<strong>/Licensing</strong> - contains license files<br />
+				<strong>/Sources</strong><br />
+				<strong>-- demo</strong> - contains media folder which must be uploaded to the root directory of your magento only if you use our "One Click Installation" feature, dump file which you should use if you want to have store like the demo store and dump of revolution sliders, using which you will get exactly the same sliders as on demo <br />
+				<strong>-- Extensions</strong> - contains files for the 3-rd party extensions that are included in theme package<br />
+				<strong>-- psd</strong> - contains layered .psd files<br />
+				<strong>-- Static Content</strong> - contains static content used on the demo of the theme. All the content is groupped by subthemes. Inside subtheme folder you will next folders: <br />
+				<strong>-- -- Blocks</strong> - contains static blocks<br />
+				<strong>-- -- Pages</strong> - contains content of pages<br />
+				Mega menu content you fill find in the default folder. Also inside each subtheme folder you will see options.txt file. Open it using your favourite text editor and you will see list of changes which should be done in order you subtheme looks exactly as on demo version.<br />  
+				<strong>/Theme Files</strong> - contains theme files + patches (if required) for different versions of magento<br />
+				<strong>/User Guide</strong> - you are reading it at the moment<br />
+				<strong>/Online FAQ.url</strong> - click it twice to open our online FAQ in your browser<br />
+				<strong>/Read it first!.txt</strong> - Must be read even before this guide<br />
+			</div>
+			<div id="license" class="post">
+				<h2 class="section-title">License</h2><br /><br />
+				<p>According to the Envato terms and conditions ThemeForest regular license allows you to use this theme to create one single End Product (the final website customized with your content) for yourself or for one
+				client. Below is a list what you are allowed and what is restricted with the regular license in a few words:<br /><br />
+				<strong>You are allowed</strong>:
+				<ul>
+					<li>Install the theme on your test server for testing purposes (that magento store shouldn't be available to the public)</li>
+					<li>Modify or manipulate the theme, you can combine it with other custom products to create the End Product</li>
+					<li>Create one website for yourself or for your client and you can transfer it to your client for any fee. This license is then transferred to your client</li>
+					<li>In case if you sell the same website to another client, you will need to purchase another regular license</li>
+				</ul><br />
+				<strong>You are NOT allowed</strong>:<br /><br />
+				<ul>
+					<li>Using  single regular license it is not allowed to create multiple websites. For multiple websites you will need multiple regular licenses</li>
+					<li>Using  single regular license it is not allowed multi-store magento installations. Each regular license entitles you to use the theme in only one store (store/domain/subdomain). For multiple stores/domains/subdomains you will need multiple regular licenses</li>
+				</ul><br /><br />
+				More information about licenses you will find here:
+				<ul>
+					<li><a href="http://themeforest.net/licenses/faq" target="_blank">License FAQ</a></li>
+					<li><a href="http://themeforest.net/licenses/terms/regular" target="_blank">Regular license details</a></li>
+					<li><a href="http://themeforest.net/licenses/terms/extended" target="_blank">Extended license details</a></li>
+					<li><a href="http://themeforest.net/licenses/standard" target="_blank">License comparison table</a></li>
+				</ul>
+				</p>
+			</div>
+			<div id="installation" class="post">
+				<h2 class="section-title">Template Installation</h2><br /><br />
+				<div class="note">
+					<ul>
+						<li>We strongly recommend you to install the theme on a test store first and only then move it to the live store</li>
+						<li>Do not omit any step described in this chapter</li>
+						<li>Do not change order of steps.</li>
+					</ul>
+					</div>
+				<h3 id="demo-store-installation" class="sub-title">Demo store's installation</h3>
+				<p>In this theme package we included sample data with settings of demo version. Follow the instructions below in order to install exactly the same store as on demo version:</p>
+				<ol>
+					<li><strong>Before magento installation</strong> create empty database using phpMyAdmin or similar tools</li>
+					<li>Import <em class="dfn-code">Sources/demo/dump.sql.gz</em> into database that was created in previous step</li>
+					<li>Install demo magento store: 
+						<ol>
+							<li>Go to magento <a target="_blank" href="http://www.magentocommerce.com/download">download page</a> choose the recent version of magento store and download it</li>
+							<li>Upload and unzip downloaded file with magento to the folder on your server where magento should be installed</li>
+							<li>Open browser and proceed to the folder where magento was unzipped and load default Magento setup wizard</li>
+							<li>Follow the wizard's instructions and finish magento installation</li>
+						</ol>
+					</li>
+					<li> When the demo store with demo sample data is installed follow successively the steps that were described in sections: <a href="#prepare-magento">"Prepare your magento"</a>, <a href="#theme-files-uploading">"Upload the theme files"</a>, <a href="#theme-installation">"Install the theme"</a></li>
+				</ol>
+				<h3 id="prepare-magento" class="sub-title">Prepare your magento</h3>
+				<h4>1. Refresh and Disable all the Magento cache</h4>
+				<p>When configuring your store, whatever theme or anything else you should <strong>refresh all the Magento cache</strong> and then completely <strong>disable it</strong>. To get it done go to <em class="dfn-code">System -> Cache Management</em></p>
+				<h4>2. Reindex magento data</h4>
+				<p>After making any changes to magento data (products, categories) you should reindex the data.  To get it done go to <em class="dfn-code">System -> Index Management</em></p>
+				<h4>3. Backup Magento files and the store database</h4>
+				<p>It saves lot's of your time if something goes wrong. To create backup go to <em class="dfn-code">System-> Tools-> Backups</em></p></p>
+				<h4>4. Disable compilation mode</h4>
+				<p>To get it done go to <em class="dfn-code">System -> Tools -> Compilation	</em></p>
+				<h4>5. Disable Merge JavaScript and CSS Files</h4>
+				<p>To get it done go to <em class="dfn-code">System -> Configuration -> Developer</em></p>
+				<h4>6. Log out from Magento admin panel</h4>
+				<p>It must be done to refresh the magento access control system</p>
+				<h3 id="theme-files-uploading" class="sub-title">Upload the theme files</h3>
+				<ol>
+					<li>If your FTP manager allows to unzip files then open your downloaded theme package, navigate to <em class="dfn-code">Bizarre Theme vX.X/Theme Files</em> and using your FTP client upload .zip file <em class="dfn-code">Theme_vX.X.zip</em> to <strong>the root directory of your magento</strong>
+				<li>Unzip <em class="dfn-code">Theme_v.X.X.zip</em></li>
+				<li>If your FTP client doesn't allow to unzip files on server then upload and unzip theme .zip files using CPanel:<br /><br /><img class="content-img" src="library/img/cpanel-unzip.png" />
+				</li>
+					<div class="note-2">Despite the fact that the .zip file contains the same folders as magento none of the magento core file will be overridden. It was made with the aim to make upload process easier</div>
+					<li>
+						<ul>
+							<li>Bizarre theme was developed based on magento 1.9.x.x version. If you are running store on that magento version, you have just upload folders from the Theme folder</li> 
+							<li>If you are running store on magento 1.7.x.x after uploading of theme files, open theme package navigate to <em class="dfn-code">Theme Files -> Patch for magento 1.7.x.x.</em> and move founded folder to the root of your magento</li>
+							<li>If you are running store on magento 1.8.0.0 after uploading of theme files, open theme package navigate to <em class="dfn-code">Theme Files -> Patch for magento 1.8.0.0.</em> and move founded folder to the root of your magento</li>
+							<li>If you are running store on magento 1.8.1.0 after uploading of theme files, open theme package navigate to <em class="dfn-code">Theme Files -> Patch for magento 1.8.1.0.</em> and move founded folder to the root of your magento</li>
+						</ul>
+					</li>
+					<li>Set correct file permissions for uploaded folders. File permissions depend on server settings. If you have any doubts about file permissions, please sent request to your hosting provider. More info about file permissions you can find here <a target="_blank" href="http://www.magentocommerce.com/wiki/1_-_installation_and_configuration/magento_filesystem_permissions">Magento WIKI: Filesystem permission</a></li>
+					<li>Log in to magento admin panel</li>
+				</ol>
+				<h3 id="theme-installation" class="sub-title">Install the theme</h3>
+				<p>There are two ways how you can get the theme installed and configured</p>
+				<h4>Using "1 Click Installation" feature</h4>
+				<p>This feature allows you to get your store installed and configured in a few clicks but we <strong>do not recommend using it on live stores</strong> because you can lose content of your homepage or/and static blocks. This feature is provided only for testing the theme on a test server. To install theme using this feature go to <em class="dfn-code">Meigee -> Bizarre -> Activate Theme</em>. In that menu you can mark 2 checkbox in order all static blocks and pages were created automatically and choose store for which theme should be applied. Be aware that if you already created some static blocks or home page with your own content they will be replaced with theme static content in case ID of your blocks and page will match predefined static blocks and pages. After you configured installation page you just need to activate theme by clicking on the activation button: the cache will be cleared and you will be logout automatically. </p>
+				<h4>Manual Installation</h4>
+				<p>This is the only right way of theme's installation if you prefer to install it on live store</p>
+				<ol>
+					<li>Go to <em class="dfn-code">System -> Configuration -> Design</em> page of your admin panel and set the field "Current Package Name" as <strong>bizarre</strong>. Click <strong>Save Config</strong> button</li>
+					<li><a href="#statics">Import static blocks and pages</a></li>
+					<li>Upload media folder from <em class="dfn-code">Sources/demo images</em> to the root of your magento. Please notice that real images from preview are not included in the package due to licensing restrictions so are replaced with blank ones</li>
+				</ol>
+				<h3 class="sub-title">Known problems with installation</h3>
+				
+				If you get any problems with theme's installation first of all make sure that you have followed all steps indicated in <a href="#prepare-magento">"Prepare your magento"</a> section. <br /><br />
+				<div class="note-2" id="installation-issues">
+					<p><strong>404 Not Found when trying to open theme configuration page</strong><br />
+					<em>Solution:</em> It's pretty common issue. Just clear all the magento cache then logout from the admin panel and login again</p>
+					<strong>"Package with this name does not exist and cannot be set" error when setting the package name</strong><br />
+					<em>Solution 1.</em> Make sure you have uploaded the theme files in the correct way. Note that folders structure of uploaded files must match to the structure of files in downloaded package.</em><br/>
+					<em>Solution 2.</em> Check if you have set correct file permissions<br/>
+				</div>
+			</div>
+			<div id="general_options" class="post">
+				<h2 class="section-title">Theme Options</h2><br /><br />
+				<p>If theme installed correctly you will see free-standing module with several options in admin panel. Let's take a look at every menu option of the module.</p>
+				<p><strong>General options</strong> menu consist of next sections:</p>
+				<ul>
+					<li><strong><em>Design</em></strong> this option defines the design scheme (vertical tabs: Theme Design, Theme Design - skin1, Theme Design - skin2 etc..) which will be active. If you choose here for example Theme Design - skin1, but will work in Theme Design - skin2 vertical tab, the changes won't be saved. More detailed about subtheme configuration you will read in section <a href="#subthemes">Pre-defined subthemes</a> of this documentation</li><br />
+					<li><strong><em>Retina Ready</em></strong> that submenu enables retina ready feature. Be aware that if Retina Ready option is enabled you have to upload your retina ready images for the images which are used in static content and indicate the path for them (i.e. data-srcX2="{{media url="your_media_folder/your_retina_ready_image_img@x2.jpg"}}) otherwise your clients will see nothing on their mobile devices with retina displays. Retina version of images are created automatically for the product images, so no need to upload different version of product image - just upload the image with the highest resolution</li><br />
+					<li><strong><em>Layout</em></strong> here you can choose wide or boxed website layout, enable responsiveness of your e-commerce store and define style of my cart page (accordion or simple list). More detailed about shopping cart you can read in section <a href="#shopping-cart">Shopping cart page</a> of current documentation </li><br />
+					<li><strong><em>Header</em></strong> this menu allows you to activate sticky header. Header menu also allows you to add or remove such elements as cart, search box, small store logo and navigation menu from the sticky header. Same here you can decide on which devices sticky header will display those elements: you can show them on all devices or only on desktop. Keep in mind that if the navigation menu has many top level categories, other elements will have lack of space. Under the header submenu you also can choose background for header. If "Part of 1st banner" is set then the 1st banner will be underneath the header. Colors won't be changed for the header in this case. This option available only for home page. On sub-pages skin color will be used. </li><br />
+					<li><strong><em>Custom Logo</em></strong> upload your logo image and retina logo here. Usual logo will appear on header, small logo will be displayed on sticky header and in header on mobile devices</li><br />
+					<li><strong><em>Top Links</em></strong> this subsection allows to make top links looking exactly as on default magento (simple list). If the default view mode of links is chosen then you can disable any of those link</li><br />
+					<li><strong><em>Top Cart options</em></strong> it is here you can display or hide next elements of top cart: product counter, top cart price, and text of top cart. At least one element should be active, otherwise all the top cart elements will be shown. Under this menu you also can enable option that will show top cart content on mouse over</li><br />
+					<li><strong><em>Footer</em></strong> in this subsection of theme options you can activate custom footer and indicate which exactly static block will be used as footer. To create footer with the same content as on demo version enable custom footer in theme options and paste static block's ID with footer content. Content for that static block you will find in <em class="dfn-code">Sources/Static Content/Blocks/bizarre_footer.txt</em></li><br />   
+					<li><strong><em>Newsletter</em></strong> here you can choose background for the newsletter block which is shown by default on home page above the footer block</li> <br />
+					<li><strong><em>Product Listing</em></strong> here you can choose position of sidebar (left or right), set quantity of products in 1 row (from 2 to 8) in grid view of category, and enable or disable such product toolbar elements as: Quick view, Product Name, Product Price, "Add to cart", "compare products" wishlist, "mail a friend", more views buttons. All these options except product names alignment can be applied globally or for specific category (Category Edit page -> tab Meigee/Layout)</li><br />
+					<li><strong><em>Product Images</em></strong> here you can choose type of product images displaying: "As is" option will display product images without any transition: the width is set in .phtml templates, the height is calculated automatically. "Keep the same height" option will display your products with the same height and keeping correct aspect ratio (spaces will be added if required). "Width and height" will allow you to choose one of predefined aspect ratios or set your own one. Be aware all these options will be applied to images of all products</li> <br />
+					<li><strong><em>Language Switcher</em></strong> allows you to choose display mode of language's choice and activate language label. To read more about creating multi language store you can in this thread: <a target="_blank"href="http://www.magentocommerce.com/boards/viewthread/7109/">Multilingual online shop</a> We included only a few flag icons, so if you do not see your flag icon you have to upload it to <em class="dfn-code">skin/frontend/bizarre/default/images/lang/</em> folder of your magento. Full list of flags with all available resolutions you can find here: <a target="_blank"href="https://www.iconfinder.com/iconsets/finalflags">flag images collection</a> - click on necessary image, choose correct format and size and download it to the folder above </li><br />
+					<li><strong><em>Currency Switcher</em></strong> allows you to choose display mode of currency's choice and activate currency label. To activate currency choice you have to add additional currency as allowed in <em class="dfn-code">System -> Configuration -> General -> Currency Setup</em> and set currency rates in <em class="dfn-code">System -> Currency Setup</em>. Same here you can choose icon symbol.</li> <br />
+					<li><strong><em>Fancybox</em></strong> this options enables customer to open product image in full size window. Available for home page, product listing, product page and for product which will be shown in footer. Do not forget to enable  fancybox icon in product widgets if you decide to use that option for products</span> </li><br />
+					<li><strong><em>Product Hover Effect</em></strong> will display another image on mouse over. To get this works you should enable this feature in theme options and also you will need to indicate hover image on product edit page in tab "Images". Add word "hover" to the Label field of the required image. Hover image and base image should be different. Hover image should NOT be excluded from the product gallery. Bizarre theme has 2 types of hover: default hover and hover with scale effect.</li><br />
+					<li><strong><em>Product Labels</em></strong> this menu enables displaying of labels "New", "Sale" and "Only X left" on product listings and product pages and same here you can manage labels' order and set 1 of 4 labels' view. This subsection also allow you to disable sale percentage on "Sale" label, word "sale" will be displayed in that case.<br/><em>Label "New"</em> will be shown in case if the product is marked as new on product edit page in field "Set Product as New from Date".<br/> <em>Label "Sale"</em> will be shown if the product is marked with special price on product edit page in tab "Prices". <br/><em>Label "Only X left"</em> will be shown if the stock level is equal or below the threshold specified in the admin panel. The threshold can be set in Only X left Threshold field in <em class="dfn-code">System -> Configuration -> Inventory</em>". Only X left" label will replace "Sale" label</li><br />
+					<li><strong><em>Other Options</em></strong> here you can enable "To Top" button</li><br />
+					<li><strong><em>Login Ajax</em></strong> by enabling this function you give you customer opportunity to login on any page without annoying page reloading</li><br />
+					<li><strong><em>Popup content</em></strong> here you can enable popup with static content which will be shown customers when they visit your store. You can add any static content to that popup. To create popup with the same content as on demo version enable popup in theme options and paste static block's ID with popup content. Content for that static block you will find in <em class="dfn-code">Sources/Static Content/Blocks/bizarre_popup_content.txt</em>. Also here you can choose where that popup should be displayed (only on home page or on all pages), set width and height of the popup window and decide if you want to display popup on mobile and tablet devices. Same here you can set period in days after which popup will be shown again if customer has already subscribed or chosen option "Don't show this popup again". Set from 1 to infinite.</li><br />
+					<li><strong><em>Contact Map</em></strong> here you can setup location of your store that will be shown on google map. Additionally, you can add more information about your store location by enabling static block with detailed store information. To create info block with the same content as on demo version enable info block in "Details block status" dropdown list and paste the ID of static block content of which you will find in the <em class="dfn-code">Sources/Static Content/Blocks/bizarre_contact_map_block.txt</em> file. You can choose one of four available position for that block and set size of that block under that theme option</li>
+				</ul><br/>
+				<p><strong>Theme Design</strong> menu has several submenus: </p>
+				<ul>
+					<li><strong><em>Options</em></strong> this menu allow to choose where the design changes will be saved. If chosen "bizarre/default" - default file will be replaced!</li>
+					<li><strong><em>Appearance</em></strong> it is here you can choose your favourite google font and desirable background pattern. We included only the most popular fonts to the theme. If you do not see your favourite font which are available in Google fonts library then go to <em class="dfn-code">app/code/local/Meigee/ThemeOptionsBizarre/Model/Gfont.php</em> and add the name of your font to the list of existing fonts in alphabetical order. Save changes, flush the cache and your font will appear in list of Gfonts. Name of gogle fonts you will find on <a target="_blank" href="http://www.google.com/fonts/">this page</a>.  </li>
+					<li><strong><em>Icons</em></strong> options under this menu allow to choose favourite Awesome icons that will replace existing ones.</li>
+					<li><strong><em>Base colors</em></strong> there are 3 base colors that you can change in this menu. Keep in mind that if the option "Override Base Colors" is set "Disable" the colors under this submenu only will be applied to website elements. After setting "Enable" for that option you will be able to change all other colors under next following submenus. In order not to lost the data with colors we recommend to create your own subtheme. More detailed information you will find in section <a href="#customization">Customization</a>  of this documentation</li>
+					<li><strong><em>Category labels</em></strong> allows you to change category label colors. You can define 3 different color schemes for labels</li>
+					<li><strong><em>Header</em></strong> colors for account block, switchers, search bar, text and header background colors can be changes here</li>
+					<li><strong><em>Header slider</em></strong> change colors of header slider elements by changing color options under this subsection</li>
+					<li><strong><em>Menu</em></strong> here we collected options that allow to change colors of the menu elements</li>
+					<li><strong><em>Content</em></strong> these options allows to change colors that are related to category listing (pager, toolbar, other page elements)</li>
+					<li><strong><em>Buttons</em></strong> colors for text of the buttons, buttons' background and borders of all buttons you can change here </li>
+					<li><strong><em>Products</em></strong> here you can change colors that concerns products and also product labels (new and on sale)</li>
+					<li><strong><em>Social Links</em></strong> all that concerns social links in the bottom of website can be changed here</li>
+					<li><strong><em>Footer</em></strong> almost every element in footer can have its own color. Set those colors here</li>
+				</ul>
+				Theme design options could be applied for several subthemes. Each design scheme will be applied for store with appropriate subtheme name. More detailed about subtheme configuration you will read in section <a href="#subthemes">Pre-defined subthemes</a> of this documentation. <br/><br/>
+				<p id="product-page-options"><strong>Product page</strong> menu has next subsections:</p>
+				<ul>
+					<li><strong><em>General</em></strong>
+						<ul>
+							<li><strong><em>Product SKU</em></strong> show or hide product SKU on product page. SKU will be displayed under the product title</li>
+							<li><strong><em>Prev and Next product buttons</em></strong> display those buttons in order your customers can move between products within a category just in one click</li>
+							<li><strong><em>More views block</em></strong> this option allow to display additional images of your product in slider or list mode. Slider will work if product has 4+ images</li> 
+							<li><strong><em>Related block position</em></strong> manage position of the block with related products: related product could be shown under the collateral block or in sidebar. Sidebar should be chosen as left or right in layout subsection of Product page options. If you choose sidebar position you will be able to set Related block view mode (large product image, small product image)</li>
+							<li><strong><em>Related products block</em></strong> choose how to display related products block in this option: slider and list are available for this option. Slider option will work if product has 5+ related products</li>
+						</ul>
+					</li><br/>
+					<li><strong><em>Layout</em></strong>
+						<ul> 
+							<li><strong><em>Product Page layout</em></strong> choose appropriate ratio of product images and description: 4 variants are available in this section</li>
+							<li><strong><em>Product Page Sidebar</em></strong> activate and choose position of sidebar on product page here. Enabled static block with id "bizarre_product_banner" and related product block may be shown in sidebar. To add product sidebar with the same content as on demo version please set sidebar position as "Left" or "Right" and create static block with id "bizarre_product_banner". Content for that static block you will find in <em class="dfn-code">Sources/Static Content/Blocks/bizarre_product_banner.txt</em> </li> 
+							<li><strong><em>Collateral block</em></strong> this option allows to choose one of four display modes of that block</li>
+							<li><strong><em>Collateral block position</em></strong> here you can manage position of collateral block. We do not recommend to put collateral block into details column on some of product page layouts due to limited space</li>
+						</ul>
+					</li><br/>
+					<li><strong><em>Brand logo image</em></strong> keep in mind that in order the options below works correctly you have to set proper options of manufacturer attribute. Screenshot with correct settings of manufacturer attribute you can find in <a href="#brands-showcase">Brand showcase section</a> of this documentation.
+						<ul> 
+							<li><strong><em>Product Brand Image</em></strong> this option shows or hides brand logo image on the product page. Make sure that your products are assigned to the brands</li>
+							<li><strong><em>Brand Image Format</em></strong> choose the brand logo image format(png, jpg, gif). Keep in mind that all images should have same format</li>
+							<li><strong><em>Link to brand search</em></strong> here you can make the brand logo image on product page click-able and forwarding to the search page with all products of appropriate brand</li> 
+							<li><strong><em>Link target blank</em></strong> search page will open in new browser tab if you choose yes </li> 
+							<li><strong><em>Brand Image Position</em></strong> manage position of brand logo image: it could be displayed in the product details column or in sidebar. If you set sidebar make sure that sidebar is chosen as left or right in layout subsection of Product page options</li>
+						</ul>
+					</li><br/>
+					<li><strong><em>Additional content on product page</em></strong> under this tab you can set static content to be shown on a product page.
+						<ul>
+							<li><strong>Under product description</strong>. Here you can display static content under product description</li>
+							<li><strong>Products Tabs</strong>. Here you can add additional tabs with static content into product tabs.</li>
+							<li><strong>"Related" static block</strong>. Here you can replace related products block with any static content.</li>
+						</ul>
+					</li><br/>
+					<li><strong><em>Rich snippet</em></strong> are designed to summarize the content of a page in a way that makes it even easier for users to understand what the page is about in search results. Under that subsection you can decide what elements of product page you want to display on search engines pages. <strong>Note</strong>: it can take between 2 - 8 weeks until search engine will show Rich Snippets for your pages, depending on the general ranking of your site, and other factors. 
+					</li>
+				</ul><br/>
+				<p><strong>Sidebar blocks</strong> menu allows you to show/hide next sidebars: Categories, Shop By, Shopping cart, Compare products, Compared products, Viewed products, Wishlist, Popular tags, My orders, Newsletter. Same here you can choose display type of such sidebar blocks as "Categories" and "Wishlist". Probably you will not see "Shop by" or "Categories" on front end after enabling them in admin panel. The solution is described in our FAQ <a target="_blank" href="http://meigeeteam.com/faq/#toggle-id-21">Sidebar blocks</a>. More information about sidebar you will find in section <a href="#sidebar">"Sidebar"</a> of documentation. </p>
+				<p><strong>Background slider </strong> we recommend to use this slider along with boxed layout. You can add up to 5 background images and set fade and duration in background slider options</p>
+				<p>All theme options can be reverted to default values by using "Clear Configuration" options of "Restore defaults" menu <em class="dfn-code">Meigee -> Bizarre -> Restore defaults</em>. In that menu you can choose what exactly you want to restore or fully deactivate theme. </p>
+			</div>
+			<div id="statics" class="post">
+				<h2 class="section-title">Static Blocks and Pages</h2><br /><br />
+				<p>This theme has some predefined static blocks which must be installed manually if you don't want to use <a href="#installation">1 Click Installation</a>.</p>
+				<h4>Import CMS Pages</h4>
+				<p>All used pages you can find under <em class="dfn-code">Sources/Static Content/Pages</em>, where &lt;FILE NAME&gt; - id of page, &lt;FILE CONTENT&gt; - content of page. Your pages may have any title. To create the homepage with same content as on demo please refer to <a href="#homepage">Home Page</a> chapter of this guide.</p>
+				<h4>Import Static Blocks</h4>
+				<p>All used static blocks you can find under <em class="dfn-code">Sources/Static Content/Blocks</em>, where &lt;FILE NAME&gt; - id of static block, &lt;FILE CONTENT&gt; - content of static block. Your static blocks may have any title</p>
+				<p>More info about all of predefined static blocks and pages you may find in appropriate sections of this guide.</p>
+			</div>
+			<div id="new_features" class="post">
+				<h2 class="section-title">What's new</h2><br /><br />
+				<p>This section of documenation is dedicated to short review of new features which were added in new theme versions. </p>
+				<p><strong>1.1 version</strong> contains next new features: 
+					<ul>
+					<li><strong>Skin 3 subtheme</strong> - we added new subtheme intended for food online ecommerce store in recent theme version. More detailed information about configuration of subthemes you will find in section <a href="#subthemes">Pre-defined subthemes</a> of current documentation</li><br />
+					<li><strong>Smart product widget</strong> - we made adding of product widget more easier in new theme version : you can configure product toolbar just clicking on toolbar element in order to remove it from the widget view: <br /><br /><img class="content-img" src="library/img/smart-widget.png" /><br /> Detailed information about widgets you will read in section <a href="#widgets">Widgets for pages and blocks</a> of current documentation</li><br />
+					<li><strong>Custom 404 pages</strong> - 404 page is what a user sees when they try to reach a non-existent page on your site (because they've clicked on a broken link, the page has been deleted, or they've mistyped a URL). While default magento 404 page is non-impressive and is out of theme design we added some styles in new theme version for that page so now it looks more attractive and guide them to a resource that will help them find more information on what they were looking for. More information about 404 page you will find in <a href="#404-page">Custom 404 page</a> section of current documentation. </li> <br />
+					<li><strong>Bestseller widget</strong> - we added new widget which allow to show best selling products for your online store. Displaying of products using that widget is the same as adding of other product widget. More information about widgets you will find in section <a href="#widgets">Widgets for pages and blocks</a> of current documentation</li> <br />
+					<li><strong>Custom tabs widget</strong> - recent version contains that new feature which allow to show different content using tabs: <br /><br />
+					<img class="content-img" src="library/img/custom_tabs_widget.png" /> <br />
+					Detailed information about widgets you will read in section <a href="#widgets">Widgets for pages and blocks</a> of current documentation </li>
+					</ul>
+				<p><strong>1.2 version</strong> contains next new features: 
+					<ul>
+						<li><strong>Patch for magento 1.9.1.0</strong> - since new 1.9.1.0 version of magento was released, we made theme compatible with that version. Along with support of new magento version we also implemented support of configurable swatches - new magento functionality which allows to show options as icons instead of old dropdown. How to configure that options is described in <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/ee1141-ce191-configurable-swatches">Configurable Swatches Guide for Magento CE 1.9.1</a> Configurable swatches are available in Magento 1.9.1 or later <strong>only</strong></li><br />
+						<li><strong>Right-to-left ready-to-use design </strong> - we recoded default Bizarre theme and now you can use Bizarre theme for your store with RTL design without additional codding: just enable that design in <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Theme appearance -> Layout</em> </li><br />
+						<li><strong>Improved Google map </strong> - we made some improvements so if you running skin5 design (Decor subtheme) please go to <em class="dfn-code">CMS -> Static blocks</em> open static block with ID <em class="dfn-code">bizarre_sk5_footer</em> find and replace the blockmap.phtml with the blockmap_wrapper.phtml</li>
+					</ul>
+				</p>
+			</div>
+			<div id="megamenu" class="post">
+				<h2 class="section-title">Mega Menu</h2><br /><br />
+				Using this theme you get two ways how your menu can be displayed: <strong>Default drop down menu</strong> or <strong>wide mega menu</strong>. Mega menu is based on our own extension called "Categories Enhanced". To activate mega menu go to <em class="dfn-code">System -> Configuration -> Meigee Extensions</em> of your magento admin panel. <strong>By default mega menu is enabled</strong>.
+				<h3 class="sub-title">How magento handles category trees</h3>
+				<p>To create categories you need to go to <em class="dfn-code">Catalog -> Manage Categories</em><br />
+				The main point in creating categories in magento is that:</p>
+				<p class="note-2">All categories must be set as subcategories for <strong>the root category</strong>. Each store must have one root category.</p>
+				<table>
+					<tr>
+					<td style="padding-right:20px;">Correct way:<br /><img class="content-img" src="library/img/categories_tree.png" /></td>
+					<td>Wrong way:<br /><img class="content-img" src="library/img/wrong_categories_tree.png" /></td>
+					</tr>
+				</table><br />
+				<p>More info regarding creating magento categories you can find there:<br />
+				<a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/tutorial-creating-and-managing-categories">Tutorial: Creating and Managing Categories</a><br />
+				<a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/creating-categories">Creating Categories</a></p>
+				<h3 class="sub-title">How to create your own megamenu content</h3>
+				<p>After installing our theme you can see new tab on your categories edit page <em class="dfn-code">Catalog -> Manage Categories</em> called <strong>Meigee/Enhanced Categories</strong></p>
+				<table>
+					<tr>
+					<td style="width:43%; padding-right:20px;"><img class="content-img" src="library/img/megamenu.png" /></td>
+					<td><p>Here it is typical structure of the mega menu you can create without any coding.</p>
+					<p>You can set <span style="text-transform:uppercase;">right content</span> only for <strong>top level category</strong> and it will be displayed right after subcategories<br /><br />
+					<span style="text-transform:uppercase;">Top content</span> set for <strong>top level category</strong> will be displayed right after subcategories<br />
+					<span style="text-transform:uppercase;">Top content</span> set for <strong>second level category</strong> will be displayed above this category title<br />
+					<span style="text-transform:uppercase;">Bottom content</span> set for <strong>top level category</strong> will be displayed under subcategories<br />
+					<span style="text-transform:uppercase;">Bottom content</span> set for <strong>second level category</strong> will be displayed under this category title<br />
+					</p></td>
+					</tr>
+				</table><br />
+				<p>Content used for demo category you can find in <em class="dfn-code">Sources/Static Content/default/Mega menu/category_content.txt</em>. Open it in your favourite text editor and copy content and paste it into the appropriate fields of Meigee/Enchanced category tab on category edit page.<br/> 
+				You can choose type of menu (wide or just list of subcategories) for each top level category. Menu Type switcher you will find under the <em class="dfn-code"> Catalog -> Manage categories -> Category edit page -> Meigee/Enchanced category</em>.
+                Also you can choose quantity of categories that will be shown in 1 row of megamenu. To set that quantity go to <em class="dfn-code">System -> Configuration -> Categories Enhanced -> Options -> Drop Down Menu Columns Count</em> and set desired quantity. If quantity of categories in 1 row will be less than set value then they will fill all the space of megamenu. Example: if set 3 subcategories in 1 row and you have 5 subcategories, then first menu row will have 3 subcategories and second row will be divided in 2 equal parts for remaining subcategories. That options works <strong>only</strong> for top level categories.</p>     
+				<h3 class="sub-title">Adding custom link to navigation menu  </h3>
+				<ol>
+					<li>Create one more category <em class="dfn-code">Catalog-> Manage Categories</em></li>
+					<li>Go to "Meigee/Enhanced Categories" tab of this category </li>
+					<li>Find "Custom Link" option there
+						<ol>
+							<li>Use 'http://' to create external link</li>
+							<li>Use '/' to create link to the home page</li>
+							<li>Use '#' to disable the link</li>
+						</ol>
+					</li>
+					<li>Save changes refresh page and check results</li>
+				</ol>
+				<h3 class="sub-title">Adding categories labels</h3>
+				<p>You can simply set custom labels in the <strong>Meigee/Enhanced Categories</strong> tab of a category edit page.</p>
+				<p><strong>Available options:</strong><br/>
+				<em class="dfn-code">Category Label</em> - Choose one of 3 available labels. <br/>
+				<em class="dfn-code">Label Text</em> - Set text for the label</p>
+				<p>To change labels color go to <em class="dfn-code">Meigee -> Bizarre -> Theme Options vX.X -> Design Options -> Category Labels</em> where you can generate a .css file with your own custom colors</p>
+				<h3 class="sub-title">Adding top level category image</h3>
+				<p>For every <strong>top level</strong> category you can add custom image which will be shown in the megamenu as background wrapper. You can choose 4 variants of image location on the category edit page under the <strong>Meigee/Enhanced Categories</strong> tab.</p>
+			</div>
+			<div id="brands-showcase" class="post">
+				<h2 class="section-title">Brands Showcase</h2><br /><br />
+				<p>Customers when buy anything are mostly interested in the brands they are taking. Bizarre theme allows you to show favourite brands on any CMS page without any additional extensions. Theme also allows to show brand logo image on product page. Before displaying brand logo images in your store you have to go through several steps: 
+						<ol>
+							<li>Go to: <em class="dfn-code">Catalog -> Attributes > Manage Attribute Sets</em> click on "Default" set</li>
+							<li>
+							<p>Make sure that "Manufacturer" attribute is in "General" group:</p>
+							<img class="content-img" src="library/img/attributes_set.png" /><br/>If you do not have such attribute you have to create it in admin. More information about attributes you can find in <a target="blank" href="http://www.magentocommerce.com/wiki/welcome_to_the_magento_user_s_guide/chapter_3#attributes">magento guide</a></li>
+							<li>Go to: <em class="dfn-code">Catalog -> Attributes -> Manage Attributes</em> click on "Manufacturer" from attribute list and go to the "Manage Label / Options" tab</li>
+							<li>
+								Make "Manufacturer" attribute options looking the same as on a following screenshot: <br /><img class="content-img" src="library/img/manufacturer_attribute_option.png" />
+							</li>
+							<li>
+								<p>Fill in option fields with your brand names and save the attribute:</p>
+								<img class="content-img" src="library/img/attribute_options.png" /></li>
+							<li>
+								Create logo images of your brands with the same names as you set in the previous step. <strong>If you use different names for each store view you have (English, German, Spanish, etc...) you need create images with all of those names.</strong> We recommend to create logo images with same proportions.
+							</li>
+							<li>Create images for retina ready devices by following rules described in the previous step but with adding @x2. Example: Indigo@x2.png</li>
+							<li>
+								Put those images to <em class="dfn-code">media/brands</em> folder of your magento. If you do not have that folder, you have to create it. 
+							</li>
+						</ol>
+						After these steps, you can easily display brand logo images using our widget "Brands Showcase" on any CMS page, or show brand logo image on product page. Widget settings that allow to add brands showcase on cms page you will find in subsection <a href="#brand-showcase-widget">Brand Showcase</a> of Widgets chapter. "Brand logo image" section of <a href="#product-page-options">product page options</a> will help you to display brand logo image on product page.  
+						</p>
+			</div>
+			<div id="widgets" class="post">
+				<h2 class="section-title">Widgets for Pages and Blocks</h2><br /><br />
+				The theme is equipped with a few ui widgets which allow you to display products and some other content on your CMS page and static blocks. To put one of our widgets into your page or static block you need to click on button "Insert widget" on the top of content editor.<br /><br />
+				<img class="content-img" src="library/img/widget-usage.png" /><br /><br />				
+				Next widgets are available in Bizarre theme: <br /><br />
+				<ul>
+					<li><strong>Featured category Extended</strong> - shows products from specific category</li>
+					<li><strong>New products Extended</strong> - shows products which are marked as new products</li>
+					<li><strong>On Sale products Extended</strong> - shows products which are marked as products with special prices</li>
+					<li><strong>Bestsellers products Extended</strong> - shows products which were sold the most</li>
+				</ul>
+					All product widgets has 5 displaying modes: list, grid, slider, <a href=" http://masonry.desandro.com/">masonry grid</a> and footer list. All of those display types have option that allows to set amount of products that should be shown. While using grid display mode you can also set quantity of product in 1 row. Masonry grid has 4 options of displaying product description: hide or show description of all products, show description of odd-numbered products or symmetric products. List type allows you to choose ratio of product description and product image. Slider mode has additional options such as "amount of visible products" and auto slide feature. Footer list display mode showing small icon of products and by default is intended for using in footer. All widgets has options which allow to hide or display all product toolbar elements such as quick view, ratings, product names, product price etc. Widget id is auto generated field, so there is no need to fill it with data.  
+				<ul><br>
+					<li><strong>Custom tabs</strong> - widget which is used to show information of your several tabs in list mode. By default is used on home page for showing static blocks which contains featured category widgets. Name of static block is used for the title of list point. <br />
+					<img class="content-img" src="library/img/custom_tabs_widget.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p></li> 
+					<li><strong>Latest tweets</strong> - shows recent tweets of your tweeter account. To get it work you need fill fields Twitter username and twitter widget ID. How to find that ID you can read in this article: <a target="_blank" href="http://blog.topdevs.net/2013/06/19/where-to-find-twitter-widget-id/">Where to find Twitter widget ID?</a></li>
+					<li><strong>Facebook Like Box</strong> - shows your FB followers and can show latest FB posts</li>
+					<li><strong>Social links</strong> - adds links of your favourite social networking websites. If you want to add more social network icons than are included in theme (i.e. tumblr link) you have to make next several changes. Go to Awesome icon website to the <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/#brand">Brand section</a> and copy the icon name (i.e. tumblr) without "fa-" prefix. Then go to   
+					<em class="dfn-code">app/code/local/Meigee/MeigeewidgetsBizarre/etc/widget.xml</em> find string with value "&lt;/instagram&gt;" and insert after it next code:<br /><br />
+					<pre>&lt;<strong>your_icon_name</strong> translate=&quot;label&quot;&gt; <br/>	&lt;label&gt;<strong>Your_icon_name</strong>&lt;/label&gt;<br/>	&lt;type&gt;text&lt;/type&gt;<br/>	&lt;visible&gt;1&lt;/visible&gt;<br/>	&lt;sort_order&gt;11&lt;/sort_order&gt;<br/>	&lt;description&gt;Example: http://your_social_network_website_link/ (Leave empty to hide)&lt;/description&gt;	<br/>&lt;/<strong>your_icon_name</strong>&gt;</pre>
+					Save changes in file. Next step is to go to <em class="dfn-code">app/design/frontend/bizarre/default/template/meigee/meigeewidgetsbizarre/sociallinks.phtml</em> and before &quot;echo '&lt;/ul&gt;';" insert next code snippet:<br/><br/>  <pre>if (!empty($html['<strong>your_icon_name</strong>'])) echo '&lt;li&gt;&lt;a class=&quot;<strong>your_icon_name</strong>&quot; href=&quot;'.$html['<strong>your_icon_name</strong>'].'&quot;&gt;&lt;i class=&quot;fa fa-<strong>your_icon_name</strong>&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;';</pre> After all changes were saved, flush all the cache and the field for new icon will appear in widget options and you'll be able to display icon of your favourite social website in frontend of your store.  
+ 					<li id="brand-showcase-widget"><strong>Brands Showcase</strong> - shows logo images of selected manufacturers on any cms page. In this widget options you can choose what brands you want to show, display mode of showcase (slider or simple list), select format of your brands logo images and make that logos click-able. Be aware when you choose "slider" option, it will work only if the sum width of your brand images is greater than 1252px, otherwise slider won't run.
+					</li><br/>
+				<h3 class="sub-title">Known problems with widgets</h3>
+				<div class="note-2" id="widgets-issues">
+					<strong>Brand logo images aren't displayed after adding them via widget</strong><br /><br />
+					<em>Solution 1.</em> Check if brand logo image is created and exist in <em class="dfn-code">media/brands</em> folder of your magento <br/>
+					<em>Solution 2.</em> Check your brand logo image file name and name of brand in admin (<em class="dfn-code">Catalog -> Attributes -> Manage Attributes -> Manage Label / Options</em>). They <strong>must</strong> match. <br/>
+					<em>Solution 3.</em> Check if format of files matches the format of file. It <strong>must</strong> match. All brand logo images <strong>must</strong> have same format<br/>
+				</div>
+				</ul>
+			</div>
+			<div id="revolution_slider" class="post">
+				<h2 class="section-title">Revolution Slider</h2><br /><br />
+				<p>Bizzare theme comes with pre-installed revolution slider + drag'n drop admin extension.</p>
+				<h3 class="sub-title">Documentations</h3>
+				<p>Since we are not developers of the jQuery plugin and magento extension we do not provide support for them. Slider documentations can be found under <em class="dfn-code">Third Party Extensions Docs</em> directory of the downloaded theme package</p>
+				<div class="note-2">Both jQuery and magento extension are installed in our theme so you don't need to download/install them separately. Just <a href="#installation">install</a> this theme to get revolution slider working.</div>
+				<h3 class="sub-title">How to get the same look of revolution slider as on the demo?</h3>
+				<p>
+					<ol>
+						<li> Provided dump with demo store settings includes configured revolution sliders. So install the dump on your store and just play with it locally to learn how it works</li>
+						<li>If you installed magento from the scratch then you can import demo sliders using revolution slider functionality: go to <em class="dfn-code">AM -> AM Revolution slider -> Import</em> and choose the necessary slider from the <em class="dfn-code">Sources/demo/Revolution demo sliders</em>. After the slider was imported follow the instructions bellow in order to set the location of slider</li> 
+					</ol></p>
+				<h3 class="sub-title">How to set position of created revolution slider?</h3>
+				<p>When you have created slider you need to follow next steps to set the position where your slider will be shown:</p>
+				<ol>
+					<li>Go to "CMS -> Widgets" and add new widget instance</li>
+					<li>
+					Set widget instance settings:<br />
+					Type: <strong>Am Revolution Slider</strong><br />
+					Design Package/Theme: <strong>bizarre / default</strong><br />
+					and click on continue button
+					</li>
+					<li>In a "Widget Options" vertical tab set the ID of you created slider.</li>
+					<li>
+					In a "Frontend Properties" vertical tab set "Widget Instance Title" and assign to stores where you want it to be displayed. Then you need to add at least one layout update on which pages and in which blocks your slider will be displayed.<br/><br/>
+					<h4>On the demo we used following positions:</h4>
+					Display On: <strong>Specified Page: CMS Home Page</strong>, Block Reference:  <strong>Page Header</strong> - is used for the header slider (Please note that you should disable <a href="#headerslider">iOS slider</a> if you want to replace it with the revolution slider)<br /><br />
+					Display On: <strong>Anchor Categories</strong>, Block Reference:  <strong>Under Category Title</strong> - is used for listing banners above products<br /><br />
+					Display On: <strong>All Pages</strong>, Block Reference:  <strong>Sidebar Banner</strong> - is used for sidebar banners<br /><br />
+
+					</li>
+				</ol>
+				<h3 class="sub-title">Known problems with revolution slider</h3>
+				<div class="note-2" id="revslider-issues">
+				<strong>After adding Revolution Slider theme features are not working</strong><br /><br />
+					<em>Solution</em> Disable jQuery for each slider you have got there <em class="dfn-code">Am -> Am Revolution Slider -> Manage Slider -> Your_Slider_Name -> Troubleshooting vertical tab</em>
+				</div>
+			</div>
+			<div id="blog_extension" class="post">
+				<h2 class="section-title">Blog Extension</h2><br /><br />
+				This theme is optimized for blog extension developed by <a target="_blank" href="http://www.magentocommerce.com/magento-connect/blog-community-edition-by-aheadworks.html">aheadWorks</a>. This extension isn't installed by default so you have to follow a few next steps to get it working.
+				<h3 class="sub-title">How to install</h3>
+				<ol>
+					<li>Refresh and disable all magento cache</li>
+					<li>Please read <a target="_blank" href="https://www.magentocommerce.com/wiki/7_-_magento_connect/what_is_a_magento_connect_extension_key">What is a magento connect extension key</a></li>
+					<li>Go to <a target="_blank" href="http://www.magentocommerce.com/magento-connect/blog-community-edition-by-aheadworks.html">blog extension</a> page to get extension link for magento connect 2.0 and then install it</li>
+					<li>Upload <strong>aw_blog.zip</strong> to <strong>the root directory of your magento</strong> using your favorite FTP client. This .zip you can find in <em class="dfn-code">Sources -> Extensions</em> folder of downloaded package</li>
+					<li>Unzip it</li>
+					<li>Refresh magento admin page in your bowser</li>
+					<li>Log out from magento admin panel and log in again</li>
+				</ol>
+				<p>That's it! Your blog installed. Now you can add some posts to your blog play with available options</p>
+				<h3 class="sub-title">How to configure</h3>
+				<p>Since we didn't developed this extension we do not provide support for it, so please refer to the extension author with any questions you will have.</p>
+				<div class="note-2">
+					<ul>
+						<li>Since in our theme is used only left sidebar please go to <em class="dfn-code">Blog -> Settings -> Blog Settings Tab</em> and set <strong>"Page layout"</strong> option to <strong>"2 column with left bar"</strong></li>
+						<li>To add blog link to the navigation bar: create category with appropriate name, include it in navigation menu and in Custom link field on Meigee/Enchanced Category set path to your blog.</li>  
+						<li>To show latest post on home page go to <em class="dfn-code"CMS -> Pages -> Home page -> Content vertical tab</em>. Click on the "Insert widget" button and choose "Blog:Latest posts" widget. Configure widget's options and insert widget on page. Save changes, flush the cache and posts will appear on home page. </li> 
+						<li>To show only 3 strings of post description on the home page please insert your short description text information between tags: &lt;p class=&quot;truncated&quot;&gt;&lt;/p&gt; </li>
+					</ul>
+				</div>
+				<h3 class="sub-title" id="blog-issues">Known problems with blog</h3>
+				<div class="note-2"><strong>Blog page isn't shown in browser or seems broken </strong><br />
+				<em>Solution</em> Make sure you have unzipped extension files correct way. All folders and files of this extension must be in appropriate directories of your magento. If you see <strong>aw_blog</strong> folder in the root of your magento you uploaded/unzipped it wrong way. <br />
+				<strong>Blog link doesn't work in different store view (i.e. language)</strong><br />
+				<em>Solution</em> If you are running multilanguage store, then in Custom link field of blog category you have to set path to the blog considering language path for each store (i.e. /english/blog)</div>
+			</div>
+			<div id="extensions" class="post">
+				<h2 class="section-title">Pre installed third party extensions</h2><br /><br />
+				<p>This theme comes with some pre-installed extensions:<br/>
+				<a target="_blank" href="http://www.iwdextensions.com/magento-one-step-checkout-module.html">IWD/OnepageCheckout</a> - One Step/Page Checkout<br/>
+				<a target="_blank" href="http://www.magentocommerce.com/magento-connect/magehouse-free-ajax-layered-navigation-toolbar-with-price-slider-2-2-0.html">Magehouse/Slider</a> - Ajax Layered Navigation with Price Slider<br/>
+				<a target="_blank" href="https://www.meanbee.com/magento-extensions/meanbee-tinymce.html">Meanbee/Tinymce5</a> - Add HTML 5 compatibility to the Magento WYSIWYG editor.<br/>
+				<a target="_blank" href="http://www.magentocommerce.com/magento-connect/vs-ajax-add-to-cart-add-to-wishlist-add-to-compare-paging-toolbar.html">VS/Ajax</a> - VS Ajax- Add To Cart, Add To Wishlist, Add to Compare, Paging, Toolbar<br/>
+				<a target="_blank" href="http://www.magentocommerce.com/magento-connect/strategery-infinitescroll.html">Strategery - InfiniteScroll</a> - Infinity Scroll</p>
+				Below we tried to describe in a few words options of that extensions, the more detailed information about options you can get by reading the extensions promo pages or by addressing questions directly to developers of extensions.<br/><br/>
+				<strong>IWD one page checkout</strong> has next options: 
+				<ul>
+					<li><strong><em>Global</em></strong> here you will see the version of module and activate the module. Same here you can change the title of checkout page</li>
+					<li><strong><em>Default settings</em></strong> under this submenu you can choose default payment method and decide if you want to show shipping address form, newsletter block and comment field on checkout page. Same here you can choose the display mode of terms and conditions box. Besides activating of Terms and Conditions here you also have to create Terms and Conditions information in magento admin panel under <em class="dfn-code">Sales -> Terms and Conditions</em> menu</li>
+					<li><strong><em>GeoIP</em></strong> function allows your customer not to fill such fields as country and city on onepage checkout, that fields will be auto filled based on IP of customer. Here you can activate that feature and indicate files which helps to realize that feature. GeoIP files you can download directly from magento admin by clicking on button "Download" below the filename fields</li>
+					<li><strong><em>Paypal Express lightbox</em></strong> submenu allows you to enable the Paypal lightbox</li>  
+					<li><strong><em>Log in with Paypal</em></strong> here you can configure the access using your Paypal account data</li>
+				</ul>
+				<strong>Magehouse price slider</strong> consists of next submenus: 
+				<ul>
+					<li><strong><em>Settings</em></strong> let you activate price slider. Dropdown lists "Include Jquery" and "Include Jquery UI" should be leaved with default values in order store with installed theme works correctly. By default "Include Jquery" should be set as "No" and "Include Jquery UI" as "Yes"</li>    
+					<li><strong><em>Price Slider Configuration</em></strong> here you find options that allow to customize your price slider by applying custom colors and other styles</li>
+					<li><strong><em>Ajax Configuration</em></strong> in this submenu ajax options are gathered all together. Ajax for toolbar should be turned off since there is another Ajax extension included in theme which is used for that. All other options are self-explanatory and don't require detailed description</li>
+				</ul>
+				<strong>VS Ajax</strong> has next functional options: <strong><em>Ajax for add to wishlist/compare button</strong></em> - this options can be applied to the category and/or for product page, <strong><em>Ajax for add to cart button</strong></em> - option that enables ajax add to cart button on product page as well on category page and quick view on category page. Last option of this extension is <strong><em>Ajax for toolbar/paging</strong></em> that has only 1 option of activating. <br/><br/>
+				<strong>Strategery - InfiniteScroll</strong> has next options: 
+				<ul>
+					<li><strong><em>General</em></strong> here you can just activate infinity scroll</li>    
+					<li><strong><em>Instances</em></strong> under this subsection you can enable/disable infinity scroll for category listing pages and on search pages</li>
+					<li><strong><em>Selectors</em></strong> this menu allow to set class of selectors. We already configured it, so we do not recommend to change any fields here. </li>  
+					<li><strong><em>Design</em></strong> here you can hide toolbar, set buffer zone and configure "Load more" button</li>
+				</ul>
+				<div class="note">We do not provide support for these extensions. Please contact to authors of these extensions with any issues</div>
+			</div>
+			<div id="homepage" class="post">
+				<h2 class="section-title">Home Page</h2><br /><br />
+				<p>
+				To create home page with same content as on demo you need to go to <em class="dfn-code">CMS -> Pages</em> and open the active home page <br/>
+				<img class="content-img" src="library/img/admin_pages.png" /><br/><br/>
+				Go to the "Design" tab and set "1 Column" layout.<br/>
+				<img class="content-img" src="library/img/admin_home_layout.png" /><br/><br/>
+				Go to the downloaded package <em class="dfn-code">Bizarre Theme X.X/Sources/static content/pages/home.txt</em> and put content from that file into "Content" section in the admin panel.
+				<img class="content-img" src="library/img/admin_home_content.png" /><br/>
+				</p>
+				<h3 class="sub-title">Default home page blocks</h3>
+				<ul>
+					<li>
+						<h4>Header elements</h4>
+						<img class="content-img" src="library/img/header_elements.png" /><p><em>*Shown sshot was made based on default Bizarre theme. It probably will look differ if you are using Bizarre subtheme</em></p>
+						We added several elements in header most of which can be easily changed via admin options. Below is the list of those elements:
+						<ul>
+							<li><strong>Logo</strong> - you can change in <em class="dfn-code">Meigee -> Bizarre -> Theme options -> General options -> Custom Logo</em> section of theme admin options</li>
+							<li><strong>Contact phones</strong> - this is just static block with id <em class="dfn-code">bizarre_header_phone</em> which you will find under the <em class="dfn-code">CMS -> Static blocks</em></li>
+							<li><strong>Navigation bar</strong> - this is your category tree. All about configuration of categories you will find in <a href="#megamenu">Mega-menu</a> section of current documentation</li>
+							<li><strong>Language and currency switchers</strong> - this block will automaticllay appears after you add several language and stores. More about that you will read in <a href="#general_options">Theme options</a> section General options subsection of current documentation</li>
+							<li><strong>Customer Log in</strong> - button leads to the customer login page where your customers can create an account or login in your store. You can activate Ajax login (<em class="dfn-code"Meigee -> Bizarre -> Theme options -> General options -> Ajax login</em>)and your customer won't be annoyed with the page reloading</li>
+							<li><strong>Top Cart</strong> - theme admin options allow you to display several elements of cart: subtotal price, cart icon, "cart" text, recently added product counter. All that can be hidden or shown in <em class="dfn-code">Meigee -> Bizarre -> Theme options -> General options -> Top cart options</em> </li>
+							<li><strong>Search box</strong> - default magento search mechanism is used in Bizarre theme. If search doesn't show results, please read this <a href="http://optimiseblog.co.uk/search-not-working-or-products-not-displaying-correctly-on-magento-website/">article about default search settings and problems</a></li>
+						</ul>
+					</li><br /><br />
+					<li>
+						<h4>Header slider</h4>
+						Header slider in Bizarre theme is a custom module "Revolution slider". More detailed about its configuration you will find in the <a href="#revolution_slider">Revolution slider</a>. 
+					</li><br /><br />
+					<li>
+						<h4>Banners under the header slider</h4>
+						<img class="content-img" src="library/img/banners_under_header_slider.png" /><p><em>*Shown sshot was made based on default Bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Promo banners under the header slider are list of 3 images with promo text and links. All that content is located inside the &lt;div&gt; tags with grid classes. To read more about grid system please follow section <a href="#grid-system">Grid System</a>. All the banners has the scale and mouse-watching effect which can be applied to any image in static block by wrapping image with the class <em class="dfn-code">text-banner</em> 
+						Demo code which is used for those blocks is below: 
+						<pre>&lt;div class=&quot;home-banners&quot;&gt;<br/>	&lt;div class=&quot;grid_4 alpha text-banner&quot;&gt;<br/>		&lt;a href=&quot;#&quot; title=&quot;Text Banner&quot;&gt;&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_1.jpg&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_1@x2.jpg&quot;}}&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;<br/>		&lt;div class=&quot;text-banner-content&quot;&gt;<br/>			&lt;h2&gt;Triple Color Bowling Bag&lt;/h2&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;<br/>			&lt;a class=&quot;banner-link&quot; href=&quot;#&quot;&gt;Shop now &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_4 text-banner&quot;&gt;<br/>		&lt;a href=&quot;#&quot; title=&quot;Text Banner&quot;&gt;&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_2.jpg&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_2@x2.jpg&quot;}}&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;<br/>		&lt;div class=&quot;text-banner-content skin-2&quot;&gt;<br/>			&lt;h2&gt;Adventure City Urban Collection&lt;/h2&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;<br/>			&lt;a class=&quot;banner-link&quot; href=&quot;#&quot;&gt;Shop now &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_4 omega text-banner&quot;&gt;<br/>		&lt;a href=&quot;#&quot; title=&quot;Text Banner&quot;&gt;&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_3.jpg&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_3@x2.jpg&quot;}}&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;<br/>		&lt;div class=&quot;text-banner-content skin-3&quot;&gt;<br/>			&lt;h2&gt;20% sale&lt;/h2&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;<br/>			&lt;a class=&quot;banner-link&quot; href=&quot;#&quot;&gt;Shop now &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+					</li><br /><br />
+					<li>
+						<h4>Products on home page</h4>
+						Product are added on home page using widget. How to add products using widget is described in section <a href="#widgets">Widget for pages and static blocks</a>
+					</li><br /><br />
+					<li>
+						<h4>Category tabs</h4>
+						<img class="content-img" src="library/img/custom_tabs_widget.png" /><p><em>*Shown sshot was made based on default Bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Below is description of every string of code which is used for those tabs:<br/> <br/> 
+						Below is description of every string of code which is used for those tabs:<br/> <br/> 
+						<em class="dfn-code">&lt;div class=&quot;product-tabs-wrapper&quot;&gt;</em> - wrapper for category tabs (*required tag for tabs)<br />
+						<em class="dfn-code">&lt;div class=&quot;product-tabs-bg&quot;&gt;</em> - wrapper tag for category tabs background image (*required tag if you are using background image for that block)<br />
+						<em class="dfn-code">&lt;img src=&quot;{{media url=&quot;<strong>wysiwyg/your_category_tabs_background_image.jpg</strong>&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;<strong>wysiwyg/your_category_tabs_background_retina_image@x2.jpg</strong>&quot;}}&quot; alt=&quot;&quot; /&gt;</em> - category tabs background image<br />
+						<em class="dfn-code">&lt;/div&gt;</em> - wrapper tag for category tabs background image (*required tag if you are using background image for that block)<br />
+						<em class="dfn-code">&lt;header class=&quot;widget-title&quot;&gt;&lt;h2&gt;<strong>Your section title</strong>&lt;/h2&gt;&lt;/header&gt;</em> - Section title<br />
+						<em class="dfn-code"><strong>generated_code_of_Meigee_Bizarre_custom_tabs_widget</strong></em><br/>
+						<em class="dfn-code">&lt;/div&gt;</em> - wrapper for category tabs (*required tag for tabs)<br/> <br/> 
+						The end result your code should look like the code below: 
+						<pre>&lt;div class=&quot;product-tabs-wrapper&quot;&gt;<br/>	&lt;div class=&quot;product-tabs-bg&quot;&gt;<br/>		&lt;img src=&quot;{{media url=&quot;wysiwyg/products_tabs_bg.jpg&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/products_tabs_bg@x2.jpg&quot;}}&quot; alt=&quot;&quot; /&gt;<br/>	&lt;/div&gt;<br/>	&lt;header class=&quot;widget-title&quot;&gt;&lt;h2&gt;Best from our shop&lt;/h2&gt;&lt;/header&gt;<br/>	{{widget type=&quot;meigeewidgetsbizarre/tabs&quot; static_blocks=&quot;50,51,52&quot; template=&quot;meigee/meigeewidgetsbizarre/tabs.phtml&quot; buttons_pos=&quot;1&quot;}}<br/>&lt;/div&gt;</pre>
+					</li><br /><br />
+					<li>
+						<h4>Banners under the category tabs</h4>
+						<img class="content-img" src="library/img/banners_under_tabs.png" /><p><em>*Shown sshot was made based on default Bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Those banners are also list of images with the promo text and links. The code which is used for them is below: <pre>&lt;div class=&quot;home-banners-2&quot;&gt;<br/>	&lt;div class=&quot;grid_9 alpha&quot;&gt;<br/>		&lt;div class=&quot;banner&quot;&gt;<br/>			&lt;div class=&quot;banner-content&quot;&gt;<br/>				&lt;h2&gt;Get the theme installed and configured for free!&lt;/h2&gt;<br/>				&lt;p&gt;Installation of our theme is pretty easy, anyway if you&#x2019;ve got into any problems we can install it on your server absolutelly for free.&lt;/p&gt;<br/>				&lt;span class=&quot;label&quot;&gt;for free&lt;/span&gt;<br/>			&lt;/div&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_3 omega&quot;&gt;<br/>		&lt;div class=&quot;text-banner&quot;&gt;<br/>			&lt;span class=&quot;banner-title&quot;&gt;&lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;&lt;strong&gt;Address&lt;/strong&gt;&lt;/span&gt;<br/>			&lt;p&gt;Jersey City, NJ 07305, New York, USA&lt;/p&gt;<br/>			&lt;p&gt;Call Us : (555) 723-649-4920&lt;/p&gt;<br/>			&lt;p&gt;Email : &lt;a href=&quot;mailto:bizarre@info.com&quot;&gt;bizarre@info.com&lt;/a&gt;&lt;/p&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;hr class=&quot;indent-72 white-space&quot; /&gt;<br/>&lt;div class=&quot;home-text-banners&quot;&gt;<br/>	&lt;div class=&quot;grid_3 alpha&quot;&gt;<br/>		&lt;div class=&quot;text-banner-image&quot;&gt;<br/>			&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_img_1.png&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_img_1@x2.png&quot;}}&quot; alt=&quot;&quot; /&gt;<br/>		&lt;/div&gt;<br/>		&lt;div class=&quot;box&quot;&gt;<br/>			&lt;strong&gt;London&lt;/strong&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.&lt;/p&gt;<br/>			&lt;a href=&quot;#&quot;&gt;Read more&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_3&quot;&gt;<br/>		&lt;div class=&quot;text-banner-image&quot;&gt;<br/>			&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_img_2.png&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_img_2@x2.png&quot;}}&quot; alt=&quot;&quot; /&gt;<br/>		&lt;/div&gt;<br/>		&lt;div class=&quot;box&quot;&gt;<br/>			&lt;strong&gt;New York&lt;/strong&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.&lt;/p&gt;<br/>			&lt;a href=&quot;#&quot;&gt;Read more&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_3&quot;&gt;<br/>		&lt;div class=&quot;text-banner-image&quot;&gt;<br/>			&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_img_3.png&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_img_3@x2.png&quot;}}&quot; alt=&quot;&quot; /&gt;<br/>		&lt;/div&gt;<br/>		&lt;div class=&quot;box&quot;&gt;<br/>			&lt;strong&gt;Paris&lt;/strong&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.&lt;/p&gt;<br/>			&lt;a href=&quot;#&quot;&gt;Read more&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>	&lt;div class=&quot;grid_3 omega&quot;&gt;<br/>		&lt;div class=&quot;text-banner-image&quot;&gt;<br/>			&lt;img src=&quot;{{media url=&quot;wysiwyg/text_banner_img_4.png&quot;}}&quot; data-srcX2=&quot;{{media url=&quot;wysiwyg/text_banner_img_4@x2.png&quot;}}&quot; alt=&quot;&quot; /&gt;<br/>		&lt;/div&gt;<br/>		&lt;div class=&quot;box&quot;&gt;<br/>			&lt;strong&gt;Sydney&lt;/strong&gt;<br/>			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae augue a risus dapibus.&lt;/p&gt;<br/>			&lt;a href=&quot;#&quot;&gt;Read more&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br/>		&lt;/div&gt;<br/>	&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+					</li><br /><br />
+					<li>
+						<h4>Latest posts</h4>
+						<p>How to add latest post is described in section <a href="#blog_extension">"Blog extensions"</a> </p>
+					</li><br /><br />
+					<li>
+						<h4>Magento Blocks</h4>
+						<p>By default newsletter block <em class="dfn-code">{{block type="newsletter/subscribe" block_id="wide.newsletter" template="newsletter/wide_subscribe.phtml"}}</em> is optimized for the using on home page. You can add other magento blocks, but you will need to add some styles in order those blocks look nice. List of blocks that can be added just by pasting the code is below:<br /> <br /> 
+						<em class="dfn-code">{{block type="core/template" block_id="contactForm" template="contacts/form_footer.phtml"}}</em> - is used for contact from<br/>
+						<em class="dfn-code">{{block type="tag/popular" block_id="tags_popular" template="tag/popular.phtml"}}</em> - is used for popular tags<br/>
+						<em class="dfn-code">{{config path="design/footer/copyright"}}</em> - is used for copyright<br/>
+						<em class="dfn-code">{{block type="page/switch" block_id="store_switcher" template="page/switch/stores.phtml"}}</em> - is used for store switcher<br/></p>
+					</li>
+				</ul>
+
+				<h3 class="sub-title">CMS HTML Elements</h3>
+				<p>To organize static content of the home page you may use following code:</p>
+				<ul>
+					<li>
+						<h4>Titles</h4>
+						<em class="dfn-code">&lt;header class=&quot;widget-title&quot;&gt;&lt;h2&gt;content_title&lt;/h2&gt;&lt;/header&gt;</em> - is used for widgets' title
+					</li><br/><br/>
+					<li>
+						<h4>Dividers</h4>
+						<p><em class="dfn-code">&lt;hr class=&quot;<strong>indent-12</strong> <strong>invisible</strong>&quot; /&gt;</em> - invisible line wtih 1em space before and after it is used for dividers of blocks. That dividers can be dotted, dashed and solid. Also the space before and after those dividers can be changed by applying another class. All classes that can be used for dividers are described below (just replace highlighted text in above divider code with needed value):</p>
+							<ul id="dividers">
+								<li><em class="dfn-code">invisible</em> - will make the divider invisible</li>
+								<li><em class="dfn-code">solid</em> - will make divider solid</li>
+								<li><em class="dfn-code">dotted</em> - will make divider dotted</li>
+								<li><em class="dfn-code">dashed</em> - will make divider dashed</li>
+								<li><em class="dfn-code">indent-9</em> - will add .75em space before and after divider</li>
+								<li><em class="dfn-code">indent-12</em> - will add 1em space before and after divider</li>
+								<li><em class="dfn-code">indent-18</em> - will add 1.5em space before and after divider</li>
+								<li><em class="dfn-code">indent-24</em> - will add 2em space before and after divider</li>
+								<li><em class="dfn-code">indent-28</em> - will add 2.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-32</em> - will add 2.5em space before and after divider</li>
+								<li><em class="dfn-code">indent-36</em> - will add 3em space before and after divider</li>
+								<li><em class="dfn-code">indent-40</em> - will add 3.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-46</em> - will add 3.88em space before and after divider</li>
+								<li><em class="dfn-code">indent-52</em> - will add 4.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-56</em> - will add 4.66em space before and after divider</li>
+								<li><em class="dfn-code">indent-60</em> - will add 5em space before and after divider</li>
+							</ul>
+					</li>
+				</ul><br/><br/>
+				<div class="note">Notice: Since magento default WYSIWYG editor breaks any HTML tags we recommend you to disable it before changing the content. To disable it go <em class="dfn-code">System -> Configuration -> General -> Content Management (very bottom of the list) -> Enable WYSIWYG Editor -> Disable by Default (or Disable Completely)</em> and click "Save Config". Otherwise your content will be broken after any save action.</div>
+			</div>
+			<div id="category-page" class="post">
+				<h2 class="section-title">Category Page</h2><br /><br />
+				<p> Section in magento admin panel which is responsible for the creating and modifying of the categories you will find <em class="dfn-code">Catalog -> Manage categories</em>. 
+				More detailed information about managing of categories you will find in magento wiki in <a target+"_blank "href="http://www.magentocommerce.com/wiki/welcome_to_the_magento_user_s_guide/chapter_3#creating_categories">Categories section</a>. Besides default options, Bizarre theme allows to manage position sidebar column, set quantity of products in 1 row - all those options are described in subsection "Product listing" of General options chapter of section <a href="#general_options">Theme options</a>. All those options can also be configured for each category separately: in tab "Meigee/Product listing" on category edit page. Settings which allow to set up view of top categories can be edited under the tab Meigee/Enhanced Categories on category edit page. Same here you can set quantity of subcategories that should be shown in 1 row. If the field will be empty than default value (<em class="dfn-code">System -> Configuration -> Categories Enhanced</em>) will be used. </p>
+				Every category page with the 2- or 3-columns design has sidebar with default sidebar blocks, each of those blocks can be disabled via theme options. Besides every of those blocks can be moved from the left side to the right and vice-versa. More detailed about sidebar blocks you will read in <a href="#sidebar">Sidebar</a> section of theme documentation. 
+				<h3 class="sub-title">Category elements</h3>
+				<ul>
+					<li>
+						<h4>Category image/slider</h4>
+						You can add any image and retina image for category: <br/><br/>
+						<img class="content-img" src="library/img/category-image.png" /><br/><br/>
+						How to add revolution slider to the category pages you can read in <a href="#revolution_slider">Revolution slider</a> section
+					</li><br /><br />
+					<li>
+						<h4>Category title</h4>
+						<img class="content-img" src="library/img/category_title.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						If you category slider/banner already consists information about category name you can remove name of that category by removing in or commenting out <em class="dfn-code">app/design/frontend/bizarre/default/template/catalog/category/view.phtml</em> out next code: 
+						<pre>&lt;h1&gt;&lt;?php echo $_helper-&gt;categoryAttribute($_category, $_category-&gt;getName(), 'name') ?&gt;&lt;/h1&gt;</pre><br/>
+						Keep in mind that the category title will be removed from all the categories.
+					</li><br /><br />
+					<li>
+						<h4>Category toolbar</h4>
+						<img class="content-img" src="library/img/category_toolbar.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Default category toolbar is powerful tool in sorting and displaying  products in category view. In Bizarre theme that toolbar is based on Ajax, so your customers will not be annoyed with page reloading. To disable Ajax for the category toolbar go to <em class="dfn-code">System -> Configuration -> Ajax for Catalog -> Ajax for toolbar/paging</em> and set no in Enabled dropdown list. <br/>
+						To change the quantity of product that should be displayed on category page use default magento admin option: go to <em class="dfn-code">System -> Configuration -> Catalog -> Frontend</em> and change the quantiy of products in <em class="dfn-code">Products per Page on Grid Allowed Values</em> and in <em class="dfn-code">Products per Page on List Allowed Values</em><br />
+						Sort by toolbar contains 3 parameters by which customers can sort your category products. You can easily make any of your attributes sortable by editing the attribute in <em class="dfn-code">Catalog -> Attributes -> Manage Attributes</em>, editing one and the bottom option is called <em class="dfn-code">Used for Sorting in Product Listing</em> - which you should set to "Yes".
+					</li><br /><br />
+					<li>
+						<h4>Shop by filters</h4>
+						<img class="content-img" src="library/img/category_filters.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Magento's Layered Navigation allows customers to filter down products using any attribute that is set as filterable for Layered Navigation. The Layered Navigation menu will display in the sidebar of your category pages with 2 and 3 columns designs, and will contain all of the attributes which are filterable. You can configure each attribute to be displayed in Layered Navigation: Use in Layered Navigation field in <em class="dfn-code">Catalog -> Attributes -> Manage Attributes</em>. More information about attributes and layered navigation you will read in magento online documenation: <a target="_blank" href="http://www.magentocommerce.com/wiki/welcome_to_the_magento_user_s_guide/chapter_3#attributes">Attributes</a>, <a target="_blank" href=" http://www.magentocommerce.com/wiki/welcome_to_the_magento_user_s_guide/chapter_3#layered_navigation">Layered navigation</a>
+					</li><br />
+					<li>
+						<h4>Configurable Swatches</h4>
+						<img class="content-img" src="library/img/configurable_swatches.png" /><p><em>*Shown sshot is made based on default Bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						Configurable swatches help you optimize the way products are presented on your site. New "swatch" capabilities make products more appealing and boost conversion rates by offering shoppers quick access to information, like available colors, fabrics, sizes, and more. That functionality was added since Magento 1.9.1.0 and is available in that or later version <strong>only</strong>. More information about configuration of that functionality you will read in magento online documenation: <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/ee1141-ce191-configurable-swatches">Configurable Swatches Guide for Magento CE 1.9.1</a>
+					</li>
+				</ul>
+				<h3 class="sub-title" id="category-issues" >Known problems with a category page</h3>
+				<div class="note-2">
+					<strong>Category page doesn't display layered navigation </strong><br /><br />
+					<em>Solution.</em> Navigate to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> Display Settings tab</em> and set “Yes” in "Is Ancor" dropdown list<br /><br />
+					<strong>Categories is not displaying in navigation menu</strong><br /><br />
+					<em>Solution 1.</em> Check your category tree. All categories should be under the Root categories <br />
+					<em>Solution 2.</em> Check your category availability: Go to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> General information</em> and set "Yes" in "Is Active" dropdown list <br />
+					<em>Solution 3.</em> Check if category included in navigation menu: Go to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> General information</em> and set "Yes" in "Include in Navigation Menu" dropdown list<br />
+					<em>Solution 4.</em> Reindex all the data (<em class="dfn-code">System -> Index Management</em>) and flush all the cache (<em class="dfn-code">System - Cache Management</em>)<br /><br />
+					<strong>Products are not displayed on product listing </strong><br /><br />
+					<em>Solution 1.</em> The products must be Visible in Catalog (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> General tab -> Status -> Enabled</em>)<br />
+					<em>Solution 2.</em> The products must be Enabled (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> General vertical tab -> Visibility -> Catalog, Search/Catalog</em>)<br />
+					<em>Solution 3.</em> Product must have a stock Quantity (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Qty -> at least 1</em>)<br />
+					<em>Solution 4.</em> The product must be set to In Stock (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Stock Availability -> In stock</em>)<br />
+					<em>Solution 5.</em> If the product is set not to track stock, it still has to have a stock Quantity and be set to In Stock<br />
+					<em>Solution 6.</em> The product must be assigned to the target Category (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Categories vertical tab</em>)<br />
+					<em>Solution 7.</em> If using multi-website mode (or if you imported the products through Data Flow), the products must be assigned to the target Website (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Websites vertical tab</em>)<br />
+					<em>Solution 8.</em> You must refresh your Cache (<em class="dfn-code">System -> Cache management</em>) and reindex all the data (<em class="dfn-code">System -> Index Management</em>)<br />
+				</div>
+			</div>
+			<div id="productpage" class="post">
+				<h2 class="section-title">Product Page</h2><br /><br />
+				<p>All product options can be found on <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Product Page</em>. You can set product page appearance for all of your products and change it for <strong>any single product</strong> on a product edit page <em class="dfn-code">Catalog -> Manage Products -> Your Product</em> under "<strong>Meigee - Bizarre options</strong>" tab. 
+				<p>Under this tab on product edit page you can change the layout of a product page, show brand logo image, SKU, prev/next buttons and sidebar with your own content. More detailed about product page options you can read in subsection <a href="#product-page-options">Product page options</a> of Theme options chapter </p>
+				<p>On product page you can add next elements: 
+					<ul>
+						<li><h4>Custom tab</h4>
+						<img class="content-img" src="library/img/product_page_custom_tab.png" /><br/><br/>
+						To add new tab create static block (<em class="dfn-code">CMS -> Static blocks </em>) with needed information, navigate to <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Product page options -> Additional content</em> on product page and indicate the static block id in field Products Tabs - this will add custom tab to all product pages. To add custom tab for single product fill the field "Products Tabs" with the static block ID on product edit page in section Meigee - Bizarre options section. You can add as many tabs as you wish. </li><br /><br />
+						<li><h4>Share buttons</h4>
+						<img class="content-img" src="library/img/product_page_share_buttons.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						To add share buttons on product pages, create static block (<em class="dfn-code">CMS -> Static blocks </em>) with next code: <br /><br />
+						<strong>Facebook share button code: </strong>
+						<pre>&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;<br/>&lt;script&gt;<br/>(function(d, s, id) {<br/>  var js, fjs = d.getElementsByTagName(s)[0];<br/>  if (d.getElementById(id)) return;<br/>  js = d.createElement(s); js.id = id;<br/>  js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;<br/>  fjs.parentNode.insertBefore(js, fjs);<br/>}(document, 'script', 'facebook-jssdk'));<br/>&lt;/script&gt;<br/>&lt;div class=&quot;fb-like&quot; data-send=&quot;false&quot; data-layout=&quot;button_count&quot; data-width=&quot;450&quot; data-show-faces=&quot;false&quot;&gt;&lt;/div&gt;<br/></pre>
+						<strong>Twitter share button code:</strong>
+						<pre>&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;meigeeteam&quot;&gt;Tweet&lt;/a&gt;<br/>&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;</pre>
+						Save static block, navigate to <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Product page options -> Additional content on product page</em> and fill the field "Under product description" with the ID of previously created static block. Save changes, flush the cache <em class="dfn-code">System -> Cache management</em> and those buttons will appear. If you are installing theme using our 1 click installation then static block with the buttons code will be created and added to all product page</li><br /><br />
+						<li><h4>Product reviews</h4>
+						<img class="content-img" src="library/img/product_page_reviews.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						To add form for product reviews and ratings, go to <em class="dfn-code">Catalog -> Reviews & Ratings -> Manage ratings</em> and add new rating or edit existing rating. More detailed about that default magento functionality you will read in magento knowledge base in section: <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/how-do-i-configure-and-use-the-reviews-and-ratings-module">Magento reviews and ratings</a></li><br /><br />
+						<li><h4>Product banner</h4>
+						<img class="content-img" src="library/img/product_page_banner.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+						You can add any click-able image to the sidebar of your product page. To add product banner, go to <em class="dfn-code">CMS -> Static blocks </em> open the <em class="dfn-code">bizarre_product_banner</em> and add image or any other content to that static block. Save changes, flush the cache <em class="dfn-code">System -> Cache management</em> and you will see the product banner on all product pages. If you do not see any sidebar on product page, please activate sidebar on product page via theme admin options <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Product page options -> Layout -> product page sidebar</em></li>
+					</ul>
+				</p>    
+				<h3 class="sub-title" id="product-issues">Known problems with a product page</h3>
+				<div class="note-2">
+				<strong>Product options block is displayed below the product image</strong><br /><br />
+				<em>Solution.</em> This is standard magento behaviour, to display this block on the right of the product image navigate to a product edit page -> “Design” vertical tab and set “Product Info Column” in “Display Product Options In” field.<br /><br />
+				<strong>Brand logo is not displaying, while the option of showing brand logo is enabled. </strong><br /><br />
+				<em>Solution 1.</em> Check if brand logo image is created and exist in <em class="dfn-code">media/brands</em> folder of your magento <br/>
+				<em>Solution 2.</em> Check your brand logo image file name and name of brand in admin (<em class="dfn-code">Catalog -> Attributes -> Manage Attributes -> Manage Label / Options</em>). They <strong>must</strong> match <br/>
+				<em>Solution 3.</em> Check if format of files matches the format of file. It <strong>must</strong> match<br/>
+				<em>Solution 4.</em> Assign product to the manufacturer on product edit page<br/><br/>
+				<strong>If you do not see you related products in sidebar of product page whereas the fact that the Related block position is set as Sidebar please check the points below:</strong><br /><br />
+				<em>Solution 1.</em> Related products should be assigned to that product <em class="dfn-code">Product edit page -> Related products</em><br/>
+				<em>Solution 2.</em> The reindex and flushing of cache should be done after assigning of related products. This is default magento behaviour: after applying any changes to the products or category you have to reindex all the data and flush the cache in order to see the changes on frontend immediately <br/>
+				<em>Solution 3.</em> The Product page sidebar position <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Product Page Options</em> should be chosen as Left or Right<br/>
+				<em>Solution 4.</em> Meigee Product options that concern related product block position and product sidebar location that are on product edit page should use Config settings if not the combination should be same as above<br /><br />
+				<strong>Quick view window contains all the content of store instead of just information about product</strong><br /><br />
+				<em>Solution.</em> Go to <em class="dfn-code">Catalog -> Manage products -> Product edit page -> Design vertical tab</em> and in Page layout dropdown list set "No layout updates"<br/><br/>
+				<strong>Upsell and related products are not disaplying on product page</strong><br /><br />
+				<em>Solution.</em> Reindex all the data <em class="dfn-code">System -> Index management</em> and flush the cache <em class="dfn-code">System -> Cache management</em><br/>
+				</div>
+				<div class="note">Notice: Theme design is developed for using with 1-column structure of the product page layout only. Sidebar with your own content on the product page you can add via theme options. Setting of 2- or 3-columns structure of product page layout by magento design options will require changing of theme code by yourself, since the product page layout will be broken.</div>
+			</div>
+			<div id="shopping-cart" class="post">
+				<h2 class="section-title">Shopping cart page</h2><br /><br />
+				Bizarre theme has 3 predefined layout of shopping cart: 
+				<ul>
+					<li><strong>Default cart</strong>:<br /><br />
+					<img class="content-img" src="library/img/cart_page_default.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+					This layout is used in magento store up to 1.8.1.0 version. </li>
+					<li><strong>New Default cart</strong>: <br /><br />
+					<img class="content-img" src="library/img/cart_page_new_default.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+					This layout is used in magento store since 1.9.0.0 version. </li>
+					<li><strong>Accordion layout</strong>: <br /><br />
+					<img class="content-img" src="library/img/cart_page_accordion.png" /><p><em>*Shown sshot is made based on default bizarre theme. It probably will look differ if you are using Bizarre subthemes</em></p>
+					This layout is our own style.</li>
+				</ul>
+				All cart page layouts can be used on any magento versions with which the Bizarre theme is compatible. 
+				<h3 class="sub-title">Shopping cart elements</h3>
+				<ul>
+					<li><h4>Cross-sell products</h4>
+					Those product can be added via admin on product edit page. More inforamtion about product relationship in magento you can read in magento knowledge base in article <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/how-do-i-set-up-product-relations">How do I Set Up Product Relations?</a></li><br/><br/>
+					<li><h4>Discount codes</h4>
+					A coupon code can be associated with a shopping cart price rule to apply a discount when a set of conditions is met. Customers can enter the coupon code from the shopping cart page to receive the discount. Coupons codes can be created for specific customer groups, or for anyone who make a purchase over a certain amount. More information about it you will find in magento knowledge base in section <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/setting-a-coupon-code-to-your-promotions">Coupon code</a>. This default magento feature is easily configured in admin. Here is some tips which help you to configure that option: <a target="_blank" href="http://www.pixafy.com/blog/2013/08/how-to-create-coupon-codes-in-magento-beginners-tutorial-1/">How to create coupon code</a>. To remove that block follow the instructions below: <a target="_blank" href="http://stackoverflow.com/questions/8276010/magento-function-to-remove-coupon-code-from-a-users-cart">How to remove discount block</a></li><br/><br/>
+					<li><h4>Estimate shipping and tax </h4>
+					Estimate shipping box is a Magento feature which allows customers to estimate the shipping cost involved in different shipping options. To remove that block please follow the instructions below:<a target="_blank" href="http://magentotutorial.org/how-to-remove-estimate-shipping-and-taxes-block-in-magento">How to remove Estimate shipping and taxes block in Magento</a>
+					</li>
+				</ul>
+			</div>
+			<div id="checkout" class="post">
+				<h2 class="section-title">Checkout page</h2><br /><br />
+				<p>2 versions of checkout are used in Bizarre theme 
+				<ul>
+					<li><strong>Default checkout</strong> - checkout which is provided by default magento. How to configure that functionality (including the payments methods, checkout process iteslf and other checkout related questions )you will read in magento knowledge base in section <a href="http://www.magentocommerce.com/knowledge-base/categories/category/checkout-options/">Checkout Options</a></li><br />
+					<img class="content-img" src="library/img/checkout_default.png" /><br/><br/>
+					<li><strong>Custom Checkout</strong> - checkout which is provided by IWD onepage checkout developers. How to configure it you will read in their <a href="https://docs.google.com/a/meigeeteam.com/document/d/1_bsiXfAhUxWmhguDAZts4xsmdcamCHRSrFfT6fwzRIw/edit">online User guide</a>. </li><br />
+					<img class="content-img" src="library/img/checkout_custom.png" /> 
+				</ul></p>
+				<p>By default custom onepage checkout is used in Bizarre theme. In case if you have troubles with the onepage checkout, first of check if the issue occurs on default magento theme and with the default checkout. If the problem remains on default mode, then you have to check and configure correctly the checkout options of your magento. If the problem occurs only on custom onepage checkout, then you will need to forward your questions to the developers of the onepage checkout. Link to their promo page you will find in section <a href="#extensions">Other small extensions of theme documentation</a>. Only in case the problems remains on while using theme on default checkout you will need to create a ticket with the description of an issue. Link to the support system you will find in section <a href="#support">Support</a> of theme documentation.</p> 
+			</div>
+			<div id="404-page" class="post">
+			<h2 class="section-title">Custom 404 page</h2><br /><br />
+				<p>Having a nice good Error 404 page is perhaps as important as having great contents. Sometimes it may not be your fault visitors landed on error pages, but being able to communicate and direct them back to the home page is as good as a second chance to re-engage a visitor. Since 1.1 theme version we added some styles and inserted product widget on 404 page. By default magento already provide 404 page, to change its content go to <em class="dfn-code">CMS -> Pages -> 404 Not Found page -> Content vertical tab</em> and replace existing content with the custom content which you will find in <em class="dfn-code">Source -> Static content -> Skin_X -> Pages</em>. For each skin <strong>must be </strong> used content of appropriate 404 page. If you change the url key of the 404 page you need also to set path to new 404 page in <em class="dfn-code">System -> Configuration -> Web -> Default pages</em>. </p>  
+			<div class="note">Notice: Design layout (<em class="dfn-code">CMS -> Pages -> 404 page -> Design Vertical tab</em>) of custom 404 page must be set as Empty, since on custom 404 page default magento elements such as header footer are not used, otherwise that page design will be broken.</div>
+			</div>
+			<div id="contact-us" class="post">
+				<h2 class="section-title">Contact us page</h2><br /><br />
+				<p>Contact us page is default magento page on which we added Google map. Google map settings and settings of the block with additional information you will find in the section <a href="#general_options">General options</a> of Theme options chapter. Google map also can be added to any CMS page just by inserting code: <em class="dfn-code">{{block type="page/html" block_id="block_map" template="meigee/blockmap.phtml"}}</em> into content of any CMS page. </p>
+				<p>By default contact us page should be edited by changing .phtml file, but there is an opportunity to make that page simple CMS page which can be edited via admin panel. To do that follow simple instructions which are described in this article: <a href="http://www.atwix.com/magento/customizing-contact-us/">Customizing Magento Contact Us page from admin panel</a></p>
+			</div>
+			<div id="sidebar" class="post">
+				<h2 class="section-title">Sidebar</h2><br /><br />
+				<p>All blocks you can see in the sidebar of your store are default magento ones. If you have installed your store from scratch you will need to do some actions to get your store working.</p>
+				<div class="note-2">If you are not very familiar to magento we strongly recommend you to install magento sample data.</div>
+				<h3 class="sub-title">Built-in Sidebar Blocks</h3>
+				<ul>
+					<li><strong>Categories</strong> - block consists of categories' list. This block is based on header navigation but can't display any static content. Please refer to "<a href="#megamenu">MegaMenu</a>" section of this guide to learn how to create categories correct way.</li>
+					<li>
+						<strong>Shop By</strong> - this block consists of several product filters. To enable this block you may navigate to <em class="dfn-code">Catalog -> Manage Categories</em>, click on a category you need and go to <strong>"Display Settings"</strong> Tab. Find <strong>"Is Anchor"</strong> option there and set it to <strong>"Yes"</strong>	
+					</li>
+					<li><strong>Compare Products</strong> - to see this block add some products to comparison list by clicking button <strong>Add to compare</strong> on frontend.</li>
+					<li><strong>Compared Products</strong> - it will appear after you compared some products.</li>
+					<li><strong>Poll</strong> - it will appear after you configured it there <em class="dfn-code">CMS -> Polls</em>.</li>
+					<li><strong>Wishlist</strong> - this block appears when you have added some products in your wishlist. You can configure this feature there <em class="dfn-code">System -> Configuration -> Customers -> Wishlist</em></li>
+					<li><strong>Popular tags</strong> - this block is hidden if your products haven't any tags. Add some tags being logged as customer on frontend (in that case you also will need to approve that tags in admin <em class="dfn-code">Catalog-> Tags-> Pending tags</em> or go to <em class="dfn-code">Catalog -> Tags -> All Tags</em> in admin and add some tags by clicking on button Add new Tag. To disable this feature completely go to <em class="dfn-code">System -> Configuration -> Advanced tab</em> and set "<strong>Mage_Tag</strong>" to "<strong>Disable</strong>"</li>
+					<li><strong>My orders</strong> - every customer that have already purchased some of your products will see that sidebar block with list of recently purchased products on frontend.</li>
+					<li><strong>PayPal Logo</strong> - this block is appeared by default, to disable it go to <em class="dfn-code">System -> Configuration -> Payment Methods Vertical Tab -> PayPal Express Checkout Tab -> Basic Settings – PayPal Express Checkout -> Frontend Experience Settings</em>. Set "<strong>PayPal Product Logo</strong>" to "<strong>No logo</strong>"</li>
+					<li><strong>Newsletter</strong> - (if set in sidebar in this theme). To disable this functionality completely go to <em class="dfn-code">System → Configuration → Advanced tab</em> and set "<strong>Mage_Newsletter</strong>" to "<strong>Disable</strong>"</li>
+				</ul>
+				Each category can have 1 of 3 available designs (1-column, 2-columns and 3-columns design)which can be easily changed using default magento admin options. To change category layout go to <em class="dfn-code">Catalog -> Manage categories -> Category edit page -> Custom design tab</em> and choose necessary design in <em class="dfn-code">Page layout</em> dropdown list. By default, all sidebar blocks are moved to the left sidebar, but in some cases, you may need to move blocks to the right side. To do that use <em class="dfn-code">Custom Layout Update</em> field. For example if you need to move block categories from left to right side, use next code: 
+				<pre>&lt;reference name=&quot;left&quot;&gt;<br/>	&lt;action method=&quot;unsetChild&quot;&gt;&lt;name&gt;catalog.categories&lt;/name&gt;&lt;/action&gt;<br/>&lt;/reference&gt;<br/>&lt;reference name=&quot;right&quot;&gt;<br/>	&lt;block type=&quot;catalog/navigation&quot; name=&quot;catalog.categories&quot;&gt;<br/>		&lt;action method=&quot;setTemplate&quot;&gt;<br/>			&lt;template&gt;catalog/navigation/left_nav.phtml&lt;/template&gt; <br/>		&lt;/action&gt;<br/>	&lt;/block&gt;<br/>&lt;/reference&gt;
+				</pre>
+				Full list of blocks that were moved to the left side you will find in <em class="dfn-code">app\design\frontend\bizarre\default\layout\local.xml</em> file under the block with comment title <em class="dfn-code">Removing sidebar blocks from default position and moving into left reference</em>.</p>
+				<p>Some of these blocks you can disable using our theme admin options here <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Sidebar Options</em>. Please be aware on that page you can only hide blocks from frontend but they won't be disabled at all.</p>
+				<h3 class="sub-title" id="sidebar-isses">Known problems with sidebar blocks</h3>
+				<div class="note-2">
+				<strong>... block isn't appeared in frontend</strong><br /><br />
+				<em>Solution 1.</em> Make sure this block is enabled under <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Sidebar Options</em><br/>
+				<em>Solution 2.</em> Switch to <strong>default</strong> magento theme. If block isn't correctly configured it won't be showed up in frontend too. Read instructions above.</em><br/>
+				</div>
+			</div>
+			<div id="footer" class="post">
+				<h2 class="section-title">Footer</h2><br /><br />
+				<p>To give our customers flexibility in customizing footer section we replaced default magento footer with static blocks where put all of default footer blocks. Anyway you can simple disable it and use default magento footer if you need. In default Bizarre theme footer is divided into 2 section wrapped with the classes <em class="dfn-code">footer-topline</em> - this section contains social links widget code and footer links and <em class="dfn-code">footer-second-line</em> which contains store logo, tags, list with products, widget latest tweets and 3 columns with the custom links. </p> 
+				<h3 class="sub-title">CMS HTML Elements</h3>
+				
+				<p>First of all please note that we used <a href="#grid-system">grid960</a> we recommend you using it too to position elements. You also can use any html tags but you should control how your footer will look like by yourself. To organize static content of the footer block you may use following code:</p>
+					<ul>
+						<li>
+							<h4>Titles</h4>
+							<em class="dfn-code">&lt;div class=&quot;footer-block-title&quot;&gt;&lt;h2&gt;Contact Us&lt;/h2&gt;&lt;/div&gt;</em>
+						</li><br/><br/>
+						<li>
+							<h4>Dividers</h4>
+							<em class="dfn-code">&lt;hr class=&quot;<strong>indent-12</strong> <strong>invisible</strong>&quot; /&gt;</em> - invisible line with 1em space before and after it is used for dividers of blocks. That dividers can be dotted, dashed and solid. Also the space before and after those dividers can be changed by applying another class. All classes that can be used for dividers are described below (just replace highlighted text in above divider code with needed value):
+							<ul id="dividers">
+								<li><em class="dfn-code">invisible</em> - will make the divider invisible</li>
+								<li><em class="dfn-code">solid</em> - will make divider solid</li>
+								<li><em class="dfn-code">dotted</em> - will make divider dotted</li>
+								<li><em class="dfn-code">dashed</em> - will make divider dashed</li>
+								<li><em class="dfn-code">indent-9</em> - will add .75em space before and after divider</li>
+								<li><em class="dfn-code">indent-12</em> - will add 1em space before and after divider</li>
+								<li><em class="dfn-code">indent-18</em> - will add 1.5em space before and after divider</li>
+								<li><em class="dfn-code">indent-24</em> - will add 2em space before and after divider</li>
+								<li><em class="dfn-code">indent-28</em> - will add 2.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-32</em> - will add 2.5em space before and after divider</li>
+								<li><em class="dfn-code">indent-36</em> - will add 3em space before and after divider</li>
+								<li><em class="dfn-code">indent-40</em> - will add 3.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-46</em> - will add 3.88em space before and after divider</li>
+								<li><em class="dfn-code">indent-52</em> - will add 4.33em space before and after divider</li>
+								<li><em class="dfn-code">indent-56</em> - will add 4.66em space before and after divider</li>
+								<li><em class="dfn-code">indent-60</em> - will add 5em space before and after divider</li>
+							</ul>
+						</li><br/><br/>
+						<li>
+							<h4>Magento Blocks</h4>
+							<em class="dfn-code">{{block type="core/template" block_id="contactForm" template="contacts/form_footer.phtml"}}</em> - is used for contact from<br/>
+							<em class="dfn-code">{{block type="tag/popular" block_id="tags_popular" template="tag/popular.phtml"}}</em> - is used for popular tags<br/>
+							<em class="dfn-code">{{config path="design/footer/copyright"}}</em> - is used for copyright<br/>
+							<em class="dfn-code">{{block type="page/switch" block_id="store_switcher" template="page/switch/stores.phtml"}}</em> - is used for store switcher<br/>
+							<em class="dfn-code">{{block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml"}}</em> - is used for newsletter form<br/><br/>
+						</li><br/><br/>
+						<li>
+							<h4>Google map</h4>
+							You can insert google map in your footer: insert next code in content of static block which is responsible for the footer: 
+							<pre>&lt;div class=&quot;map-wrapper&quot;&gt;<br/> &lt;div class=&quot;container_12&quot;&gt;<br/>  &lt;div class=&quot;btn-close&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/div&gt;<br/>  &lt;div class=&quot;background-wrapper&quot;&gt;<br/>   &lt;div class=&quot;map-wrapper-bg&quot;&gt;&lt;div class=&quot;map-button-wrapper&quot;&gt;&lt;button class=&quot;button map-button&quot;&gt;&lt;span&gt;&lt;span&gt;find us on map&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;<br/>   {{block type=&quot;page/html&quot; block_id=&quot;block_map&quot; template=&quot;meigee/blockmap_wrapper.phtml&quot;}}<br/>  &lt;/div&gt;<br/> &lt;/div&gt;<br/>&lt;/div&gt;</pre> Store location on Gmap is set in <em class="dfn-code"> Meigee -> Bizarre -> Theme options -> General options -> Contact map</em> 
+						</li><br/><br/>
+						<li>In addition you can use some of our our <a href="widgets"></a>widgets in the footer: Latest Tweets, Social Links. How to add those widgets you will read in <a href="#widgets">Widgets for pages and blocks</a> section </li>
+					</ul><br/><br/>
+				<div class="note">Notice: Since magento default WYSIWYG editor breaks any HTML tags we recommend you to disable it before changing the content. To disable it go <em class="dfn-code">System -> Configuration -> General -> Content Management (very bottom of the list) -> Enable WYSIWYG Editor -> Disable by Default (or Disable Completely)</em> and click "Save Config". Otherwise your content will be broken after any save action.</div>
+			</div>
+			<div id="parallax" class="post">
+				<h2 class="section-title">Parallax effect</h2><br /><br />
+				<p>Parallax is the web design technique of using CSS to make different layers on the web page move at different rates. So, when scrolling down the page, instead of having all the text, photos,  and other elements move screen altogether, it feels more like a visual page turn, with a new layer of beautiful imagery or a pull quote gliding up to replace the just read page.<br />
+				Bizarre theme allows you to add parallax effect for any cms page. To create page with parallax effect you need:
+				<ol>
+					<li>Add code from <em class="dfn-code" >skin6/Pages/skin6_home.txt</em> to the required page <em class="dfn-code">CMS -> Pages -> YOUR_PAGE -> Content Tab</em>  </li>
+					<li>Add following custom xml code from <em class="dfn-code" >skin6/Pages/skin6_home_xml.txt</em> to <em class="dfn-code">Design Tab -> Layout Update XML</em>
+					</li>
+				</ol>
+				Do not forget to flush the cache after applying changes. </p>
+				<div class="note">Notice: Since magento default WYSIWYG editor breaks any HTML tags we recommend you to disable it before changing the content. To disable it go <em class="dfn-code">System -> Configuration -> General -> Content Management (very bottom of the list) -> Enable WYSIWYG Editor -> Disable by Default (or Disable Completely)</em> and click "Save Config". Otherwise your content will be broken after any save action.</div>
+			</div>
+			<div id="mobile" class="post">
+				<h2 class="section-title">Mobile Appearance</h2><br /><br />
+				<p>Design of Bizarre theme for mobile and tablet versions is differ a little bit from the desktop version: some elements were hidden, some - were moved to new places. All those changes you will see in the <em class="dfn-code">skin/frontend/<strong>bizarre</strong>/default/css/grid_responsive.css</em> file in case if your are using default theme and <em class="dfn-code">skin/frontend/bizarre/<strong>skinX</strong>/css/grid_responsive.css</em> file if you are using subtheme. To customize element on mobile devices you will need to add the rule for the element in the appropriate section in your custom.css file. For example if you need to hide any element on mobile or tablet version you should follow next simple steps: 
+				<ol>
+					<li>Find the selector of required element using <a href="https://getfirebug.com" target="_blank">Firebug</a> in Firefox or other debug tool:
+					<img class="content-img" src="library/img/firebug_usage.png" /><br/><br/> </li>
+					<li>
+						<ul>
+							<li>Open <em class="dfn-code">skin/frontend/bizarre/default/css/custom.css</em>  file if you are using default theme </li>
+							<li>Open <em class="dfn-code">skin/frontend/skinX/default/css/custom.css</em>  file if you are using subthemes</li>
+						</ul>
+					</li>
+					<li>Add found selector with <em class="dfn-code">display: none</em> rule inside the section 
+						<ul>
+							<li><em class="dfn-code">@media only screen and (min-width: 978px)  and (max-width: 1280px) </em> - if you want to hide element on devices with screen resolution from 978 up to 1280 px (tablet version landscape orientation)</li>
+							<li><em class="dfn-code">@media only screen and (min-width: 768px) and (max-width: 977px)</em> - if you want to hide element on devices with screen resolution from 768 up to 977 px (tablet version portrait orientation)</li>
+							<li><em class="dfn-code">@media only screen and (min-width: 480px) and (max-width: 767px)</em> - if you want to hide element on devices with screen resolution from 480px up to 767px (mobile version landscape orientation)</li>
+							<li><em class="dfn-code">@media only screen and (max-width: 767px)</em>  - if you want to hide element on devices with screen resolution up to 767px (mobile version portrait orientation)</li>
+						</ul>
+					</li>
+				</ol>
+				So, if you want to hide home banners on the mobile device of portait orientation, your end code in custom.css file should look like the code below: 
+				<pre>@media only screen and (max-width: 767px) {<br/>.home-banners {display:none}<br/>}</pre>
+				</p>
+			</div>
+			<div id="subthemes" class="post">
+				<h2 class="section-title">Pre-defined subthemes</h2><br /><br />
+				<p>Bizarre theme has several pre-definded subthemes (designs) which can be used along with the main design. Below is the list of skins and correlation name of store: <br/>
+				<ul>
+					<li><strong>Default design</strong> - Clothes store</li>
+					<li><strong>Skin1 design</strong> - Kids store</li>
+					<li><strong>Skin2 design</strong> - Cars store</li>
+					<li><strong>Skin3 design</strong> - Food store</li>
+					<li><strong>Skin4 design</strong> - Home appliance store</li>
+					<li><strong>Skin5 design</strong> - Decor store</li>
+					<li><strong>Skin6 design</strong> - Store with parallax effect</li>
+				</ul>
+				<br/><br/>
+				To apply one of the design to the specific store you have to follow next simple steps: 
+				<ol>
+					<li>Refresh and disable all the Magento cache. To get it done go to <em class="dfn-code">System -> Cache Management</em></li>
+					<li>Go to the <em class="dfn-code">System -> Configuration -> Design -> Themes</em> and in the left top corner of that page choose the store that will use one of pre-defined design in the Current Configuration Scope dropdown list and after that indicate the name of new design in the fields <em class="dfn-code">Templates</em> and <em class="dfn-code">Skin (Images / CSS)</em>. Names of folders under the <em class="dfn-code">Source -> Static content</em> should be used as the name of the new subtheme (i.e. skin1, skin2, etc...). Unmark "Use website" checkbox in order you can edit that fields</li>
+					</li>
+					<li>Go to <em class="dfn-code">Meigee -> Bizarre -> Import Static Content</em> and import static blocks for the selected design. You can also create static blocks manually: content for those blocks and page you will find under <em class="dfn-code">Source -> Demo -> Static content -> Design name</em>. Keep in mind that WYSIWYG editor breaks HTML mark up, so we recommend to disable it while editing static content</li>
+					<li>Go to <em class="dfn-code">System -> Configuration -> Web -> Default pages</em> and select in the "CMS Home Page" dropdown the freshly created home page (if the static content for new subtheme was created using import feature then the new home page title will be Design_name Home page and url key: Design_name_home). Unmark "Use website" checkbox in order you can edit that fields</li>
+					<li>Go to <em class="dfn-code">Source -> Demo -> Static content -> Design name</em> open options.txt file and follow the instructions described in that file in order to finish configuration of store and make your store exactly the same as on demo</li>
+				</ol>
+				There are several things you should know while creating a store with Bizarre subthemes
+				<ul>
+					<li>Colors for store with selected design you can change in appropriate vertical design tab. To make that tab active you have to choose in <em class="dfn-code">Meigee -> Bizarre -> Theme options -> General options -> Design</em> section the needed subtheme design scheme (Theme Design - default, Theme design - skin1, Theme design - skin1 etc...)</li>
+					<li>If you configuring skin6 you also need to indicate skin name (skin6) in <em class="dfn-code">System -> Configuration -> Design -> Themes</em> field <em class="dfn-code">Layout</em></li>
+					<li>If you are configuring skin1 you have to create widget which should use static block with id "bizarre_sk1_slider" and Layout of that widget should be next: 
+					<strong>Display On:</strong> - Specified page, <strong>Page:</strong> - Home page, <strong>Block Reference</strong> - Page Header. In static block "bizarre_sk1_slider" id of revolution slider (<em class="dfn-code">{{widget type="revslider/slider_preview" id="<strong>1</strong>"}}</em>)must match ID of you Revolution slider slide. To Find ID of revolution slider slide go to <em class="dfn-code">AM -> AM Revolution Slider -> Manage Slider</em>.</li>
+					<li>If you want to use element of specific skin (for example header) along with default skin, follow next steps: 
+						<ol>
+							<li>Go to <em class="dfn-code">skin/frontend/bizarre/<strong>skinX</strong>/css/custom.css</em> and copy all from section header to the <em class="dfn-code">skin/frontend/bizarre/<strong>default</strong>/css/custom.css file</em></li>
+							<li>Replace <em class="dfn-code">app/design/frontend/bizarre/<strong>default</strong>/template/page/html/header.phtml</em> with the header of desired skin <em class="dfn-code">app/design/frontend/bizarre/<strong>skinX</strong>/template/page/html/header.phtml</em></li>
+							<li>Generate colors for your header in <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Design options</em>. Do not forget to enable option of overriding of base colors in order to change color of specific element of your store <em class="dfn-code">Meigee -> Bizarre -> Theme options -> Design options -> Base colors</em></li>
+						</ol>
+					</li>
+				</ul>
+				</p>
+			</div>
+			<div id="multistores" class="post">
+				<h2 class="section-title">Multiply stores</h2><br /><br />
+				<p>You can create several stores on 1 magento installation using magento default functionality. How to create and configure multiply store you can read in <a target="_blank" href="http://www.magentocommerce.com/knowledge-base/entry/tutorial-multi-site-multi-domain-setup">this article</a> from the magento knowledge base. Bizarre theme supports that default magento feature but there are several points which you should know while configuration of multistores magento: 
+					<ol>
+						<li>Extensions which are included in theme are global and if there is no necessity of using those extensions in other stores, just make modules available only for store with Bizarre theme installed: you can do that in modules' settings or just by disabling modules (<em class="dfn-code">System -> Configuration -> Advanced</em>). Make sure that you have chosen correct scope in "Current Configuration Scope" dropdown list</li>
+						<li>Static blocks which are supposed to be different for each store should be assigned to the appropriate store but have the same static block ID</li>
+						<li>If you mark products as new or sale in one store, they also will be displayed by "New" or "Sale" widget in all other stores which are running Bizarre theme. To avoid that you have to create another website.</li>
+						<li>If you are using template along with other themes installed on other stores but within one magento installation we recommend to create a copy of attribues set which will contain only Bizarre attributes and use it only for store with Bizarre theme installed - in that case you will have no errors with the using several themes on 1 magento installation</li>
+					</ol>
+				</p>
+			</div>
+			<div id="grid-system" class="post">
+				<h2 class="section-title">960 Grid System</h2><br /><br />
+				<p>The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 1252 pixels. We are using 12 columns grid in Bizarre theme which is divided into portions that are 86 pixels wide. Next names of classes are used for wrapping elements: 
+				<ul id="dividers">
+					<li><em class="dfn-code">.grid_1</em> - width 86px</li>
+					<li><em class="dfn-code">.grid_2</em> - width 192px</li>
+					<li><em class="dfn-code">.grid_3</em> - width 298px</li>
+					<li><em class="dfn-code">.grid_4</em> - width 404px</li>
+					<li><em class="dfn-code">.grid_5</em> - width 510px</li>
+					<li><em class="dfn-code">.grid_6</em> - width 616px</li>
+					<li><em class="dfn-code">.grid_7</em> - width 722px</li>
+					<li><em class="dfn-code">.grid_8</em> - width 828px</li>
+					<li><em class="dfn-code">.grid_9</em> - width 934px</li>
+					<li><em class="dfn-code">.grid_10</em> - width 1040px</li>
+					<li><em class="dfn-code">.grid_11</em> - width 1146px</li>
+					<li><em class="dfn-code">.grid_12</em> - width 1252px</li>
+				</ul>
+				All that classes have 10px left and right margins. Additional classes <em class="dfn-code">alpha</em> and <em class="dfn-code">omega</em> remove those margins accordingly: <em class="dfn-code">alpha</em> removes left 10px margin, <em class="dfn-code">omega</em> - right 10px margin. By default we use <em class="dfn-code">alpha</em> for first element in grid and <em class="dfn-code">omega</em> for the last element. Below is simple example how you can row with 4 equal section in which you can insert any information you need: <br /><br />
+				<pre>&lt;div class=&quot;container_12&quot;&gt;<br/>	&lt;div class=&quot;grid_12&quot;&gt;<br/>		&lt;div class=&quot;grid_3 alpha&quot;&gt;1st Section&lt;/div&gt;<br/>		&lt;div class=&quot;grid_3&quot;&gt;2nd Section&lt;/div&gt;<br/>		&lt;div class=&quot;grid_3&quot;&gt;3rd Section&lt;/div&gt;<br/>		&lt;div class=&quot;grid_3 omega&quot;&gt;4th Last Section&lt;/div&gt;<br/>	&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+				One more example with 3 section, two of which are smaller than center image: <br /><br />
+				<pre><div class=&quot;container_12&quot;&gt;<br/>	&lt;div class=&quot;grid_12&quot;&gt;<br/>		&lt;div class=&quot;grid_3 alpha&quot;&gt;1st Section&lt;/div&gt;<br/>		&lt;div class=&quot;grid_6&quot;&gt;2nd Section&lt;/div&gt;<br/>		&lt;div class=&quot;grid_3 omega&quot;&gt;3rd Last Section&lt;/div&gt;<br/>	&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+				The main principle is that the sum of your columns and spaces between columns should be equal 1252px. More information about grid system you can read here: <a target="_blank"href="http://960.gs/">960 Grid system</a>
+			</div>
+			<div id="translation" class="post">
+				<h2 class="section-title">Translation</h2><br /><br />
+				<p>Bizarre theme added a few additional interface character strings. For example "Go to Shopping Cart" is replaced "View Cart", "Cart Subtotal:" - "Total:" and so on and so forth. New labels are located in <em class="dfn-code">app/design/frontend/bizarre/default/locale/en_US/translate.csv</em>. This file can be used to translate the interface into other languages: for example to translate interface to German follow next steps: 
+				<ol>
+					<li>Create a new folder for your translation. For German language it will be <em class="dfn-code">app/design/frontend/bizarre/default/locale/de_DE</em></li> 
+					<li>Copy translate.csv from <em class="dfn-code">app/design/frontend/bizarre/default/locale/en_US</em> and paste it into created folder <em class="dfn-code">app/design/frontend/bizarre/default/locale/de_DE</em></li>
+					<li>Open <em class="dfn-code">app/design/frontend/bizarre/default/locale/de_DE/translate.csv</em> in Open-office Calc (or other text editor like Notepad++)</li>
+					<li>The first column contains the original character strings. It should be left without changes. In the second column you can place your translation of each string. Some strings contains %d or %s entries. These entries should be left without changes in the translated strings</li>
+				</ol>
+				<div class="note">Notice: The text editor should be capable to save file in UTF-8 encoding. We do not recommend to use Excel, cause can break file structure. More information about tools for the translation you will find in magento knowledge base in article <a href="http://www.magentocommerce.com/wiki/groups/166/useful_tools_to_work_with_translations">Useful tools to work on translation</a>
+				Some localization tips you will find in <a href="http://blog.belvg.com/magento-certified-developer-exam-internationalization.html">this useful article</a>
+				</div>
+				</p>
+			</div>
+			<div id="customization" class="post">
+				<h2 class="section-title">Customization of theme and using of custom subthemes</h2><br /><br />
+				<p>Magento uses parent/child theming concept so our theme is based on default magento theme. It allows to customize any parts of a theme with ease.</p>
+				<div class="note-2">You should never modify magento and our theme default template files. This may cause lot's of problems in updating magento core or our theme to the latest version.</div>
+				<h3 class="sub-title">How to customize the theme</h3>
+				<p>There are two correct ways how you should customize our theme. Choose it based on your needs</p>
+				<ol>
+					<li>
+					<strong>You need to customize css rules only</strong>. In this case you should write your own css rules in <em class="dfn-code">skin/frontend/bizarre/default/css/custom.css</em><br />
+					Since this file is loaded after any other css files all css rules written in it <strong>will override any others</strong>
+					</li>
+					<li><strong>You need to customize .js or .phtml files</strong>. In this case the only correct way is creating your own subtheme.</li>
+				</ol>
+				<h3 class="sub-title">How to create subthemes</h3>
+				<p>Creating a subtheme is a correct way of customization our theme. It allows you to update our theme to the latest version with ease. All you need is <strong>just upload</strong> newest version of the theme,  implement changes <strong>in overridden files</strong> in your own subtheme. You can create as many subthemes as you want. You can create specific subthemes for categories or cms pages, etc.</p>
+				<p><strong>Default theme folders structure</strong>.<br/>
+				<em class="dfn-code">app/design/frontend/<strong>bizarre/</strong>default/</em><br/>
+				Template files are separated into following folders:<br/>
+				<em class="dfn-code">layout</em> - contains XML files which define pages structure<br/>
+				<em class="dfn-code">template</em> - contains template .phtml files <br/>
+				<em class="dfn-code">locale</em> - contains CSV files with translations<br/><br/>
+				<em class="dfn-code">skin/frontend/<strong>bizarre/</strong>default/</em><br/>
+				Template files are separated into following folders:<br/>
+				<em class="dfn-code">css</em> - contains CSS files<br/>
+				<em class="dfn-code">images</em> - contains images<br/>
+				<em class="dfn-code">js</em> - directory contains JavaScript files<br/><br/>
+				Overriding of our extensions is not recommended and this guide doesn't cover it. You may have strong php/Zend knowledges to customize any extensions including ours.</p>
+				<p>
+				To create your own subtheme you need to create two following folders:<br/>
+				<em class="dfn-code">app/design/frontend/bizarre/<strong>subtheme/</strong></em><br/>
+				<em class="dfn-code">skin/frontend/bizarre/<strong>subtheme/</strong></em><br/>
+				</p>
+				<p>Then you need to copy files which you want to customize into that subtheme keeping folders structure. For example if you need to customize header <em class="dfn-code">app/design/frontend/bizarre/default/template/page/html/header.phtml</em> you need to copy it to <em class="dfn-code">app/design/frontend/bizarre/<strong>subtheme/</strong>template/page/html/header.phtml</em></p>
+				<h3 class="sub-title">How to activate subtheme</h3>
+				<p>
+				After creating subtheme the way described above you need to activate it via the magento admin panel. You can activate different themes for a whole store, categories or pages</p>
+				<p><strong>To activate your own subtheme for a whole store go to <em class="dfn-code">System -> Configuration -> Design</strong></em> and fill needed fields like this:</strong><br/>
+				<img class="content-img" src="library/img/admin_design.png" /><br/><br/>
+				<p><strong>To activate your own subtheme for a specific category go to <em class="dfn-code">Catalog -> Manage Categories</strong></em>, click on a category you want to change the theme for, go to the tab "Custom Design" and choose your own subtheme under bizarre group:</strong><br/>
+				<img class="content-img" src="library/img/admin_category_design.png" /><br/><br/>
+				<p><strong>To activate your own subtheme for a specific page go to <em class="dfn-code">CMS -> Pages</strong></em>, click on a page you want to change the theme for, go to the tab "Design" and choose your own subtheme under bizarre group:</strong><br/>
+				<img class="content-img" src="library/img/admin_page_design.png" />
+				</p>
+				<h3 class="sub-title">How to know which file is used for...</h3>
+				Magento has incredible tool for debug provided by default. <br/>
+				It can be enabled here <em class="dfn-code">System -> Configuration -> Developer -> Debug</strong></em>. <br/>
+				<img class="content-img" src="library/img/admin_debug.png" /><br/>
+				It cannot be enabled for whole store but for specific store view so make sure you have chosen it. <br/><br/>So in frontend you will see something like this:<br/>
+				<img class="content-img" src="library/img/frontend_hints.png" /><br/><br/>
+				<div class="note">Notice: Customization/configuration/integration of theme, magento and 3rd party extensions is a spacious field of development and sometimes requires hard recording of some magento and/or theme code. Due to that we're unable to provide support related to theme customization/configuration/integration with 3-rd party extensions. Please refer to the section <a href="#custom">Custom Development</a> where we offer our trusted partners which are available for any customization work. </div>
+			</div>
+			<div id="new-extensions" class="post">
+				<h2 class="section-title">Integration of New Extensions with the Theme </h2><br /><br />
+				<div class="note-2">There is the only one theme which is fully compatible with any extensions. Default magento theme.</div>
+				We tried to make this theme as much compatible with any extensions as possible but it's impossible to get it done for sure due to huge amount of available extensions. So please notice <strong>this theme may not be compatible with some extensions</strong>.
+				<h3 class="sub-title">Why the theme can't be compatible with any extensions?</h3>
+				<p>The answer is pretty simple: If this theme and an extension use the same template files - <strong>they aren't compatible</strong></p>
+				<h3 class="sub-title">Solution?</h3>
+				<p>In most of cases the solution is pretty easy too:<br />
+				<strong>Move template files of an extension to the theme folder</strong>. This theme is an interface, like <strong>base</strong> or <strong>default</strong> one, so if an extension has folder under <em class="dfn-code">base/<strong>default/</strong></em> or <em class="dfn-code">default/<strong>default/</strong></em> move all of them to <em class="dfn-code">bizarre/<strong>default/</strong></em></p>
+				<p>But sometimes you also need to edit some template files of an extension or/and of the theme ones to get it working. We strongly do not recommend doing this if you are not familiar to magento, hire professional developers to get it done instead. Please refer to <a href="#custom">Custom Development</a> chapter of this guide for more information.</p>
+				<p>Authors of the 3-rd party extensions should provide detailed instruction about how to integrate the extension with custom themes because default magento theme is used only on magento demo, on real stores people use custom themes for sure.</p>
+			</div>
+			<div id="ready-solutions" class="post">
+				<h2 class="section-title">Known issues and their solutions</h2><br /><br />
+				<ul>
+					<li><h3>Issues with installation</h3>
+						<dl class="issues">
+							<dt class="note-3">404 Not Found when trying to open theme configuration page</dt>
+							<dd>
+								<em>Solution: </em>Clear all the magento cache then logout from the admin panel and login again
+							</dd>
+							<dt class="note-3">Package with this name does not exist and cannot be set" error when setting the package name</dt>
+							<dd>
+								<em>Solution 1: </em>Make sure you have uploaded the theme files in the correct way. Note that folders structure of uploaded files must match to the structure of files in downloaded package<br />
+								<em>Solution 2: </em> Check if you have set correct file permissions
+							</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with widgets</h3>
+						<dl class="issues">
+							<dt class="note-3">Brand logo images aren't displayed after adding them via widget</dt>
+							<dd>
+								<em>Solution 1: </em> Check if brand logo image is created and exist in <em class="dfn-code">media/brands</em> folder of your magento <br/>
+								<em>Solution 2: </em> Check your brand logo image file name and name of brand in admin (<em class="dfn-code">Catalog -> Attributes -> Manage Attributes -> Manage Label / Options</em>). They <strong>must</strong> match <br/>
+								<em>Solution 3: </em> Check if format of files matches the format of file. It <strong>must</strong> match. All brand logo images <strong>must</strong> have same format<br/>
+							</dd>
+							<dt class="note-3">Products are not displaying in New / Sale widgets </dt>
+							<dd>
+								<em>Solution 1: </em>Mark product as “New” or Sale on product edit page<br />
+								<em>Solution 2: </em> Make sure that you have enough new products to show. Usually it should be not less than 7 products marked as new/sale<br />
+								<em>Solution 3: </em>Reindex all the data (System-> Index Management) and flush the magento cache (System->Cache management)
+							</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with Revolution slider</h3>
+						<dl class="issues">
+							<dt class="note-3">After adding Revolution Slider theme features are not working</dt>
+							<dd>
+								<em>Solution: </em> Disable jQuery for each slider you have got there <em class="dfn-code">Am -> Am Revolution Slider -> Manage Slider -> Your_Slider_Name -> Troubleshooting vertical tab</em>
+							</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with Blog</h3></li>
+						<dl class="issues">
+							<dt class="note-3">Blog page isn't shown in browser or seems broken</dt>
+							<dd>
+								<em>Solution: </em>Make sure you have unzipped extension files correct way. All folders and files of this extension must be in appropriate directories of your magento. If you see <strong>aw_blog</strong> folder in the root of your magento you uploaded/unzipped it wrong way. 
+							</dd>
+							<dt class="note-3">Blog link doesn't work in different store view (i.e. language)</strong></dt>
+							<dd>
+								<em>Solution: </em>Set path to the blog considering language path for each store (i.e. /english/blog) in "Custom link" field of blog category
+							</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with Category page</h3>
+						<dl class="issues">
+							<dt class="note-3">Category page doesn't display layered navigation</dt>
+							<dd>
+								<em>Solution: </em>Navigate to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> Display Settings tab </em> and set “Yes” in "Is Ancor" dropdown list
+							</dd>
+							<dt class="note-3">Categories is not displaying in navigation menu</dt>
+							<dd>
+								<em>Solution 1: </em>Check your category tree. All categories should be under the Root categories <br />
+								<em>Solution 2: </em>Check your category availability: Go to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> General information</em> and set "Yes" in "Is Active" dropdown list<br />
+								<em>Solution 3: </em>Check if category included in navigation menu: Go to <em class="dfn-code">Catalog -> Manage Categories -> Category edit page -> General information</em> and set "Yes" in "Include in Navigation Menu" dropdown list.<br />
+								<em>Solution 4: </em>Reindex all the data (<em class="dfn-code">System -> Index Management</em>) and flush all the cache (<em class="dfn-code">System - Cache Management</em>)
+							</dd>
+							<dt class="note-3">Products are not displayed on product listing </dt>
+							<dd>
+								<em>Solution 1.</em> The products must be Visible in Catalog (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> General tab -> Status -> Enabled</em>)<br />
+								<em>Solution 2.</em> The products must be Enabled (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> General vertical tab -> Visibility -> Catalog, Search/Catalog</em>)<br />
+								<em>Solution 3.</em> Product must have a stock Quantity (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Qty -> at least 1</em>)<br />
+								<em>Solution 4.</em> The product must be set to In Stock (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Stock Availability -> In stock</em>)<br />
+								<em>Solution 5.</em> If the product is set not to track stock, it still has to have a stock Quantity and be set to In Stock<br />
+								<em>Solution 6.</em> The product must be assigned to the target Category (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Categories vertical tab</em>)<br />
+								<em>Solution 7.</em> If using multi-website mode (or if you imported the products through Data Flow), the products must be assigned to the target Website (<em class="dfn-code">Catalog -> Manage products -> Product edit page -> Inventory vertical tab -> Websites vertical tab</em>)<br />
+								<em>Solution 8.</em> You must refresh your Cache (<em class="dfn-code">System -> Cache management</em>) and reindex all the data (<em class="dfn-code">System -> Index Management</em>)<br />
+							</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with Product Page</h3>
+						<dl class="issues">
+							<dt class="note-3">Product options block is displayed below the product image</dt>
+							<dd>
+								<em>Solution: </em>This is standard magento behaviour, to display this block on the right of the product image navigate to a product edit page -> “Design” vertical tab and set “Product Info Column” in “Display Product Options In” field.
+							</dd>
+							<dt class="note-3">Brand logo is not displaying, while the option of showing brand logo is enabled. </dt>
+							<dd>
+								<em>Solution 1: </em>Check if brand logo image is created and exist in <em class="dfn-code">media/brands</em> folder of your magento <br/>
+								<em>Solution 2: </em>Check your brand logo image file name and name of brand in admin (<em class="dfn-code">Catalog -> Attributes -> Manage Attributes -> Manage Label / Options</em>). They <strong>must</strong> match<br />
+								<em>Solution 3: </em>Check if format of files matches the format of file. It <strong>must</strong> match<br/>
+								<em>Solution 4: </em>Assign product to the manufacturer on product edit page<br/>
+							</dd>
+							<dt class="note-3">If you do not see you related products in sidebar of product page whereas the fact that the Related block position is set as Sidebar please check the points below:</dt>
+							<dd>
+								<em>Solution 1: </em>Related products should be assigned to that product <em class="dfn-code">Product edit page -> Related products</em><br/>
+								<em>Solution 2: </em>The reindex and flushing of cache should be done after assigning of related products. This is default magento behaviour: after applying any changes to the products or category you have to reindex all the data and flush the cache in order to see the changes on frontend immediately <br/>
+								<em>Solution 3: </em>The Product page sidebar position <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Product Page Options</em> should be chosen as Left or Right<br/>
+								<em>Solution 4: </em>Meigee Product options that concern related product block position and product sidebar location that are on product edit page should use Config settings if not the combination should be same as above<br/>
+							</dd>
+							<dt class="note-3">Quick view window contains all the content of store instead of just information about product</dt>
+								<dd>
+									<em>Solution.</em> Go to <em class="dfn-code">Catalog -> Manage products -> Product edit page -> Design vertical tab</em> and in Page layout dropdown list set "No layout updates"<br/>
+								</dd>
+							<dt class="note-3">Upsell and related products are not disaplying on product page</dt>
+								<dd>
+									<em>Solution.</em> Reindex all the data <em class="dfn-code">System -> Index management</em> and flush the cache <em class="dfn-code">System -> Cache management</em><br/>
+								</dd>
+						</dl>
+					</li>
+					<li><h3>Issues with Sidebar</h3>
+						<dl class="issues">
+							<dt class="note-3">Sidebar block isn't appeared in frontend</strong></dt>
+							<dd>
+								<em>Solution 1: </em> Make sure this block is enabled under <em class="dfn-code">Meigee -> Bizarre -> Theme Options -> Sidebar Options</em><br/>
+								<em>Solution 2: </em> Switch to <strong>default</strong> magento theme. If block isn't correctly configured it won't be showed up in frontend too. Read instructions above.</em>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div id="self-diagnostic" class="post">
+				<h2 class="section-title">Self-Debugging</h2><br /><br />
+				<p>Since we are providing only theme related support please make sure that your issue is definitely caused by theme before sending a request to support team. How to debug that: 
+					<ol>
+						<li>Disable all the cache (<em class="dfn-code">System -> Cache management</em>) and activate default theme (<em class="dfn-code">System -> Configuration -> Design -> Package -> Set as default</em>) Save changes and check if the problems remains. If so, the issue is not theme related and you need to dig your magento or custom modules settings in order to find the reason of issue.</li>
+						<li>Disable all the modules which were previously installed (just rename file of module in this folder "app/etc/modules" Make sure that cache is disabled in your admin before renaming modules). If the issue disappear after you renamed all your custom modules it will mean that one of your module breaks theme behaviour. Revert all the changes back and start to rename one by one your modules files in order to know which exactly module breaks theme behaviour</li>
+						<li>Just check same issue on demo version. If the demo version doesn't show same error, it means that you have error in your store only, so you have to explore the reason of issue in your store. Refer to the points above in order to do that. </li>
+						<li>Open console of <a href="https://getfirebug.com" target="_blank">Firebug</a> or similar debug tools and update page. If you see many errors like "theme_feature is not a function" it means that you included more than jQuery library. Refer to the point 2 in order to know which exactly module requires additional library.</li>
+					</ol>
+				</p>
+			</div>
+			<div id="custom" class="post">
+				<h2 class="section-title">Custom Development</h2><br /><br />
+				<table>
+					<tr>
+						<td style="width:46%; padding-right:20px;">
+				<a target="_blank" href="http://www.advancedlogic.eu"><img class="content-img" src="library/img/advanced_logic.png" /></a></td>
+						<td>
+				At the moment we do not offer this kind of service but are happy to present our trusted partner that offer customizations and integration services of our themes.
+				These guys are <strong>Magento Solution Partner</strong> and <strong>a Magento Certified Developer Company</strong> - <a target="_blank" href="http://www.advancedlogic.eu">http://www.advancedlogic.eu</a>. Just contact them for any customization work.</td>
+					</tr>
+				</table>
+			</div>
+			<div id="updates" class="post">
+				<h2 class="section-title">Theme Updates</h2><br /><br />
+				<table>
+					<tr>
+						<td style="width:25%; padding-right:20px;">
+				<a target="_blank" href="http://themeforest.net/downloads"><img class="content-img" src="library/img/notifying.png" /></a></td>
+						<td>First of all make sure you have flagged this option on your <a target="_blank" href="http://themeforest.net/downloads">downloads page</a> to get notified by email if the theme is updated</td>
+					</tr>
+				</table><br />
+				<p>After getting an email with note that the theme was updated you need to download the latest version on your downloads page by yourself. The newest theme always comes with folder "<strong>Changes</strong>" where we put .diff files with all changes we have made.</p>
+				<p>If you have customized the theme in the correct way which was described in <a href="#customization">Customization</a> section of this guide all you need is follow <a href="#installation">Installation</a> steps once again and then implement changes described in .diff file into your <strong>subtheme</strong> files if they were changed.</p>
+				<p>Otherwise you will need to read line by line the .diff file and make the same changes in all affected files. <strong>Sometimes .diff files are really huge</strong></p>
+				<p>Below is the list of Free diff reader:
+					<ul>
+						<li><a href="http://diffuse.sourceforge.net/"target="_blank">Diffuse</a></li>
+						<li><a href="http://www.ajcsoft.com/diff-compare-files.htm"target="_blank">AJC Diff</a></li>
+						<li><a href="http://kdiff3.sourceforge.net/"target="_blank">KDiff</a></li>
+						<li><a href="http://sourcegear.com/diffmerge/"target="_blank">DiffMerge</a></li>
+						<li><a href="http://tortoisesvn.tigris.org/TortoiseMerge.html"target="_blank">Tortoise Merge</a></li>
+						<li><a href="http://meldmerge.org/"target="_blank">Meld</a>*</li>
+						<li><a href="http://www.grigsoft.com/download-windiff.htm"target="_blank">WinDiff</a></li>
+						<li><a href="http://www.guiffy.com/Diff-Tool.html"target="_blank">Diff Tool</a>*</li>
+					</ul>
+					<em>*Support Syntax Highlighting</em>
+				</p>
+			</div>
+			<div id="support" class="post">
+				<h2 class="section-title">Support</h2><br /><br />
+				<p class="note-2">At the moment we provide support only via <a target="_blank" href="https://meigeeteam.freshdesk.com">ticket system</a>. <strong>All requests are handled in turn</strong>. That means if you provide incorrect information of your problem you will get an email with asking of clarification and your request will be put into the end of a turn.</p>
+				<h3 class="sub-title">Before sending a request</h3>
+				<ol>
+					<li>Please read this user guide carefully. Many problems are covered here.</li>
+					<li>Please read our online <a target="_blank" href="http://meigeeteam.com/faq/">FAQ</a></li>
+				</ol>
+				<h3 class="sub-title">Where to find my purchase code</h3>
+				<p><img class="content-img" src="library/img/purchase_code.png" /></p>
+				<h3 class="sub-title">Sending a request</h3>
+				<p>To get help quickly please provide the following information:</p>
+				<ol>
+					<li>The link of your magento store with installed theme</li>
+					<li>Magento admin credentials</li>
+					<li>FTP details to let us fix bugs directly on your server</li>
+					<li>Detailed description of a problem you've got</li>
+					<li>Screenshots in 90% are very helpful so are really appreciated</li>
+				</ol>
+				<div class="note-2">Providing incorrect credentials or FTP access data is a very frequent problem. Please check <strong>twice</strong> if you're providing correct data. <strong>Otherwise your issue will be put into the end of a turn!</strong></div>
+			</div>
+	</div>
+</body>
+</html>

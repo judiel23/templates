@@ -1,0 +1,1 @@
+{{widget type="meigeewidgetsbizarre/newproducts" template="meigee/meigeewidgetsbizarre/grid.phtml" products_amount="4" products_per_row="4" widget_id="6153"}}

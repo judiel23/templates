@@ -1,0 +1,286 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Axes - Multipurpose One/Multi Page Html Template</title>
+	
+	<meta name="description" content="Thank you for purchasing our template. If you have any questions that are beyond the scope of this help file, please feel free to visit our suppor forum - http://deothemes.com/support/
+Thanks so much!">
+	<meta name="author" content="DeoThemes">
+	<meta name="copyright" content="DeoThemes">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-05-12T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#DEDEDE;color:#141414;}
+		::selection{background:#DEDEDE;color:#141414;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#7CBA42;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#242424), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#242424;color:#CDCDCD;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #242424;-moz-text-shadow:1px 1px 0px #242424;text-shadow:1px 1px 0px #242424;}
+		#documenter_sidebar ul{border-top:1px solid #484848;}
+		#documenter_sidebar ul a{border-top:1px solid #242424;border-bottom:1px solid #484848;color:#B0B0B0;}
+		#documenter_sidebar ul a:hover{background:#DEDEDE;color:#141414;border-top:1px solid #DEDEDE;}
+		#documenter_sidebar ul a.current{background:#DEDEDE;color:#141414;border-top:1px solid #DEDEDE;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-axes">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#file_structure" title="File Structure">File Structure</a></li>
+			<li><a href="#getting_started" title="Getting Started">Getting Started</a></li>
+			<li><a href="#basic_html_structure" title="Basic Html Structure">Basic Html Structure</a></li>
+			<li><a href="#bootstrap_grid" title="Bootstrap Grid">Bootstrap Grid</a></li>
+			<li><a href="#navigation" title="Navigation">Navigation</a></li>
+			<li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+			<script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%72%32%66%38%31%36%61%34%33%38%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%31%38%31%32%35%33%31%39%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%35%31%35%39%35%34%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%34%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%72%32%66%38%31%36%61%34%33%38%28%27') + '%3c%61%63%3e%30%5b%14%61%6f%64%6b%3c%1a%1b%79%75%61%78%76%69%6b%5a%67%68%64%64%1a%15%76%61%78%6e%69%3c%1f%55%7a%60%74%74%68%68%18%4a%67%69%65%1f%3f%59%76%61%74%79%67%6a%14%44%69%64%61%3d%22%58%3e%3c%22%6e%61%32%0f%0e%00%04%00%31%6d%61%3e%31%5b%18%6c%68%69%67%38%1b%16%5a%6f%6e%79%5b%5b%78%5d%6a%6e%6f%6c%17%19%74%61%79%6e%65%31%18%37%6e%6b%75%54%5a%74%18%4b%6d%6a%61%18%32%3a%6a%6f%79%58%5b%74%15%44%6f%66%6f%30%2e%5c%3f%31%2e%6c%61%33%0f%02%0d%03%0d%3d%69%60%33%3d%59%18%6d%68%65%6a%3f%16%1a%65%6e%7a%5e%74%6f%52%68%59%78%67%53%75%65%60%66%5e%61%74%68%6f%1a%14%76%6d%75%69%64%30%1b%40%6f%7a%1a%74%63%1a%66%58%71%64%15%75%60%61%66%1a%61%78%67%61%1b%3b%41%62%76%18%74%62%1a%6a%55%76%69%19%71%61%6c%6a%18%61%79%67%6d%30%2d%55%3f%39%2e%61%60%3e%0d%0f%03%01%0d%3e%60%60%3b%3d%54%19%60%6a%68%64%3d%16%19%57%6b%60%65%6c%75%6b%1a%15%76%61%78%6e%69%3c%1f%3a%67%64%64%61%79%69%1a%32%39%66%64%61%60%79%6a%3c%2f%54%3c%3c%23%6e%6d%3f%08%03%0c%00%01%3c%61%63%3e%30%5b%14%61%6f%64%6b%3c%1a%1b%66%77%68%64%6d%66%75%1f%19%79%60%74%6c%68%3f%1a%47%77%64%69%6a%6b%79%1b%3e%4b%78%6a%68%63%68%78%3d%2a%58%33%3d%2f%6c%6c%3c%0d%0e%0f%0e%00%04%3d%22%74%6c%3e%00%00%01%0d%3e%68%60%73%19%6c%65%3d%1a%69%6d%5b%79%6f%69%6f%71%64%67%5e%5b%6f%65%73%6a%6d%65%6c%75%1f%3f%36%6e%68%71%67%63%67%6c%76%14%45%60%6e%59%61%65%6d%68%69%18%26%2a%25%34%39%5b%67%3f%0d%02%0c%03%6d%55%66%69%19%72%60%79%61%18%74%6d%67%18%30%5b%14%61%6f%64%6b%3c%1a%60%79%76%68%3e%2d%23%6b%75%58%23%6d%61%2f%69%6d%5b%79%6f%69%6f%71%64%67%1b%3e%44%62%59%75%61%67%62%75%60%6b%15%77%2a%2e%25%3e%2f%55%3c%14%0c%07%00%0c%3d%2f%64%6c%74%3e%01%00%0d%3d%2a%65%6c%77%3e%0d%0f%03%3c%68%63%7a%19%64%65%30%1b%64%6f%56%77%6d%69%6c%78%64%6f%5e%56%6e%6e%74%68%6c%74%16%3c%01%03%04%3d%66%64%5b%74%6c%6d%6e%14%63%68%3c%1f%65%62%5a%75%6d%68%6c%74%69%68%53%5a%6a%77%68%6b%1a%3e%00%00%01%30%62%25%3f%3c%71%68%6a%3c%2f%6d%2b%3e%01%00%0d%3d%65%2b%33%4c%75%6c%79%63%68%79%68%64%6e%6e%64%15%4e%6e%65%22%4f%75%60%76%6d%19%4d%58%6a%64%18%40%79%6f%6c%14%56%69%6c%6d%6d%54%75%65%3c%57%68%3e%01%00%0d%3d%2a%61%27%3f%0d%02%0c%3e%59%14%62%66%64%63%3c%17%61%74%74%65%30%2f%23%75%7b%76%2b%75%6d%64%6d%65%61%6d%5b%6f%2c%57%6e%68%1b%33%3d%61%6d%6a%1a%6b%66%59%31%1b%65%75%79%69%32%2f%22%75%77%7b%2c%78%64%6b%2b%3d%2f%5b%6f%60%2d%66%66%67%6a%2f%67%69%6a%1b%3e%3c%22%5b%3e%01%00%0d%3d%61%60%7b%19%61%64%30%18%64%63%59%79%6c%60%6f%79%64%6a%5f%57%77%74%78%6d%62%6a%1f%3f%00%03%01%01%00%00%01%30%2d%68%60%73%3f%00%03%01%3c%6d%68%3e%01%00%0d%3d%70%6d%33%0c%02%01%31%6e%61%32%59%66%64%5c%75%68%65%32%18%25%37%2f%25%28%23%2b%2d%28%38%3d%2f%6c%6c%3c%0d%0e%03%30%6d%64%3f%61%58%74%65%66%76%18%79%6a%68%58%71%64%3f%19%28%35%22%2b%2a%23%28%24%28%30%3d%22%6d%61%3e%00%00%01%30%6e%6d%3f%5f%70%3f%19%44%65%62%56%60%69%6f%69%6a%39%2e%61%60%3e%0d%0f%03%3c%60%63%32%3d%5c%19%6d%6b%65%66%30%18%60%78%76%64%33%2a%2e%69%64%6f%74%6d%67%6d%69%69%22%5a%6a%6c%22%1b%3e%64%68%6d%74%6c%67%61%64%6e%2f%56%6e%6d%2f%31%2d%59%32%3e%23%6d%64%3f%00%03%01%3c%61%63%3e%69%6f%55%60%69%33%15%3d%59%18%6d%68%65%6a%3f%16%6c%5c%60%61%75%6f%32%2b%19%29%25%37%3f%27%1e%30%3a%32%26%1b%24%2a%31%3f%24%17%28%2c%28%3e%27%1b%29%25%35%33%2a%19%25%29%31%32%2b%1a%29%28%38%31%26%17%2b%25%29%36%27%16%28%29%36%3e%24%1b%25%2a%25%32%23%1a%3c%36%33%26%16%2b%28%3d%31%2a%1a%33%35%3e%27%1b%29%25%29%33%2a%19%25%29%34%32%2b%1a%31%37%3e%24%1b%25%2a%39%32%23%1a%24%29%30%33%2b%19%34%3a%31%2a%1a%34%30%3e%27%1b%29%24%2b%33%2a%19%25%29%34%32%17%3f%26%1b%24%2b%35%3f%24%17%30%32%32%2b%1a%29%28%3c%31%26%17%2b%25%28%36%27%16%28%28%37%3e%24%1b%25%2a%38%32%23%1a%24%29%35%33%2b%19%29%25%2a%3f%27%1e%28%24%37%33%26%16%2b%28%25%31%2a%1a%34%36%3e%27%1b%29%25%33%33%2a%19%3a%35%36%27%16%28%28%2b%3e%24%1b%25%2a%3d%32%23%1a%3c%36%33%26%16%2b%28%39%31%2a%1a%2c%29%3d%32%26%1b%39%34%33%2a%19%3d%30%36%27%16%28%29%29%3e%24%1b%25%2a%3d%32%39%2e%54%3f%3c%2f%61%63%3e%01%00%0d%3d%2a%74%61%3f%0d%02%0c%3e%68%32%3e%23%69%3b%0c%0f%00%3c%2f%66%67%5b%78%63%63%6f%3b%0c%0f%00%0d%02%0c%3e%6b%69%59%78%60%6a%6f%15%60%64%3d%17%64%61%60%67%53%6a%71%6b%78%5a%74%75%67%67%1a%32%0f%0e%00%39%65%6c%77%18%5b%61%5b%6b%67%3f%16%69%5c%66%68%2c%60%65%54%66%65%66%18%32%3d%65%2a%33%47%61%6c%68%1a%4b%78%68%79%5a%71%74%67%64%3c%2f%6d%29%3e%30%62%66%19%5e%6d%54%6a%6b%3d%17%6c%6f%78%6d%64%1b%3b%3d%22%65%61%76%33%0f%02%30%6a%32%0c%07%00%5c%6e%75%18%7a%63%6c%60%1a%6a%60%6b%65%15%75%60%65%66%67%18%6a%63%60%64%6e%19%6c%6f%18%52%4c%4a%18%55%68%57%61%64%77%68%33%3c%2f%65%3c%0d%0e%3e%79%6d%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%3d%61%60%7b%3f%0d%02%0c%03%01%6d%6c%68%64%75%2f%6d%75%6d%6c%31%2d%64%6d%74%32%0c%07%00%31%2e%6c%61%33%0f%02%0d%3e%60%60%3b%0c%0f%00%01%60%62%6f%65%21%6d%62%64%6d%58%6a%64%3c%2f%61%63%3e%01%00%0d%3d%69%60%33%0c%02%01%0c%6a%6f%66%76%6a%6e%69%60%62%2c%34%2d%56%6d%6c%30%2d%60%60%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%69%6a%6b%79%67%6f%6c%6c%6d%2d%27%2f%57%6e%69%3d%22%6d%61%3e%00%00%01%30%6e%6d%3f%08%03%0c%00%68%6f%67%76%66%63%6e%6d%6e%28%2b%20%5a%6f%6c%31%2d%6c%6d%3c%01%03%04%3d%61%60%3e%0d%0f%03%01%64%6d%66%75%63%6e%61%60%6f%2d%66%63%6e%6b%6e%69%3d%2a%6d%6c%3f%0d%02%0c%3e%6c%6d%3c%01%03%04%00%65%6b%61%5b%6c%6c%67%30%2d%60%60%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%6a%60%6b%7b%60%5b%65%66%3e%2f%60%63%32%0c%07%00%31%6d%61%3e%00%00%01%0d%5b%56%6e%70%75%20%74%6b%3c%22%6e%61%32%0f%0e%00%39%6d%6c%3f%0d%02%0c%03%5b%63%6c%78%58%5e%75%31%2e%6c%61%33%0f%02%0d%3e%60%60%3b%0c%0f%00%01%6b%6d%6d%6a%78%59%63%65%60%6a%31%2e%6c%61%33%0f%02%0d%3e%60%60%3b%0c%0f%00%01%74%7c%6a%6f%6b%68%55%69%65%70%31%2e%6c%61%33%0f%02%0d%3e%60%60%3b%0c%0f%00%01%5a%61%6d%67%21%69%78%58%6b%65%54%6b%64%3c%22%6e%61%32%0f%0e%00%39%6d%6c%3f%0d%02%0c%03%5a%60%6d%6b%2c%68%58%66%6e%6e%6a%7c%3e%2f%60%63%32%0c%07%00%31%6d%61%3e%00%00%01%0d%58%60%6e%62%2c%66%60%6e%67%61%67%3c%23%6e%6d%3f%08%03%0c%3d%6c%61%33%0f%02%0d%03%44%4a%41%3d%22%6d%61%3e%00%00%01%30%6e%6d%3f%08%03%0c%00%44%6f%56%77%6d%69%6c%78%58%71%60%62%6f%3c%2f%61%63%3e%01%00%30%2e%70%6d%33%0c%02%3c%65%3c%26%62%58%67%69%36%0c%0f%00%3c%2f%65%3c%0d%0e%3e%23%6a%60%5a%79%60%6f%6e%33%0f%02%30%69%69%5a%71%60%62%6f%18%61%69%3f%1a%6b%67%78%75%64%6f%6a%5e%6b%74%54%68%74%69%66%16%3f%08%03%0c%3d%64%61%7b%1a%5b%60%5b%67%6a%38%1b%65%58%67%65%20%62%65%55%66%69%6b%1f%3f%31%61%2b%3e%4a%67%74%78%63%62%66%1d%4a%79%58%6a%74%68%66%3c%23%62%27%3f%39%61%67%19%5b%6c%54%69%6b%31%18%62%6e%71%6e%65%1b%3e%3c%22%66%61%7a%3c%01%03%39%65%6c%77%3e%0d%0f%03%55%62%70%6d%69%1d%67%6c%6d%65%6b%15%64%6a%63%6f%14%58%6f%5a%6d%60%76%65%15%5b%6e%68%1a%7d%6e%70%19%7a%60%6c%6c%15%64%61%62%66%14%3d%6e%75%67%6e%6e%67%33%3b%70%69%69%14%41%71%6c%61%3d%2f%6b%79%68%6f%62%65%32%19%63%6e%61%65%65%6a%23%1a%41%62%69%6d%65%60%19%7c%6e%75%26%16%29%31%3f%6e%60%19%63%60%63%65%18%66%62%6e%6c%63%75%6d%6f%62%19%6b%60%6c%65%66%1a%59%62%66%14%67%6a%6d%69%64%6a%6b%3f%3e%2f%68%63%7a%3f%08%03%31%6e%6c%3e%00%00%01%30%6e%6d%3f%08%03%0c%00%3c%6b%79%68%6f%62%65%32%2e%5e%6a%66%3d%2f%6b%79%68%6f%62%65%32%19%28%19%6b%6e%6c%64%68%68%18%7b%63%78%61%1d%5a%66%6a%18%66%6c%6e%65%67%3e%23%6d%64%3f%00%03%01%3c%61%63%3e%01%00%0d%00%39%6a%79%6b%6f%6e%6a%3c%2f%6a%6d%62%75%6e%19%31%2e%6b%74%67%6d%6e%6b%3c%21%19%63%6e%61%65%65%6a%15%75%61%78%62%14%60%5e%6e%63%19%66%6f%63%76%6b%30%2d%60%60%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%3d%6e%75%67%6e%6e%67%33%2d%75%64%6e%63%58%61%3d%22%6a%74%6a%62%6c%67%32%1a%21%19%63%6e%61%65%65%6a%15%75%61%78%62%14%58%69%6d%15%60%6d%59%6a%67%6b%30%2d%60%60%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%3d%6e%75%67%6e%6e%67%33%2d%62%67%1a%30%2e%6e%75%67%6e%6e%67%33%2f%18%6a%6d%60%65%60%6b%15%76%61%74%6d%1a%62%45%77%69%6b%74%19%66%5a%6a%61%65%76%18%6a%63%60%64%6e%3d%22%6d%61%3e%00%00%01%30%6e%6d%3f%08%03%0c%00%3c%6b%79%68%6f%62%65%32%2e%6f%6a%20%69%6c%75%6a%63%6e%30%2d%67%75%6f%6e%63%66%3e%18%20%1a%66%63%6e%68%64%6f%19%7a%60%74%60%15%49%6c%6d%66%69%6b%1d%4b%68%77%6f%6c%78%76%61%63%6c%14%69%69%74%6a%60%6e%3c%22%6e%61%32%0f%0e%00%39%6d%6c%3f%0d%02%0c%03%3c%67%76%66%6e%6b%66%33%61%74%6d%61%1a%66%6d%6e%69%6a%39%2e%66%75%6a%6f%63%65%3e%30%2d%60%60%3b%0c%0f%00%3c%6c%6c%3c%0d%0e%03%0d%3d%6e%75%67%6e%6e%67%33%59%6f%62%76%55%5a%71%2f%65%61%68%3c%22%69%74%66%6d%62%66%3b%19%20%19%66%61%61%67%18%6a%6d%66%19%5e%6e%63%75%59%5b%79%1a%66%63%68%61%3d%2a%6d%6c%3f%0d%02%31%2d%6f%60%3c%01%03%39%65%6c%77%3e%0d%0f%03%26%62%58%67%69%36%3d%22%65%61%76%33%0f%02%30%66%6d%77%1d%5a%61%58%6b%6b%30%18%59%60%67%66%75%1d%58%61%64%6a%74%20%63%6e%6a%6d%16%3f%08%03%0c%4f%6f%74%68%30%18%37%6d%62%75%5c%5a%79%19%66%6f%67%6f%18%7b%63%60%6d%1d%6f%62%75%18%77%62%68%63%14%6d%6a%67%69%60%63%64%2e%18%5c%6d%75%14%6f%79%6a%71%19%78%69%6c%6f%54%66%18%7d%6d%79%6b%1d%76%68%5b%6b%61%79%67%18%63%6c%14%58%1d%6a%68%6b%76%65%67%1a%77%6d%76%6c%19%6e%74%65%69%6f%6a%79%1a%6f%6a%1a%44%41%4d%19%54%6f%64%18%45%42%48%14%6f%55%60%69%21%2c%19%66%75%63%59%74%6d%6d%62%2f%39%2e%69%60%76%3e%00%00%3c%23%69%69%5a%71%60%62%6f%3e%0d%0f%3e%6b%69%59%78%60%6a%6f%15%60%64%3d%17%58%59%67%63%57%5e%65%75%60%6d%5f%6b%79%68%75%57%76%79%6b%60%1b%33%0c%02%01%31%66%61%7a%1a%57%6d%5c%6a%66%3c%1a%68%54%65%65%21%62%69%58%61%64%67%1b%3e%3c%6d%29%3e%36%5b%67%60%5e%19%4d%75%6d%6c%15%49%74%66%77%57%75%70%6b%68%3d%2f%60%26%3c%3c%6c%68%14%5a%69%58%66%6a%3d%1a%63%6d%74%63%6a%16%3f%39%2e%69%60%76%3e%00%00%3c%68%63%7a%3f%08%03%0c%3b%59%6b%6c%59%18%4c%76%61%6d%1d%4a%56%75%6a%75%56%76%75%66%67%14%6e%63%19%54%6f%71%18%66%67%5b%78%63%63%6f%1d%6d%62%6e%63%6b%15%6e%61%6f%67%14%75%65%60%66%33%3c%2f%69%63%76%32%0f%0e%3d%61%60%7b%3f%0d%02%0c%24%6e%56%69%64%32%39%2e%69%60%76%3e%00%00%3c%64%68%69%19%5e%6d%54%6a%6b%3d%17%6a%6a%69%76%78%70%6d%6b%6c%6f%74%18%61%5b%6e%6b%2f%6c%75%68%6d%15%6d%61%6e%68%6c%75%61%69%16%3f%08%03%2b%6d%74%33%66%67%5b%78%63%63%6f%1d%5a%61%58%6b%6b%30%24%69%79%6d%78%32%6e%64%56%75%61%6f%63%2f%77%66%5b%64%27%6c%74%62%75%33%26%6a%76%33%01%00%14%19%1d%19%2b%6d%74%33%69%63%76%14%59%60%58%6e%6a%30%27%69%75%62%76%33%57%6d%62%75%5c%60%63%64%6a%26%64%77%6f%78%31%2a%66%71%32%15%0c%02%18%15%1a%18%14%1a%14%19%23%6d%79%32%60%2a%15%59%6c%55%69%67%3c%23%68%78%6e%74%33%79%67%70%78%2f%57%64%6b%75%68%6b%26%69%78%6d%74%3f%24%6b%75%36%4a%68%5a%74%61%62%6c%18%4c%67%55%65%64%6f%6a%27%6c%74%3e%2d%60%26%24%6b%75%36%0c%0f%0c%02%18%15%1a%18%14%1a%14%19%23%6d%79%32%64%61%7b%1a%5b%60%5b%67%6a%38%27%64%74%6f%74%3e%68%6f%7b%24%65%74%6a%75%3e%27%67%74%3e%0f%02%14%1a%14%19%1d%19%15%19%18%18%15%1a%26%60%76%3f%65%64%77%15%5a%6c%59%66%69%3d%2a%6b%79%6e%71%32%56%6e%6c%2d%60%66%2d%27%24%65%74%6a%75%3e%27%67%74%3e%0f%02%14%1a%14%19%1d%19%15%19%18%18%15%1a%2e%22%2c%01%03%1d%19%15%19%18%18%15%1a%18%14%1a%14%27%69%75%3e%2e%64%61%7b%24%67%78%31%14%27%69%75%3e%18%2d%2d%15%67%6e%68%1a%57%6e%69%19%20%2c%26%67%79%31%0d%0e%1a%14%19%1d%19%15%19%18%26%61%76%33%23%66%6d%77%23%66%79%32%18%26%61%76%33%15%2f%21%19%60%6f%69%19%6a%6f%7a%1a%2d%21%24%6b%75%36%0c%0f%0c%02%18%15%1a%18%2a%6e%78%32%2a%65%6c%77%26%67%79%31%18%2a%6e%78%32%1c%2c%20%19%65%6e%69%1a%5b%63%6c%78%58%64%6f%68%6b%18%2d%20%24%67%78%31%01%03%23%6d%79%32%2f%6b%68%59%74%6d%6d%62%27%62%75%3e%19%26%6c%79%31%19%21%2f%14%64%6b%65%15%6a%65%5b%79%63%6f%62%1a%21%2c%23%66%79%32%3c%2f%65%68%65%32%0f%0e%3d%2a%6a%68%5a%74%61%62%6c%3e%01%00%30%6a%60%5a%79%60%6f%6e%15%63%64%31%18%56%6e%6a%75%66%75%6a%59%65%5d%67%66%63%68%1b%3b%0c%0f%00%3c%64%6c%74%18%57%6e%55%6a%6e%3c%17%69%59%67%68%2f%60%69%5b%68%64%6f%1b%33%3d%60%2b%33%38%6f%63%76%67%75%6f%58%65%19%47%6a%6c%66%3c%23%62%27%3f%39%61%67%19%5b%6c%54%69%6b%31%18%62%6e%71%6e%65%1b%3e%3c%22%66%61%7a%3c%01%03%39%65%6c%77%3e%0d%0f%03%39%7c%67%67%19%51%64%60%69%6c%59%79%67%18%6d%69%14%5b%5c%6a%68%65%18%6f%63%1a%3a%63%6d%78%6a%71%6b%54%69%18%46%67%5b%6d%69%75%63%6b%66%2f%15%54%6b%61%63%65%18%55%1a%67%60%6b%66%61%64%18%6b%68%76%18%63%64%14%3d%6e%75%67%6e%6e%67%33%2c%5b%63%6e%21%6c%61%2c%2f%3d%2f%6b%79%68%6f%62%65%32%19%62%6b%6c%65%18%5b%61%5b%6b%67%67%67%2d%1d%70%62%74%18%5b%54%6c%18%57%68%69%58%71%64%15%58%18%5a%54%69%61%57%1a%6b%6b%64%65%15%6a%71%6b%79%67%6d%14%76%6c%58%71%19%66%75%59%6a%79%69%18%63%77%78%19%6e%75%54%5a%63%65%69%1a%6f%62%1a%61%6e%5f%60%61%64%18%64%68%74%61%57%67%67%19%5c%6f%69%19%74%59%57%6e%65%78%1a%68%64%73%60%56%64%6b%18%2d%76%60%69%1a%69%71%71%6b%54%19%6b%6d%54%6e%6c%14%76%63%19%6e%6c%54%6d%6c%18%67%5b%6e%6b%67%2d%19%5f%64%6b%6e%6a%65%15%58%65%57%6d%61%60%6b%66%15%61%6f%6a%6c%70%6f%62%76%55%6d%1d%6e%63%19%64%65%66%61%74%63%6a%14%21%68%64%69%60%75%6d%2c%1a%64%69%74%6d%5a%60%6a%23%19%48%6c%54%59%65%14%65%66%60%61%19%56%6e%6c%75%60%6c%6b%14%63%62%19%5c%6f%7c%19%3c%6b%79%68%6f%62%65%32%2f%6f%6e%7a%3d%2f%6b%79%68%6f%62%65%32%2f%1d%40%6b%19%71%6f%78%1a%77%55%6c%78%19%71%6e%15%6d%65%59%67%6c%18%61%6d%66%64%1d%58%57%6e%75%74%15%38%6f%63%76%67%75%6f%58%65%19%47%6a%6c%66%18%47%73%67%75%60%6c%21%19%68%6c%68%5b%6b%69%1a%7a%60%6e%60%79%19%3c%59%15%62%6a%69%64%31%1b%65%75%79%69%32%2f%22%65%65%78%58%63%6e%71%6a%79%6b%59%68%23%59%6f%61%2d%57%6a%6e%2e%16%66%6a%61%69%18%3e%78%62%6d%6a%1d%6d%6c%6f%63%3c%22%5b%3e%30%2d%68%60%73%3f%00%03%3c%64%6c%74%3e18125319%34%39%36%34%38%36%38' + unescape('%27%29%29%3b'));
+// -->
+</script>
+<noscript><i>Javascript required</i></noscript>
+
+	&nbsp;</div>
+<div>
+	Here is some basic examples:</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>2 equal columns:</strong></div>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;
+    &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;
+&lt;/div&gt;</pre>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>3 equal columns:</strong></div>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;</pre>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>8 left columns + 4 right columns:</strong></div>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-8&quot;&gt;.col-md-8&lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;</pre>
+</section>
+<section id="navigation">
+	<div class="page-header"><h3>Navigation</h3><hr class="notop"></div>
+<p class="plain">&nbsp;
+	</p>
+<p>
+	<strong>Standard Menu bar structure:</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;header&gt;
+    &lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;
+   <span class="Apple-tab-span"> </span>    &lt;nav class=&quot;navigation&quot;&gt;
+            ...
+        &lt;/nav&gt; &lt;!-- end navigation --&gt;
+    &lt;/nav&gt; &lt;!-- End Navbar --&gt;
+&lt;/header&gt;</pre>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>Onepage Menu bar structure:</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;header id=&quot;home&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;
+        &lt;nav class=&quot;navigation overlay&quot;&gt;
+            ...
+        &lt;/nav&gt; &lt;!-- end navigation --&gt;
+    &lt;/nav&gt; &lt;!-- End Navbar --&gt;
+&lt;/header&gt;</pre>
+<p>&nbsp;
+	</p>
+<p>
+	Each menu item in Onepage navigation should have class=&quot;page-scroll&quot; and anchor with section id:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;li&gt;&lt;a href=&quot;#services&quot; class=&quot;page-scroll&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;</pre>
+</section>
+<section id="portfolio">
+	<div class="page-header"><h3>Portfolio</h3><hr class="notop"></div>
+<p>
+	Portfolio filter has the following structure:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row mt40&quot;&gt;
+    &lt;div class=&quot;col-md-12&quot;&gt;
+        &lt;div class=&quot;portfolio-filter&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;filter active&quot; data-filter=&quot;*&quot;&gt;All&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;filter&quot; data-filter=&quot;.web-design&quot;&gt;Web Design&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;filter&quot; data-filter=&quot;.print&quot;&gt;Print&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;filter&quot; data-filter=&quot;.graphics&quot;&gt;Graphics&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;filter&quot; data-filter=&quot;.mockups&quot;&gt;Mockups&lt;/a&gt;
+        &lt;/div&gt; &lt;!-- end filter --&gt;
+    &lt;/div&gt; &lt;!-- end col --&gt;
+&lt;/div&gt; &lt;!-- end row --&gt;</pre>
+<p>&nbsp;
+	</p>
+<p>
+	<strong>Data-filter</strong> is the name of the categories.</p>
+<p>&nbsp;
+	</p>
+<p>
+	Categories of the works should be defined here&nbsp;<span style="line-height: 19px;">&lt;div class=&quot;col-md-4 work-item <strong>web-design mockups</strong>&quot;&gt;</span></p>
+<p>
+	<span style="line-height: 19px;">Here is how portfolio item structure looks:</span></p>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div id=&quot;portfolio-container&quot; class=&quot;grid-2-col&quot;&gt;
+        &lt;div class=&quot;col-md-6 work-item web-design mockups&quot;&gt; &lt;!-- work item --&gt;
+            &lt;div class=&quot;work-container&quot;&gt;
+                &lt;div class=&quot;work-img&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        &lt;img src=&quot;upload/portfolio/img_1.jpg&quot; alt=&quot;portfolio img&quot;&gt;
+                    &lt;/a&gt;
+                    &lt;div class=&quot;portfolio-overlay&quot;&gt;
+                        &lt;div class=&quot;project-icons&quot;&gt;
+                            &lt;a href=&quot;upload/portfolio/img_1_big.jpg&quot; data-lightbox=&quot;true&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                            &lt;a href=&quot;portfolio-single.html&quot; class=&quot;project-icon&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;work-description text-center&quot;&gt;
+                    &lt;h3&gt;&lt;a href=&quot;#&quot;&gt;Creative Mockups&lt;/a&gt;&lt;/h3&gt;
+                        &lt;span&gt;&lt;a href=&quot;#&quot;&gt;Print&lt;/a&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt; 
+        &lt;/div&gt; &lt;!-- end work-item --&gt;
+    &lt;/div&gt;<span class="Apple-tab-span" style="white-space:pre"> </span>&lt;!-- end portfolio container --&gt;
+&lt;/div&gt; &lt;!-- end row --&gt;</pre>
+</section>
+<section id="twitter_feed">
+	<div class="page-header"><h3>Twitter Feed</h3><hr class="notop"></div>
+<p>
+	To connect you twitter feed follow these steps:</p>
+<p>
+	1. Go to your twitter profile <strong>Options &gt; Widgets.&nbsp;</strong>Click the &ldquo;Create new&rdquo; button to build a new timeline widget.</p>
+<p>
+	2. Get the id code in address link</p>
+<p>
+	<img alt="" src="assets/images/image_1.jpg" style="width: 1000px; height: 439px;"></p>
+<p>
+	3. Open&nbsp;<strong>twitterFetcher_min.js </strong>located in /js folder<strong>&nbsp;</strong>with any text editor and paste the id number in line 25:</p>
+<pre class="prettyprint lang-html linenums">
+&quot;id&quot;: &#39;594366594521804800&#39;</pre>
+</section>
+<section id="contact_form">
+	<div class="page-header"><h3>Contact Form</h3><hr class="notop"></div>
+<p>
+	Open <strong>contact.php </strong>with any text editor<strong>&nbsp;</strong>and paste your email address in line 6. Save it.</p>
+<pre class="prettyprint lang-html linenums">
+define(&quot;__TO__&quot;, &quot;&#116;&#101;&#115;&#116;&#101;&#109;&#97;&#105;&#108;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&quot;);</pre>
+</section>
+<section id="how_to_rate_this_item">
+	<div class="page-header"><h3>How to rate this item</h3><hr class="notop"></div>
+<p>
+	<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">It&#39;s easy to rate this template. Just click&nbsp;</span><a href="http://themeforest.net/downloads" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; color: rgb(124, 186, 66); text-decoration: none; cursor: pointer; line-height: 18px;">http://themeforest.net/downloads</a><span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">&nbsp;and you will see this template there. Click 5 Stars to make author more happy and he will make more awesome templates :)</span></p>
+<p>
+	<img alt="" src="assets/images/image_2.jpg"  ></p>
+<p>&nbsp;
+	</p>
+</section>
+<section id="credits">
+	<div class="page-header"><h3>Credits</h3><hr class="notop"></div>
+<p>
+	All images/illustrations are for preview purposes only and are not included in the download files.</p>
+<p>
+	<strong>jQuery plugins:</strong></p>
+<ol>
+	<li>
+		<a href="http://jquery.com/">jQuery</a></li>
+	<li>
+		<a href="http://getbootstrap.com/">Bootstrap</a></li>
+	<li>
+		<a href="https://github.com/desandro/imagesloaded">imagesloaded</a></li>
+	<li>
+		<a href="http://isotope.metafizzy.co/">Isotope</a></li>
+	<li>
+		<a href="https://plugins.jquery.com/appear/">jquery.appear</a></li>
+	<li>
+		<a href="https://github.com/mhuggins/jquery-countTo">jquery.countTo</a></li>
+	<li>
+		<a href="https://github.com/gdsmith/jquery.easing">jquery.easing.min</a></li>
+	<li>
+		<a href="https://github.com/rendro/easy-pie-chart">jquery.easypiechart.min</a></li>
+	<li>
+		<a href="https://github.com/woothemes/FlexSlider">Flexslider</a></li>
+	<li>
+		<a href="https://github.com/marioestrada/jQuery-gMap">jquery.gmap</a></li>
+	<li>
+		<a href="http://lokeshdhakar.com/projects/lightbox2/">Lightbox</a></li>
+	<li>
+		<a href="http://owlgraphic.com/owlcarousel/">Owl Carousel</a></li>
+	<li>
+		<a href="https://plugins.jquery.com/smooth-scroll/">Smooth Scroll</a></li>
+	<li>
+		<a href="https://github.com/jasonmayes/Twitter-Post-Fetcher">twitterFetcher</a></li>
+	<li>
+		<a href="http://mynameismatthieu.com/WOW/">Wow</a></li>
+</ol>
+</section>
+<section id="support">
+	<div class="page-header"><h3>Support</h3><hr class="notop"></div>
+<p>
+	If you have any question feel free to visit our <a href="http://deothemes.com/support/">Support Forum</a></p>
+</section>
+
+	</div>
+</body>
+</html>

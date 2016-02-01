@@ -1,0 +1,23 @@
+Bottom Content:
+	<div class="menu-logo">
+		<a href="#" title="Menu logo"><img src="{{media url="wysiwyg/menu_logo.png"}}" data-srcx2="{{media url="wysiwyg/menu_logo@x2.png"}}" alt=""></a>
+	</div>
+	<span><strong>Little more about us</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum adipiscing urna, ac sollicitudin velit pharetra sit amet. Morbi vestibulum augue id mauris iaculis pharetra. Vestibulum aliquet, odio eu congue viverra, dolor magna rutrum purus, sed convallis urna nunc et leo. Phasellus a justo condimentum, hendrerit quam sit amet, congue orci. Nunc massa mi, posuere ut lacus vitae, hendrerit suscipit libero.</span>
+Ratio:
+    3/3
+Right Content:
+<div class="menu-banners">
+	<a href="#" class="menu-banner first"><img src="{{media url="wysiwyg/wide_menu_banner_1.jpg"}}" data-srcx2="{{media url="wysiwyg/wide_menu_banner_1@x2.jpg"}}" alt="" ></a>
+	<a href="#" class="menu-banner last"><img src="{{media url="wysiwyg/wide_menu_banner_2.jpg"}}" data-srcx2="{{media url="wysiwyg/wide_menu_banner_2@x2.jpg"}}" alt="" ></a>
+</div>
+Top Content:
+<div class="left-links">
+	<ul>
+		<li><a href="#" title="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a></li>
+		<li><a href="#" title="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a></li>
+		<li><a href="#" title="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a></li>
+	</ul>
+</div>
+<div class="right-link">
+	<a href="#" title="All in one">All in one</a>
+</div>
