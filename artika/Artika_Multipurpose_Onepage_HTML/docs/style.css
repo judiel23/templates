@@ -1,0 +1,291 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+	color: #333;
+	background: #fafafa;
+}
+img, a, ul, li {
+	border: 0;
+	outline: 0;
+}
+ol li, ul li {
+	list-style: none;
+}
+a:focus, a:link, a:visited, a:active {
+	color: inherit;
+}
+p, li {
+	line-height: 30px;
+}
+code {
+	font-size: 14px;
+	background-color: #ebebeb;
+	padding: 5px;
+}
+/* typography */
+
+a {
+	text-decoration: none;
+}
+
+/* html 5 */
+
+header, nav, section, article, footer {
+	display: block;
+}
+/* fix */
+
+.clear {
+	clear: both;
+}
+.hl {
+	background-color: #03C9A9;
+	padding: 3px 5px;
+	color: #fff;
+}
+/* wrap */
+
+.boxed {
+	width: 1000px;
+	height: auto;
+}
+#header {
+	margin: 25px auto;
+}
+#section {
+	margin: 150px auto;
+}
+/* header */
+
+header {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+	border-bottom: 2px solid #2574a9;
+}
+#logo {
+	float: left;
+	height: 50px;
+	margin-right: 25px;
+}
+
+#logo img {
+	height: 50px;
+}
+/* menu */
+nav li {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+nav li a {
+	display: block;
+	padding: 0 5px;
+	margin: 0 5px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+#main-menu {
+	color: #fff;
+	float: right;
+}
+#main-menu li {
+	border: 2px solid #fff;
+	position: relative;
+	color: #2C3E50;
+}
+#main-menu li:hover {
+	border: 2px solid #2C3E50;
+	color: #2C3E50;
+}
+#main-menu li:hover .sub-menu {
+	display: block;
+}
+#main-menu li a {
+	cursor: pointer;
+}
+#bottom-menu {
+	position: fixed;
+	right: 75px;
+	bottom: 20px;
+	color: #fff;
+}
+#bottom-menu li {
+	background-color: #fff;
+	border: 2px solid #cdcdcd;
+	color: #1BA39C;
+}
+#bottom-menu li:hover {
+	border: 2px solid #1BA39C;
+}
+/* back to top */
+#btn-top {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+#btn-top i {
+	text-align: center;
+	line-height: 40px;
+}
+/* content */
+.main-feat {
+	margin: 25px 0;
+	background-color: #fafafa;
+	min-height: 200px;
+	padding: 20px;
+}
+.main-feat .head-sect {
+	background-color: #2C3E50;
+}
+.list-feat {
+	font-size: 18px;
+	color: #2C3E50;
+	font-weight: bold;
+	line-height: 30px;
+	list-style: square;
+	list-style-position: inside;
+}
+.list-feat i {
+	padding-right: 10px;
+}
+.list-feat ol {
+	float: left;
+	margin-right: 50px;
+}
+/* headings */
+.head-sect {
+	height: 50px;
+	padding: 0 20px;
+	line-height: 50px;
+	color: #fff;
+	background-color: #2574A9;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.sect-chapt {
+	margin: 25px 0;
+	background: #fff;
+	box-shadow: 2px 2px 1px #dfdfdf;
+	min-height: 200px;
+	padding: 20px;
+}
+article {
+	margin-top: 25px;
+}
+article h1 {
+	margin: 10px 0;
+}
+article ul,
+article ol {
+	margin-bottom: 10px;
+}
+article li {
+	list-style: square;
+	list-style-position: inside;
+	line-height: 30px;
+}
+article ol li {
+	list-style: decimal;
+	list-style-position: inside;
+}
+article ol ul li {
+	list-style: square;
+	list-style-position: inside;
+}
+article ol ul, article ol ol {
+	margin-left: 25px;
+}
+article a:hover {
+	color: #2574A9;
+}
+/* screens */ 
+
+article img {
+	clear: both;
+	max-width: 100%;
+	margin: 20px 0;
+}
+/* footer */
+footer {
+	margin-top: 25px;
+	background-color: #2C3E50;
+	padding: 20px;
+}
+footer p {
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+footer a {
+	font-weight: bold;
+}
+footer a:hover {
+	color: #1BA39C;
+}
+/* back to top */
+
+#back-top {
+	height: 50px;
+	width: 50px;
+	background-color: #2574A9;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	text-align: center;
+}
+#back-top:hover {
+	background-color: #efefef;
+}
+#back-top i {
+	color: #fff;
+	line-height: 50px;
+	font-size: 20px;
+}
+#back-top:hover i {
+	color: #2C3E50;
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1240px) {
+header {
+	position: static;
+}
+.boxed {
+	width: 90%;
+}
+#logo {
+	float: none;
+	text-align: center;
+	margin: 0 auto 40px auto;
+}
+#main-menu {
+	float: none;
+}
+#main-menu ul {
+	text-align: center;
+}
+#section {
+	margin: 25px auto;
+}
+#screen {
+	float: none;
+}
+}
+ @media screen and (max-width: 720px) {
+article img {
+	display: none;
+}
+}

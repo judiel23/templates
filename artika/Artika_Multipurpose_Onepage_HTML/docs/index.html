@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Documentation - ARTIKA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300|Raleway:300,700' rel='stylesheet' type='text/css'>
+<link href='ico/icons.css' rel='stylesheet' type="text/css">
+<link href='style.css' rel='stylesheet' type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scripts.js"></script>
+</head>
+
+<body id="top">
+<header>
+  <div class="boxed" id="header">
+    <div id="logo"><img src="img/logo.png"></div>
+    <nav id="main-menu">
+      <ul>
+        <li><a data-scrollto="#chap0">Overview</a></li>
+        <li><a data-scrollto="#chap1">One Pages</a>
+        <li><a data-scrollto="#chap2">Sections</a></li>
+        <li><a data-scrollto="#chap3">Skin Colors</a></li>
+        <li><a data-scrollto="#chap4">Classes CSS</a></li>
+        <li><a data-scrollto="#chap5">Options JS</a></li>
+        <li><a data-scrollto="#chap6">Credits</a></li>
+      </ul>
+    </nav>
+    <div class="clear"></div>
+  </div>
+</header>
+<div class="boxed" id="section"> 
+  
+  <!-- 0. OVERVIEW -->
+  <section class="main-feat">
+    <h1 class="head-sect"><a id="chap0">Overview</a></h1>
+    <ul class="list-feat">
+      <ol>
+        <li><i class="icon-star"></i>12 One Page Included</strong></li>
+        <li><i class="icon-star"></i>2 Cooming Soon Page</strong></li>
+        <li><i class="icon-star"></i>19 Sections Included</strong></li>
+        <li><i class="icon-star"></i>Easy to Customize</strong></li>
+      </ol>
+      <ol>
+        <li><i class="icon-star"></i>Custom Skin Colors</strong></li>
+        <li><i class="icon-star"></i>Framework CSS</strong></li>
+        <li><i class="icon-star"></i>300+ Icons Included</strong></li>
+        <li><i class="icon-star"></i>Fully Responsive</li>
+      </ol>
+      <ol>
+        <li><i class="icon-star"></i>Parallax Ready</li>
+        <li><i class="icon-star"></i>Transitions Ready</li>
+        <li><i class="icon-star"></i>Google API Map Included</li>
+        <li><i class="icon-star"></i>Option JS easy to use</strong></li>
+      </ol>
+      <div class="clear"></div>
+    </ul>
+  </section>
+  <!-- END 0. --> 
+  
+  <!-- 1. ONE PAGE -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap1">One Page</a></h1>
+    <article>
+      <h1>Structure</h1>
+      <p>Inside package are presents <strong>12 demo page.</strong><br>
+        <strong>2 of this ones are <em>cooming soon</em> page.</strong><br>
+        Each demo has its folder. Each folder is numbered.<br>
+        Each demo has its files identified by a suffix relative to the number of demo.</p>
+      <p><strong class="hl">PHP Version</strong> - Eg. <code>callout-10.php</code> it's referred to the demo 10.<br>
+        Only the index page hasn't the number suffix. Each index page is named index.php and it's included in its folder.<br>
+        <strong class="hl">HTML Version</strong> - All sections are splitted in one unic file.
+      <p>
+      <p><strong class="hl">PHP Version</strong> - Each demo has its sections. There's a lot of sections included in all demos<br>
+        Inside index file of each demo are described (by require php function) a list of all sections used.</p>
+      <h1>Fonts Family</h1>
+      <p>In each index, the <strong>body</strong> tag has identified by an <strong>id</strong>.<br>
+        Each id is referred to a specif font-family. The fonts are assigned in the <code>demo-font.css</code> file.
+      <h1>Function to Minimize</h1>
+      <strong class="hl">Note</strong> - these functions are active only in <strong>php version.</strong>
+      <p>CSS files are declared before body tag, the JS files after the body.<br>
+        All css and js files are commented because in the theme are used two php functions which minimize all scripts.<br>
+        this process improve the speed of pages. There're no present any file minimized in the theme, because the minimization is made from server side.<br>
+        To add more scripts inside the fuction, open the <code>js.php</code> file located in js folder.</p>
+      <p><strong class="hl">Note</strong> - <em>If you want to use all scripts separately to editing, remove the comments before the file css or js in index page.<br>
+        After remove or comment the functions php around line 29 (for styles css) and around line 80 (for js scripts).</em></p>
+    </article>
+  </section>
+  <!-- END 1. --> 
+  
+  <!-- 2. SECTIONS -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap2">Sections</a></h1>
+    <article>
+    
+      <h2>Working with HTML</h2>
+      <p><strong>The Theme includes 19 sections.</strong><br>
+        Sections can be recognized by their #ID inside page html.
+      <p>
+      <h1>Sections available</h1>
+      <ul>
+        <li><strong>Header</strong> <code>&lt;header&gt;</code> - It contains the logo and menu navigations.</li>
+        <li><strong>Wall</strong> <code>#wall</code> - Usually is the first site section. It contains a slider or a full images as background.</li>
+        <li><strong>Intro</strong> <code>#intro</code> - Usually is an about section. It contains text, icons or images.</li>
+        <li><strong>Blog</strong> <code>#blog</code> - Include a list of articles. It can show a grid of posts with thumb and excerpt or like feeds.</li>
+        <li><strong>Callout</strong> <code>#callout</code> - Write an highlited message with title, text and/or icons.</li>
+        <li><strong>Clients</strong> <code>#clients</code> - Add a carousel of logos.</li>
+        <li><strong>Counters</strong> <code>#counters</code> - Add some services counter.</li>
+        <li><strong>Features</strong> <code>#features</code> - Add a box for your info or list of details.</li>
+        <li><strong>Map</strong> <code>#map</code> - Add a  google map with one or more markers. (Set the map by data parameters)</li>
+        <li><strong>Portfolio</strong> <code>#portfolio</code> - Add a grid list of projects. It can shows a grid of thumbs with captions. (No inner pages)</li>
+        <li><strong>Parallax</strong> <code>#parallax</code> - Create a box with text or icons inside parallax background.</li>
+        <li><strong>Gallery</strong> <code>#gallery</code> - Add a grid list of images. It can shows a grid of thumbs with captions. (Lightbox ready)</li>
+        <li><strong>Quotes</strong> <code>#quotes</code> - Set multiple message by some people. It can show a list of quotes with thumbs or with only text.</li>
+        <li><strong>Services</strong> <code>#services</code> - Add others box informations. It usually shows columns with text and icons.</li>
+        <li><strong>Team</strong> <code>#team</code> - Add box for your team.</li>
+        <li><strong>Price</strong> <code>#prices</code> - Add one or more columns prices.</li>
+        <li><strong>CountDown</strong> <code>#countdown</code> - Add a timer to countdown (available only in demo11 and demo 12. The parameters to set it are located in js/scripts.js file around line 182 (demo 11) and 192 (demo 12).</li>
+        <li><strong>Widgets</strong> <code>#widgtes</code> - Add an area widgets with two, three or four widgets list.</li>
+        <li><strong>Footer</strong> <code>&lt;footer&gt;</code> - It contains the site copyright with a bottom to top.</li>
+      </ul>
+      <br><br>
+      <h2>Working with PHP</h2>
+      <p><strong>The Theme includes 19 sections.</strong><br>
+        Sections are divided in php files and they located in section folder of each demo.<br>
+      <p>
+      <h1>Sections available</h1>
+      <ul>
+        <li><strong>Header</strong> <code>header.php</code> - It contains the logo and menu navigations.</li>
+        <li><strong>Wall</strong> <code>wall.php</code> - Usually is the first site section. It contains a slider or a full images as background.</li>
+        <li><strong>Intro</strong> <code>intro.php</code> - Usually is an about section. It contains text, icons or images.</li>
+        <li><strong>Blog</strong> <code>blog.php</code> - Include a list of articles. It can show a grid of posts with thumb and excerpt or like feeds.</li>
+        <li><strong>Callout</strong> <code>callout.php</code> - Write an highlited message with title, text and/or icons.</li>
+        <li><strong>Clients</strong> <code>clients.php</code> - Add a carousel of logos.</li>
+        <li><strong>Counters</strong> <code>counters.php</code> - Add some services counter.</li>
+        <li><strong>Features</strong> <code>features.php</code> - Add a box for your info or list of details.</li>
+        <li><strong>Map</strong> <code>map.php</code> - Add a  google map with one or more markers. (Set the map by data parameters)</li>
+        <li><strong>Portfolio</strong> <code>portfolio.php</code> - Add a grid list of projects. It can shows a grid of thumbs with captions. (No inner pages)</li>
+        <li><strong>Parallax</strong> <code>parallax.php</code> - Create a box with text or icons inside parallax background.</li>
+        <li><strong>Gallery</strong> <code>gallery.php</code> - Add a grid list of images. It can shows a grid of thumbs with captions. (Lightbox ready)</li>
+        <li><strong>Quotes</strong> <code>quotes.php</code> - Set multiple message by some people. It can show a list of quotes with thumbs or with only text.</li>
+        <li><strong>Services</strong> <code>services.php</code> - Add others box informations. It usually shows columns with text and icons.</li>
+        <li><strong>Team</strong> <code>team.php</code> - Add box for your team.</li>
+        <li><strong>Price</strong> <code>prices.php</code> - Add one or more columns prices.</li>
+        <li><strong>CountDown</strong> <code>countdown.php</code> - Add a timer to countdown (available only in demo11 and demo 12. The parameters to set it are located in js/scripts.js file around line 182 (demo 11) and 192 (demo 12).</li>
+        <li><strong>Widgets</strong> <code>widgtes.php</code> - Add an area widgets with two, three or four widgets list.</li>
+        <li><strong>Footer</strong> <code>footer.php</code> - It contains the site copyright with a bottom to top.</li>
+      </ul>
+      <p><strong class="hl">Note</strong> - To use section in your page or index, include related php file with php include function<br>
+        e.g. <code>include('blog-#.php');</code></p>
+      
+    </article>
+  </section>
+  <!-- END 2. --> 
+  
+  <!-- 3. SKINS -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap3">Skin Colors</a></h1>
+    <article>
+      <h1>Colors</h1>
+      <p>In each demo are included a set of colors for each demo. Exactly six colors.<br>
+        For each demo is present a skin css identified by the id of the demo.<br>
+        For each color exist one rgba version (transparent color) one hover color and one hover rgba.
+      <p>
+      <h1>Colors</h1>
+      <ul>
+        <li>Color 1 - use class -> <code>clr-1</code></li>
+        <li>Color 2 - use class -> <code>clr-2</code></li>
+        <li>Color .. - use class -> <code>clr-#</code></li>
+        <li>Color 0 (white) - use class -> <code>clr-0</code></li>
+      </ul>
+      <h1>Backgrounds</h1>
+      <ul>
+        <li>Bg-Color 1 - use class -> <code>bg-clr-1</code></li>
+        <li>Bg-Color 2 - use class -> <code>bg-clr-2</code></li>
+        <li>Bg-Color .. - use class -> <code>bg-clr-#</code></li>
+        <li>Bg-Color 0 (white) - use class -> <code>bg-clr-0</code></li>
+      </ul>
+      <h1>Color Transparent</h1>
+      <ul>
+        <li>Color Alpha 1 - use class -> <code>clr-alpha-1</code></li>
+        <li>Color Alpha 2 - use class -> <code>clr-alpha-2</code></li>
+        <li>Color Alpha .. - use class -> <code>clr-alpha-#</code></li>
+        <li>Color Alpha 0 (white) - use class -> <code>clr-alpha-0</code></li>
+      </ul>
+      <h1>Backgrounds Transparent</h1>
+      <ul>
+        <li>Bg-Alpha 1 - use class -> <code>bg-alpha-1</code></li>
+        <li>Bg-Alpha 2 - use class -> <code>bg-alpha-2</code></li>
+        <li>Bg-Alpha .. - use class -> <code>bg-alpha-#</code></li>
+        <li>Bg-Alpha 0 (white) - use class -> <code>bg-alpha-0</code></li>
+      </ul>
+      <h1>Color Hover</h1>
+      <ul>
+        <li>Color 1 in hover - use class -> <code>clr-h-1</code></li>
+        <li>Color 2 in hover - use class -> <code>clr-h-2</code></li>
+        <li>Color .. in hover - use class -> <code>clr-h-#</code></li>
+        <li>Color 0 (white) in hover - use class -> <code>clr-h-0</code></li>
+      </ul>
+      <h1>Backgrounds Hover</h1>
+      <ul>
+        <li>Bg Color 1 in hover - use class -> <code>bg-clr-h-1</code></li>
+        <li>Bg Color 2 in hover - use class -> <code>bg-clr-h-2</code></li>
+        <li>Bg Color .. in hover - use class -> <code>bg-clr-h-#</code></li>
+        <li>Bg Color 0 (white) in hover - use class -> <code>bg-clr-h-0</code></li>
+      </ul>
+      <p>You can use also background transparent hover and color transparent hover. Look the classes in the file to view all.</p>
+      <p><strong class="el">Note</strong> - <em>Menu colors and hovers are included always in the skin css file</em></p>
+    </article>
+  </section>
+  <!-- END 3. --> 
+  
+  <!-- 4. FRMWK CSS -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap4">Classes CSS</a></h1>
+    <article>
+      <h1>GRID SYSTEM</h1>
+      <p>The theme included a responsive grid based on flow columns</p>
+      <p>The classes are located in <code>framework.css</code>
+      <p>You can use these classes to insert lined up content in your page</p>
+      <ul>
+        <li><code>.col-1-6</code> - Attach a width of 1/6 of the content</li>
+        <li><code>.col-1-5</code> - Attach a width of 1/5 of the content</li>
+        <li><code>.col-1-4</code> - Attach a width of 1/4 of the content</li>
+        <li><code>.col-1-3</code> - Attach a width of 1/3 of the content</li>
+        <li><code>.col-1-2</code> - Attach a width of 1/2 of the content</li>
+      </ul>
+      <p>In adding to fit better your page are present also other grid classes as <code>.col-2-3</code>, <code>.col-2-4</code>, <code>.col-3-4</code>, <code>.col-2-5</code>, <code>.col-3-5</code>, <code>.col-4-5</code>, <code>.col-2-6</code>, <code>.col-3-6</code>, <code>.col-4-6</code>, <code>.col-5-6</code>.</p>
+      <h1>SPACINGS</h1>
+      <p>You can use useful classes related to padding and margin to edit your content.</p>
+      <p>These classes are located in <code>custom.css</code></p>
+      <ul>
+        <li><code>.marg-25</code> - attach 25px of margin to tag</li>
+        <li><code>.marg-50</code> - attach 50px of margin to tag</li>
+        <li><code>.marg-75</code> - attach 75px of margin to tag</li>
+        <li><code>.marg-100</code> - attach 100px of margin to tag</li>
+      </ul>
+      <ul>
+        <li><code>.padd-25</code> - attach 25px of padding to tag</li>
+        <li><code>.padd-50</code> - attach 50px of padding to tag</li>
+        <li><code>.padd-75</code> - attach 75px of padding to tag</li>
+        <li><code>.padd-100</code> - attach 100px of padding to tag</li>
+      </ul>
+      <p><strong>Other possible combinations</strong> - You can mix direction or axis y/x</p>
+      <ul>
+        <li><code>.padd-top-25</code> - attach 25px of padding-top to tag</li>
+        <li><code>.padd-bott-50</code> - attach 50px of padding-bottom to tag</li>
+        <li><code>.margin-left-75</code> - attach 75px of margin-left to tag</li>
+        <li><code>.margin-right-100</code> - attach 100px of margin-right to tag</li>
+      </ul>
+      <ul>
+        <li><code>.padd-x-25</code> - attach 25px of padding left and right to tag</li>
+        <li><code>.padd-y-50</code> - attach 50px of padding top and bottom to tag</li>
+        <li><code>.marg-x-75</code> - attach 75px of margin left and right to tag</li>
+        <li><code>.marg-y-100</code> - attach 100px of margin top and bottom to tag</li>
+      </ul>
+      <ul>
+        <li><code>.no-marg</code> - remove all margin at the element</li>
+        <li><code>.no-padd</code> - remove all padding at the element</li>
+      </ul>
+      <p><em>And much more..</em></p>
+      <h1>STRUCTURE</h1>
+      <p>Use differt classes to set the size of element<br>
+        Here some examples..
+      <ul>
+        <li><code>.full</code> - set width and heiht to 100%</li>
+        <li><code>.full-h</code> - set height to 100%</li>
+        <li><code>.full-w</code> - set width to 100%</li>
+        <li><code>.h-50</code> - set the height of element to 50px (at intervals of 50px up to 600px)</li>
+        <li><code>.w-50</code> - set the wight of element to 50px (at intervals of 50px up to 600px)</li>
+      </ul>
+      <h1>POSITIONING</h1>
+      <p>Set element in position relative, absolute or static..</p>
+      <ul>
+        <li><code>.posit-a</code> - set an element in absolute position</li>
+        <li><code>.posit-f</code> - set an element in fixed position</li>
+        <li><code>.posit-s</code> - set an element in static position</li>
+        <li><code>.top-0</code> - put an element on top position</li>
+        <li><code>.bott-0</code> - put an element on bottom position</li>
+        <li><code>.right-0</code> - put an element on right position</li>
+        <li><code>.left-0</code> - put an element on left position</li>
+        <li><code>.left-50</code> - put an element to 50px from left position (at intervals of 50px up to 300px)</li>
+        <li><code>.bott-50</code> - put an element to 50px from bott position (at intervals of 50px up to 300px)</li>
+        <li><code>.right-50</code> - put an element to 50px from right position (at intervals of 50px up to 300px)</li>
+        <li><code>.top-50</code> - put an element to 50px from top position (at intervals of 50px up to 300px)</li>
+        <li><code>.z-0</code> - put an element in z-index 0 (it can be set from 0 to z-9)</li>
+        <li><code>.z-99</code> <code>.z-999</code> <code>.z-9999</code> - put an element in z-index 9 or 99 or 9999</li>
+      </ul>
+      <p><em>And much more..</em></p>
+      <h1>DISPLAY</h1>
+      <p>Set element in display block, inline-block or flotted..</p>
+      <ul>
+        <li><code>.disp-b</code> - set an element in display block</li>
+        <li><code>.disp-ib</code> - set an element in display inline-block</li>
+        <li><code>.disp-n</code> - set an element in display none</li>
+        <li><code>.disp-i</code> - put an element in display inline</li>
+        <li><code>.disp-t</code> - put an element in display table</li>
+        <li><code>.disp-tc</code> - put an element in display table-cell</li>
+        <li><code>.clear</code> - add a clear both (usefull after flotted element)</li>
+        <li><code>.float-l</code> - put an element in flotted mode from left</li>
+        <li><code>.float-r</code> - put an element in flotted mode from right</li>
+        <li><code>.float-n</code> - remove flotted mode</li>
+      </ul>
+      <ul>
+        <li><code>.resp-n</code> - hidden element under 1400px (discover <code>css/responsive.css</code> file for more details</li>
+        <li><code>.opa-0</code> - add an opacity of 0% to the div (it can be set from opa-0 to opa-9)</li>
+        <li><code>.overf-h</code> - assign an overflow hidden property at the element</li>
+      </ul>
+      <h1>TYPOGRAPHY</h1>
+      <ul>
+        <li><code>.head-b</code> <code>.head-m</code> <code>.head-s</code> - are used for big headings from font-size 70px to 100px</li>
+        <li><code>.caption-b</code> <code>.caption-m</code> <code>.caption-s</code> - are used for medium headings from font-size 30px to 50px</li>
+        <li><code>.title-b</code> <code>.title-m</code> <code>.title-s</code> - are used for small headings from font-size 25px to 40px</li>
+        <li><code>.content-b</code> <code>.content-m</code> <code>.content-s</code> - are used for inner text from font-size 14px to 18px</li>
+        <li><code>.icon-b</code> <code>.icon-m</code> <code>.icon-s</code> - are used for icons add a font-size from 30px to 70px</li>
+        <li><code>.icon-rad</code> <code>.icon-rad-bg</code> - create an icon with border-radius or radius background</li>
+        <li><code>.icon-box</code> <code>.icon-box-bg</code> - create an icon with square border or square background</li>
+        <li><code>.text-c</code> - put an element in display inline</li>
+        <li><code>.text-l</code> - put an element in display inline</li>
+        <li><code>.text-r</code> - put an element in display inline</li>
+      </ul>
+      <h1>BACKGROUNDS</h1>
+      <ul>
+        <li><code>.bg-rep</code> - set a background-repeat inside background image</li>
+        <li><code>.bg-fix</code> - set a background-position fixed inside background image</li>
+        <li><code>.bg-cov</code> - set a background-size cover inside background image</li>
+        <li><code>.bg-cov-bott</code> - set a background-size cover and background positon bottom center inside background image</li>
+        <li><code>.bg-cov-bott</code> - set a background-size cover and background positon top center inside background image</li>
+      </ul>
+      <h1>TRANSITIONS</h1>
+      <p>You can use useful classes to attach some css3 animations to your box content</p>
+      <p>The classes are located in <code>framework.css</code>
+      <ul>
+        <li><code>.transit</code> - add a transition about 0.3s erase-in-out</li>
+        <li><code>.transit-fade</code> - add a fade transition</li>
+        <li><code>.transit-left</code> - add a transition from left</li>
+        <li><code>.transit-right</code> - add a transition from right</li>
+        <li><code>.transit-top</code> - add a transition from top</li>
+        <li><code>.transit-bottom</code> - add a transition from bottom</li>
+        <li><code>.transit-bouncein</code> - add a bounce in transition</li>
+        <li><code>.transit-flip</code> - add a 3d transition</li>
+        <li><code>.transit-rotate</code> - add a rotate transition</li>
+        <li><code>.transit-pulse</code> - add a pulse transition</li>
+        <li><code>.transit-bounce</code> - add a bounce transition</li>
+      </ul>
+      <p><em>And much more..</em></p>
+      <p>In adding to customize your transitions, you can set some parameters inserting these data attribute in your html tag</p>
+      <ul>
+        <li><code>data-delay="millisec"</code> - define the duration of the transition</li>
+        <li><code>data-appear="true/false"</code> - set the start of transition when scroll page</li>
+      </ul>
+    </article>
+  </section>
+  <!-- END 4. --> 
+  
+  <!-- 5. FRMWK JS -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap5">Options JS</a></h1>
+    <article>
+      <p><strong class="hl">Note!</strong> - The Theme includes many options and parameters about some sections already set in js code and easy to edit by user directly from the html code.</p>
+      <p>All functions used in the theme are located and well commented in <code>js/scripts.js</code> file</p>
+      <h1>ICONS</h1>
+      <p>The theme uses <strong>Typicons Set Icons</strong>. You can see all icons <strong><a href="http://typicons.com/">here.</a></strong></p>
+      <h1>SCROLL TO SECTION</h1>
+      <p>In each link tag is present the <strong>data-scrollto</strong> attribute, put the id to reach inside to get the position on page.<br>
+        eg. <code> data-scrollto="#blog" </code>, it will reach to blog section.
+      <p>
+      <h1>SLIDERS</h1>
+      <p>The parameters of the sliders are described around line 30 of scripts.js file<br>
+        Slider fade and slider with slide transition are separated to easily the use of them.<br>
+        You can change the speed or desable/enable auto play.. For more details visit the developer's page <a href="http://typicons.com/"><strong>here</strong>.</a></p>
+      <h1>COUNTDOWN</h1>
+      <p>The parameters to customize your cooming soon page, are described around line 182<br>
+        The counters are separated for demo 11 and 12. For more details visit the de veloper's page <a href="http://hilios.github.io/jQuery.countdown/"><strong>here</strong>.</a><br>
+        You can change the final data time or edit the style of numbers.</p>
+      <h1>GOOGLE MAP</h1>
+      <p>To customize your map reach the <code>map</code> section (you can find it through its 'id') or opening <strong>map.php</strong> file (PHP Version).<br>
+        You can set the address by <code>data-lng</code> (longitude) and <code>data-lat</code> (latitude) attributes<br>
+        You can set the color (<code>data-color</code>) and the saturation (<code>data-saturation</code>).<br>
+        In adding you can attach multiple marker positions setting the same data attributes made for the map.<br>
+        Finally you can add your personal marker image putting the absolute url inside <code>data-icon</code> attribute.</p>
+    </article>
+  </section>
+  <!-- END 5. --> 
+  
+  <!-- 6. CREDITS JS -->
+  <section class="sect-chapt">
+    <h1 class="head-sect"><a id="chap6">Credits</a></h1>
+    <article>
+      <p>List of libraries used in the theme</p>
+      <ul>
+        <li><code>api gmap</code></li>
+        <li><code>jquery</code></li>
+        <li><code>jquery ui</code></li>
+        <li><code>jquey easing</code></li>
+        <li><code>jquery countdown</code></li>
+        <li><code>jquery appear</code></li>
+        <li><code>jquery countTo</code></li>
+        <li><code>jquery fancybox</code></li>
+        <li><code>jquery mousewheel</code></li>
+        <li><code>owl carousel</code></li>
+        <li><code>isotope</code></li>
+      </ul>
+      <p>All the other settings of the theme are inclused in <code>scripts.js</code></p>
+    </article>
+  </section>
+  <!-- END 6. --> 
+  
+</div>
+<nav id="bottom-menu">
+  <ul>
+    <li><a href="http://demo.uncommons.pro/themes/html/artika/" target="_blank">Demo</a></li>
+    <li><a href="http://support.uncommons.pro/" target="_blank">Support</a></li>
+    <li><a id="btn-top" data-scrollto="#chap0" target="_blank"><i class="icon-arrow-up"></i></a></li>
+  </ul>
+</nav>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="copy">
+    <p>Documentation - Create by <a href="http://www.uncommons.pro">unCommons</a> | <a href="http://support.uncommons.pro/">Support</a> | <a href="https://twitter.com/unCommonsTeam">Twitter</a> | <a href="https://www.facebook.com/unCommons">Facebook </a></p>
+  </div>
+</footer>
+</body>
+</html>
